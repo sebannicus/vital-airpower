@@ -82,7 +82,7 @@ const svg = `
 </svg>`;
 
 // Fondo: foto industrial con blur + oscuridad
-const bg = await sharp(resolve(root, 'public/images/planta-de-aire.jpeg'))
+const bg = await sharp(resolve(root, 'public/images/planta-de-aire.webp'))
   .resize(W, H, { fit: 'cover', position: 'centre' })
   .blur(3)
   .modulate({ brightness: 0.4 })
@@ -97,7 +97,7 @@ await sharp(bg)
     { input: Buffer.from(svg), blend: 'over' },
     { input: logoResized, left: logoX, top: logoY, blend: 'over' },
   ])
-  .jpeg({ quality: 92 })
-  .toFile(resolve(root, 'public/images/og-image.jpg'));
+  .webp({ quality: 92 })
+  .toFile(resolve(root, 'public/images/og-image.webp'));
 
-console.log('✓ og-image.jpg generada (1200×630)');
+console.log('✓ og-image.webp generada (1200×630)');
