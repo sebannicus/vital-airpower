@@ -14,9 +14,30 @@ import Footer from '../components/layout/Footer.astro';
 
     <!-- HERO -->
     <section class="relative min-h-[90vh] flex items-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
+      <!-- Carousel de fondo -->
+      <div class="absolute inset-0 z-0" id="hero-carousel">
         <div class="absolute inset-0 bg-gradient-to-r from-[#1B1C1C]/85 via-[#1B1C1C]/60 to-[#1B1C1C]/20 z-10"></div>
-        <img src="/images/planta-de-aire.jpeg" alt="Planta de aire comprimido industrial" class="w-full h-full object-cover" width="1920" height="1080" />
+        {[
+          { src: '/images/planta-de-aire.jpeg',          alt: 'Planta de aire comprimido industrial' },
+          { src: '/images/compresor-planta.jpeg',         alt: 'Compresor en planta industrial' },
+          { src: '/images/ingersoll-generador-planta.jpeg', alt: 'Generador Ingersoll Rand en operación' },
+          { src: '/images/limpieza-mantencion-2.jpeg',    alt: 'Técnico en mantenimiento de compresor' },
+        ].map((img, i) => (
+          <img
+            src={img.src}
+            alt={img.alt}
+            class={`hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === 0 ? 'opacity-100' : 'opacity-0'}`}
+            data-slide={i}
+            width="1920"
+            height="1080"
+          />
+        ))}
+        <!-- Puntos de navegación -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          {[0,1,2,3].map(i => (
+            <button class={`hero-dot w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-white w-6' : 'bg-white/40'}`} data-dot={i} aria-label={`Slide ${i+1}`}></button>
+          ))}
+        </div>
       </div>
       <div class="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12">
         <div class="md:col-span-8 lg:col-span-7">
@@ -192,3 +213,28 @@ import Footer from '../components/layout/Footer.astro';
 
   <Footer />
 </BaseLayout>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.hero-slide');
+  const dots   = document.querySelectorAll<HTMLElement>('.hero-dot');
+  let current  = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function goTo(n: number) {
+    slides[current].classList.replace('opacity-100', 'opacity-0');
+    dots[current].classList.remove('bg-white', 'w-6');
+    dots[current].classList.add('bg-white/40');
+    current = n;
+    slides[current].classList.replace('opacity-0', 'opacity-100');
+    dots[current].classList.add('bg-white', 'w-6');
+    dots[current].classList.remove('bg-white/40');
+  }
+
+  function next() { goTo((current + 1) % slides.length); }
+
+  timer = setInterval(next, 5000);
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { clearInterval(timer); goTo(i); timer = setInterval(next, 5000); });
+  });
+</script>
