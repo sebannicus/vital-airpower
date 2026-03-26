@@ -2,30 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
-
-const categories = [
-  {
-    icon: 'compress',
-    title: 'Compresores Industriales',
-    desc: 'Compresores de tornillo rotativos para aplicaciones industriales y mineras. Asesoría técnica para seleccionar la capacidad correcta según su demanda.',
-    bullets: ['De tornillo rotativo', 'Centrífugos', 'De pistón'],
-    large: true,
-  },
-  {
-    icon: 'air',
-    title: 'Tratamiento de Aire',
-    desc: 'Secadores refrigerativos y de adsorción, filtros coalescentes y trampas de condensado. Aire limpio y seco para procesos sensibles.',
-    bullets: [],
-    large: false,
-  },
-  {
-    icon: 'bolt',
-    title: 'Grupos Electrógenos',
-    desc: 'Grupos electrógenos industriales para respaldo energético en operaciones críticas. Disponibles para mantenimiento, reparación y arriendo.',
-    bullets: [],
-    large: true,
-  },
-];
 ---
 
 <BaseLayout
@@ -38,30 +14,41 @@ const categories = [
 
     <!-- HERO -->
     <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1920px] mx-auto">
-        <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
-          Catálogo técnico
-        </span>
-        <h1 class="font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
-          Equipos para cada proceso industrial
-        </h1>
-        <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
-          Compresores, sistemas de tratamiento de aire y grupos electrógenos. Venta con asesoría técnica incluida e instalación.
-        </p>
+      <div class="max-w-[1920px] mx-auto grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-8">
+          <span class="animate-hero font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
+            Catálogo técnico
+          </span>
+          <h1 class="animate-hero-delay-1 font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
+            Equipos para cada proceso industrial
+          </h1>
+          <p class="animate-hero-delay-2 text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
+            Compresores, sistemas de tratamiento de aire y grupos electrógenos. Venta con asesoría técnica incluida e instalación.
+          </p>
+        </div>
+        <div class="animate-hero-delay-3 md:col-span-4 hidden md:flex items-center justify-center">
+          <img
+            src="/images/logo.png"
+            alt="Vital Airpower Compresores"
+            width="180"
+            height="180"
+            class="w-40 h-auto opacity-15"
+          />
+        </div>
       </div>
     </section>
 
     <!-- CATEGORÍAS -->
     <section class="py-24 px-6 md:px-12">
       <div class="max-w-[1920px] mx-auto">
-        <div class="mb-16">
+        <div class="mb-16" data-animate>
           <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Líneas de producto</h2>
           <div class="w-20 h-1 bg-[#003F87]"></div>
         </div>
 
         <!-- Compresores grande -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
-          <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6" data-animate-stagger>
+          <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
             <div>
               <div class="aspect-video bg-[#EAE7E7] mb-8 flex items-center justify-center overflow-hidden relative">
                 <div class="w-full h-full bg-gradient-to-br from-[#003F87]/10 to-[#1B1C1C]/20 flex items-center justify-center">
@@ -88,7 +75,7 @@ const categories = [
           </div>
 
           <!-- Tratamiento de aire -->
-          <div class="md:col-span-2 bg-[#EAE7E7] p-8 flex flex-col justify-between group hover:bg-white transition-colors">
+          <div class="md:col-span-2 bg-[#EAE7E7] p-8 flex flex-col justify-between group hover:bg-white hover:-translate-y-1 transition-all duration-200">
             <div class="aspect-[16/6] bg-[#D4D0CF] mb-6 flex items-center justify-center">
               <span class="material-symbols-outlined text-[#5E5E5E]/40" style="font-size: 4rem;">air</span>
             </div>
@@ -104,7 +91,7 @@ const categories = [
           </div>
 
           <!-- Grupos electrógenos -->
-          <div class="md:col-span-2 bg-[#1B1C1C] text-white p-8 flex flex-col justify-between relative overflow-hidden group">
+          <div class="md:col-span-2 bg-[#1B1C1C] text-white p-8 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1 transition-transform duration-200">
             <div class="absolute -right-8 -bottom-8 opacity-5">
               <span class="material-symbols-outlined" style="font-size: 12rem;">bolt</span>
             </div>
@@ -126,7 +113,7 @@ const categories = [
     </section>
 
     <!-- MARCAS TÉCNICAS -->
-    <section class="py-16 bg-[#F6F3F2] border-y border-[#C2C6D4]/30">
+    <section class="py-16 bg-[#F6F3F2] border-y border-[#C2C6D4]/30" data-animate>
       <div class="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <span class="font-[Space_Grotesk] text-[#5E5E5E] font-bold text-xs uppercase tracking-widest whitespace-nowrap">Servicio técnico certificado:</span>
         <div class="flex flex-wrap items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
@@ -140,7 +127,7 @@ const categories = [
     <!-- POST-VENTA -->
     <section class="py-24 px-6 md:px-12">
       <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div>
+        <div data-animate="fade-left">
           <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-6">Servicios post-venta incluidos</h2>
           <p class="text-[#5E5E5E] mb-8 leading-relaxed">
             Todo equipo vendido incluye instalación, puesta en marcha y plan de mantenimiento preventivo. No vendemos equipos — entregamos soluciones funcionando.
@@ -152,7 +139,7 @@ const categories = [
               { icon: 'event_repeat', title: 'Plan de mantenimiento', desc: 'Programa preventivo para extender la vida útil del equipo.' },
               { icon: 'support_agent', title: 'Soporte técnico 24/7', desc: 'Respuesta ante fallas durante las primeras 1.000 horas.' },
             ].map(({ icon, title, desc }) => (
-              <div class="flex items-start gap-4">
+              <div class="flex items-start gap-4 p-4 hover:bg-[#F6F3F2] transition-colors duration-200 rounded-sm">
                 <span class="material-symbols-outlined text-[#003F87] flex-shrink-0" style="font-size: 1.3rem;">{icon}</span>
                 <div>
                   <p class="font-bold text-sm text-[#1B1C1C] mb-0.5">{title}</p>
@@ -162,13 +149,16 @@ const categories = [
             ))}
           </div>
         </div>
-        <div class="bg-[#003F87] text-white p-10">
-          <span class="material-symbols-outlined mb-6 block" style="font-size: 3rem;">headset_mic</span>
-          <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4">¿No encuentra lo que busca?</h3>
-          <p class="text-white/70 leading-relaxed mb-8">
+        <div class="bg-[#003F87] text-white p-10 relative overflow-hidden" data-animate="fade-right">
+          <div class="absolute -right-8 -bottom-8 opacity-10">
+            <img src="/images/logo.png" alt="" aria-hidden="true" width="200" height="200" class="brightness-0 invert" />
+          </div>
+          <span class="material-symbols-outlined mb-6 block relative z-10" style="font-size: 3rem;">headset_mic</span>
+          <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 relative z-10">¿No encuentra lo que busca?</h3>
+          <p class="text-white/70 leading-relaxed mb-8 relative z-10">
             Cuéntenos su proceso y presupuesto. Le recomendamos la solución técnica más adecuada para su operación, sin compromisos.
           </p>
-          <a href="/contacto" class="inline-flex items-center gap-3 bg-white text-[#003F87] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#D7E2FF] transition-colors">
+          <a href="/contacto" class="relative z-10 inline-flex items-center gap-3 bg-white text-[#003F87] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#D7E2FF] hover:-translate-y-0.5 transition-all duration-200">
             Consultar con un técnico
             <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
           </a>
@@ -177,16 +167,16 @@ const categories = [
     </section>
 
     <!-- CTA -->
-    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2] text-center">
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2] text-center" data-animate>
       <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Necesita asesoría para elegir el equipo correcto?</h2>
       <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Cuéntenos su proceso y le recomendamos la solución técnica más adecuada.</p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+        <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:-translate-y-0.5 transition-all duration-200">
           Consultar con un técnico
           <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
         </a>
         <a href="https://wa.me/56512244588" target="_blank" rel="noopener noreferrer"
-          class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:scale-105 transition-transform">
+          class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:scale-105 hover:-translate-y-0.5 transition-all duration-200">
           <span class="material-symbols-outlined" style="font-size: 1.1rem;">chat</span>
           WhatsApp
         </a>
