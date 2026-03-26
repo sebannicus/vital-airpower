@@ -71,3 +71,52 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-primary-light);
   color: var(--color-primary);
 }
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-animate="fade-up"] { transform: translateY(28px); }
+[data-animate="fade-left"] { transform: translateX(-28px); }
+[data-animate="fade-right"] { transform: translateX(28px); }
+[data-animate="scale-in"] { transform: scale(0.94); }
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Stagger para hijos con delay -->
+[data-animate-stagger] > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-animate-stagger].is-visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.05s; }
+[data-animate-stagger].is-visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.15s; }
+[data-animate-stagger].is-visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.25s; }
+[data-animate-stagger].is-visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.35s; }
+[data-animate-stagger].is-visible > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.45s; }
+
+/* Hero: animación al cargar (sin JS) */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-hero { animation: hero-enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-hero-delay-1 { animation: hero-enter 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-hero-delay-2 { animation: hero-enter 0.9s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-hero-delay-3 { animation: hero-enter 0.9s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Número/stat counter shimmer */
+@keyframes shimmer-line {
+  0%   { width: 0; opacity: 0.7; }
+  100% { width: 100%; opacity: 1; }
+}
+

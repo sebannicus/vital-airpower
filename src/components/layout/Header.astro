@@ -1,52 +1,138 @@
 ---
 const navLinks = [
-  { href: '/',                    label: 'Inicio' },
-  { href: '/empresa',             label: 'Empresa' },
-  { href: '/servicios',           label: 'Servicios' },
-  { href: '/soluciones',          label: 'Soluciones Industriales' },
-  { href: '/equipos',             label: 'Equipos' },
-  { href: '/contacto',            label: 'Contacto' },
+  { href: '/',             label: 'Inicio' },
+  { href: '/empresa',      label: 'Empresa' },
+  { href: '/servicios',    label: 'Servicios' },
+  { href: '/soluciones',   label: 'Soluciones' },
+  { href: '/equipos',      label: 'Equipos' },
+  { href: '/contacto',     label: 'Contacto' },
 ];
 
 const currentPath = Astro.url.pathname;
 ---
 
-<nav
-  class="fixed top-0 w-full z-50 bg-[#FCF9F8] border-b border-[#C2C6D4]/20"
+<header
+  id="site-header"
+  class="fixed top-0 w-full z-50 transition-all duration-300"
   aria-label="Navegación principal"
 >
-  <div class="flex justify-between items-center px-6 md:px-12 py-5 max-w-[1920px] mx-auto">
+  <!-- Barra principal -->
+  <nav class="relative bg-white/95 backdrop-blur-md border-b border-[#C2C6D4]/20 shadow-sm">
+    <div class="flex justify-between items-center px-6 md:px-12 py-3 max-w-[1920px] mx-auto">
 
-    <!-- Logo -->
-    <a href="/" class="text-2xl font-black tracking-tighter text-[#1B1C1C] font-[Space_Grotesk]">
-      Vital Airpower
-    </a>
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group" aria-label="Vital Airpower — Inicio">
+        <img
+          src="/images/logo.png"
+          alt="Vital Airpower Compresores"
+          width="52"
+          height="52"
+          class="h-[52px] w-auto transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="hidden sm:block">
+          <p class="font-[Space_Grotesk] font-black text-[#1B1C1C] text-lg leading-none tracking-tight">
+            VITAL <span class="text-[#003F87]">AIR</span>POWER
+          </p>
+          <p class="font-[Space_Grotesk] text-[#5E5E5E] text-[0.6rem] tracking-[0.25em] uppercase">
+            Compresores
+          </p>
+        </div>
+      </a>
 
-    <!-- Nav desktop -->
-    <div class="hidden md:flex items-center gap-8">
-      {navLinks.map(({ href, label }) => (
+      <!-- Nav desktop -->
+      <div class="hidden md:flex items-center gap-6">
+        {navLinks.map(({ href, label }) => (
+          <a
+            href={href}
+            class={[
+              "font-[Space_Grotesk] uppercase tracking-widest text-[0.7rem] font-bold transition-all duration-200 relative py-1",
+              currentPath === href || (href !== '/' && currentPath.startsWith(href))
+                ? "text-[#003F87] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#003F87]"
+                : "text-[#5E5E5E] hover:text-[#003F87] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#003F87] after:transition-all after:duration-300 hover:after:w-full",
+            ].join(' ')}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-3">
         <a
-          href={href}
-          class={[
-            "font-[Space_Grotesk] uppercase tracking-widest text-[0.75rem] font-bold transition-colors duration-300",
-            currentPath === href
-              ? "text-[#0056B3] border-b-2 border-[#0056B3] pb-1"
-              : "text-[#5E5E5E] hover:text-[#0056B3]",
-          ].join(' ')}
+          href="/contacto"
+          class="hidden sm:flex items-center gap-2 bg-[#003F87] text-white px-5 py-2.5 text-[0.7rem] font-bold tracking-widest uppercase transition-all duration-200 hover:bg-[#0056B3] hover:shadow-lg hover:shadow-[#003F87]/20 active:scale-95"
         >
-          {label}
+          <span class="material-symbols-outlined" style="font-size: 0.95rem;">support_agent</span>
+          Soporte 24/7
         </a>
-      ))}
+
+        <!-- Hamburger mobile -->
+        <button
+          id="menu-toggle"
+          class="md:hidden flex flex-col gap-[5px] p-2 group"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span class="block w-6 h-0.5 bg-[#1B1C1C] transition-all duration-300 group-[.is-open]:rotate-45 group-[.is-open]:translate-y-[7px]"></span>
+          <span class="block w-6 h-0.5 bg-[#1B1C1C] transition-all duration-300 group-[.is-open]:opacity-0"></span>
+          <span class="block w-6 h-0.5 bg-[#1B1C1C] transition-all duration-300 group-[.is-open]:-rotate-45 group-[.is-open]:-translate-y-[7px]"></span>
+        </button>
+      </div>
     </div>
 
-    <!-- CTA nav -->
-    <a
-      href="/contacto"
-      class="flex items-center gap-2 bg-[#003F87] text-white px-6 py-2 text-xs font-bold tracking-widest uppercase transition-transform scale-95 hover:scale-100 active:scale-90"
+    <!-- Mobile menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out bg-white border-t border-[#C2C6D4]/20"
     >
-      <span class="material-symbols-outlined text-sm" style="font-size: 1rem;">support_agent</span>
-      Soporte 24/7
-    </a>
+      <div class="px-6 py-6 flex flex-col gap-4">
+        {navLinks.map(({ href, label }) => (
+          <a
+            href={href}
+            class={[
+              "font-[Space_Grotesk] uppercase tracking-widest text-sm font-bold py-2 border-b border-[#C2C6D4]/20 transition-colors",
+              currentPath === href ? "text-[#003F87]" : "text-[#5E5E5E] hover:text-[#003F87]",
+            ].join(' ')}
+          >
+            {label}
+          </a>
+        ))}
+        <a
+          href="/contacto"
+          class="mt-2 flex items-center justify-center gap-2 bg-[#003F87] text-white px-5 py-3 text-xs font-bold tracking-widest uppercase"
+        >
+          <span class="material-symbols-outlined" style="font-size: 1rem;">support_agent</span>
+          Soporte 24/7
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
 
-  </div>
-</nav>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu!.style.maxHeight && menu!.style.maxHeight !== '0px';
+    if (isOpen) {
+      menu!.style.maxHeight = '0px';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.classList.remove('is-open');
+    } else {
+      menu!.style.maxHeight = menu!.scrollHeight + 'px';
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.classList.add('is-open');
+    }
+  });
+
+  // Scroll: header shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header?.querySelector('nav')?.classList.add('shadow-md');
+    } else {
+      header?.querySelector('nav')?.classList.remove('shadow-md');
+    }
+  }, { passive: true });
+</script>

@@ -20,21 +20,21 @@ import Footer from '../components/layout/Footer.astro';
       </div>
       <div class="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12">
         <div class="md:col-span-8 lg:col-span-7">
-          <span class="inline-block px-3 py-1 bg-[#D7E2FF] text-[#003F87] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+          <span class="animate-hero inline-block px-3 py-1 bg-[#D7E2FF] text-[#003F87] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
             Continuidad Operacional
           </span>
-          <h1 class="font-[Space_Grotesk] text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tighter mb-8">
+          <h1 class="animate-hero-delay-1 font-[Space_Grotesk] text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tighter mb-8">
             Soluciones técnicas para que su planta no se detenga
           </h1>
-          <p class="text-white/80 text-xl max-w-xl mb-10 font-light leading-relaxed">
+          <p class="animate-hero-delay-2 text-white/80 text-xl max-w-xl mb-10 font-light leading-relaxed">
             Mantenimiento, reparación y contingencia de compresores industriales en la Región de Coquimbo. 25+ años de experiencia en las marcas líderes.
           </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+          <div class="animate-hero-delay-3 flex flex-wrap gap-4">
+            <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:shadow-lg hover:shadow-[#003F87]/30 hover:-translate-y-0.5 transition-all duration-200">
               Solicitar asistencia técnica
               <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
             </a>
-            <a href="/equipos" class="border border-white/30 text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white/10 transition-colors">
+            <a href="/equipos" class="border border-white/30 text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200">
               Ver equipos
             </a>
           </div>
@@ -43,7 +43,7 @@ import Footer from '../components/layout/Footer.astro';
     </section>
 
     <!-- TRUST BAR -->
-    <section class="py-10 bg-[#F6F3F2] border-y border-[#C2C6D4]/30">
+    <section class="py-10 bg-[#F6F3F2] border-y border-[#C2C6D4]/30" data-animate>
       <div class="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <span class="font-[Space_Grotesk] text-[#5E5E5E] font-bold text-xs uppercase tracking-widest whitespace-nowrap">Experiencia técnica en:</span>
         <div class="flex flex-wrap items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
@@ -57,11 +57,11 @@ import Footer from '../components/layout/Footer.astro';
     <!-- SERVICIOS BENTO -->
     <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
       <div class="max-w-[1920px] mx-auto">
-        <div class="mb-16">
+        <div class="mb-16" data-animate>
           <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Ecosistema de Servicios</h2>
           <div class="w-20 h-1 bg-[#003F87]"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6" data-animate-stagger>
           <!-- Mantenimiento grande -->
           <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
             <div>
@@ -123,7 +123,7 @@ import Footer from '../components/layout/Footer.astro';
     <!-- INDUSTRIA CRÍTICA -->
     <section class="py-24 px-6 md:px-12">
       <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 items-center gap-16">
-        <div class="relative">
+        <div class="relative" data-animate="fade-left">
           <div class="aspect-[4/3] bg-[#EAE7E7] overflow-hidden">
             <div class="w-full h-full bg-gradient-to-br from-[#003F87]/20 to-[#1B1C1C]/20 flex items-center justify-center">
               <span class="material-symbols-outlined text-[#003F87]/30" style="font-size: 8rem;">factory</span>
@@ -139,7 +139,7 @@ import Footer from '../components/layout/Footer.astro';
             </div>
           </div>
         </div>
-        <div>
+        <div data-animate="fade-right">
           <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">Minería e Industria</span>
           <h2 class="font-[Space_Grotesk] text-4xl font-bold mb-6">Conocemos las condiciones del norte chico</h2>
           <p class="text-[#5E5E5E] mb-8 leading-relaxed">Operamos en la Región de Coquimbo, con cobertura hacia La Serena, Coquimbo y faenas mineras. Entendemos que en una operación industrial, el aire comprimido no es solo un recurso — es el pulso de la planta. Por eso nuestra respuesta es técnica, rápida y en terreno.</p>
@@ -160,7 +160,7 @@ import Footer from '../components/layout/Footer.astro';
     </section>
 
     <!-- BANNER 24/7 -->
-    <section class="bg-[#003F87] text-white py-24 relative overflow-hidden">
+    <section class="bg-[#003F87] text-white py-24 relative overflow-hidden" data-animate="scale-in">
       <div class="absolute inset-0 opacity-5 flex items-center justify-center pointer-events-none select-none">
         <span class="font-[Space_Grotesk] text-[20rem] font-black uppercase tracking-tighter">CONTINGENCIA</span>
       </div>
@@ -180,7 +180,7 @@ import Footer from '../components/layout/Footer.astro';
     </section>
 
     <!-- CTA WHATSAPP -->
-    <section class="py-24 px-6 md:px-12 text-center">
+    <section class="py-24 px-6 md:px-12 text-center" data-animate>
       <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Listo para asegurar su proceso productivo?</h2>
       <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Hable directamente con un técnico especialista para un diagnóstico preliminar sin costo.</p>
       <a href="https://wa.me/56512244588" target="_blank" rel="noopener noreferrer"
