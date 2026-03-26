@@ -44,14 +44,10 @@ const whyUs = [
             Maximizamos la vida útil de sus equipos con servicios diseñados para eliminar paradas no programadas. Vital Airpower: el soporte técnico que su operación necesita.
           </p>
         </div>
-        <div class="animate-hero-delay-3 md:col-span-4 hidden md:flex items-center justify-center">
-          <img
-            src="/images/logo.webp"
-            alt="Vital Airpower Compresores"
-            width="180"
-            height="180"
-            class="w-40 h-auto opacity-15"
-          />
+        <div class="animate-hero-delay-3 md:col-span-4 hidden md:block">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/servicios-portada3.webp" alt="Servicio técnico industrial Vital Airpower" class="w-full h-full object-cover" width="600" height="450" />
+          </div>
         </div>
       </div>
     </section>
@@ -126,11 +122,16 @@ const whyUs = [
         <!-- Fila 2 -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6" data-animate-stagger>
           <!-- Rental -->
-          <div class="bg-white p-8 border border-[#C2C6D4]/30 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
-            <span class="material-symbols-outlined text-[#0056B3] mb-4" style="font-size: 2rem;">schedule</span>
-            <div>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Rental Industrial</h3>
-              <p class="text-sm text-[#5E5E5E]">Equipos portátiles para peaks de demanda o paradas de planta programadas.</p>
+          <div class="bg-white border border-[#C2C6D4]/30 flex flex-col group hover:-translate-y-1 transition-transform duration-200 overflow-hidden" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <div class="aspect-video overflow-hidden flex-shrink-0">
+              <img src="/images/manguera-compresor.webp" alt="Rental de equipos industriales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="338" />
+            </div>
+            <div class="p-8 flex flex-col flex-1 justify-between">
+              <span class="material-symbols-outlined text-[#0056B3] mb-4" style="font-size: 2rem;">schedule</span>
+              <div>
+                <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Rental Industrial</h3>
+                <p class="text-sm text-[#5E5E5E]">Equipos portátiles para peaks de demanda o paradas de planta programadas.</p>
+              </div>
             </div>
           </div>
 
@@ -149,11 +150,16 @@ const whyUs = [
           </div>
 
           <!-- Tratamiento -->
-          <div class="bg-white p-8 border border-[#C2C6D4]/30 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
-            <span class="material-symbols-outlined text-[#0056B3] mb-4" style="font-size: 2rem;">air</span>
-            <div>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Tratamiento de Aire</h3>
-              <p class="text-sm text-[#5E5E5E]">Secadores, filtros y trampas para aire limpio y seco en procesos sensibles.</p>
+          <div class="bg-white border border-[#C2C6D4]/30 flex flex-col group hover:-translate-y-1 transition-transform duration-200 overflow-hidden" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <div class="aspect-video overflow-hidden flex-shrink-0">
+              <img src="/images/filtro-compresor.webp" alt="Filtro y tratamiento de aire comprimido" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="338" />
+            </div>
+            <div class="p-8 flex flex-col flex-1 justify-between">
+              <span class="material-symbols-outlined text-[#0056B3] mb-4" style="font-size: 2rem;">air</span>
+              <div>
+                <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Tratamiento de Aire</h3>
+                <p class="text-sm text-[#5E5E5E]">Secadores, filtros y trampas para aire limpio y seco en procesos sensibles.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -161,20 +167,30 @@ const whyUs = [
         <!-- Fila 3 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-animate-stagger>
           <!-- Asesoría -->
-          <div class="bg-[#EAE7E7] p-8 flex items-center gap-6 group hover:bg-white hover:-translate-y-1 transition-all duration-200">
-            <span class="material-symbols-outlined text-[#0056B3] flex-shrink-0" style="font-size: 2.5rem;">graphic_eq</span>
-            <div>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Asesoría Técnica Industrial</h3>
-              <p class="text-sm text-[#5E5E5E] leading-relaxed">Auditorías energéticas por ultrasonido y diseño de redes de tuberías. Identifique dónde pierde energía en su sistema.</p>
+          <div class="bg-[#EAE7E7] flex flex-col group hover:bg-white hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+            <div class="aspect-video overflow-hidden flex-shrink-0">
+              <img src="/images/cambio-de-filtro.webp" alt="Asesoría técnica y auditoría industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="338" />
+            </div>
+            <div class="p-8 flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#0056B3] flex-shrink-0 mt-1" style="font-size: 2rem;">graphic_eq</span>
+              <div>
+                <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Asesoría Técnica Industrial</h3>
+                <p class="text-sm text-[#5E5E5E] leading-relaxed">Auditorías energéticas por ultrasonido y diseño de redes de tuberías. Identifique dónde pierde energía en su sistema.</p>
+              </div>
             </div>
           </div>
 
           <!-- Electrógenos -->
-          <div class="bg-[#1B1C1C] text-white p-8 flex items-center gap-6 hover:-translate-y-1 transition-transform duration-200">
-            <span class="material-symbols-outlined flex-shrink-0" style="font-size: 2.5rem;">bolt</span>
-            <div>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Grupos Electrógenos</h3>
-              <p class="text-sm text-white/60 leading-relaxed">Mantenimiento, reparación y arriendo de grupos electrógenos para respaldo energético en procesos críticos.</p>
+          <div class="bg-[#1B1C1C] text-white flex flex-col group hover:-translate-y-1 transition-transform duration-200 overflow-hidden">
+            <div class="aspect-video overflow-hidden flex-shrink-0">
+              <img src="/images/generador-ingersoll-rand.webp" alt="Grupos electrógenos industriales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" width="600" height="338" />
+            </div>
+            <div class="p-8 flex items-start gap-4">
+              <span class="material-symbols-outlined flex-shrink-0 mt-1" style="font-size: 2rem;">bolt</span>
+              <div>
+                <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Grupos Electrógenos</h3>
+                <p class="text-sm text-white/60 leading-relaxed">Mantenimiento, reparación y arriendo de grupos electrógenos para respaldo energético en procesos críticos.</p>
+              </div>
             </div>
           </div>
         </div>

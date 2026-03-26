@@ -57,14 +57,10 @@ const specs = [
             Sistemas de aire comprimido y soporte técnico diseñados para la continuidad operativa en minería e industria del norte chico.
           </p>
         </div>
-        <div class="animate-hero-delay-3 md:col-span-4 hidden md:flex items-center justify-center">
-          <img
-            src="/images/logo.webp"
-            alt="Vital Airpower Compresores"
-            width="180"
-            height="180"
-            class="w-40 h-auto opacity-15"
-          />
+        <div class="animate-hero-delay-3 md:col-span-4 hidden md:block">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/planta-de-aire.webp" alt="Planta de aire comprimido industrial" class="w-full h-full object-cover" width="600" height="450" />
+          </div>
         </div>
       </div>
     </section>
@@ -77,18 +73,27 @@ const specs = [
           <div class="w-20 h-1 bg-[#003F87]"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
-          {sectors.map(({ icon, title, desc }, i) => (
-            <div class={`p-10 flex flex-col justify-between group hover:-translate-y-1 transition-transform duration-200 ${i === 0 ? 'bg-[#003F87] text-white' : i === 1 ? 'bg-[#1B1C1C] text-white' : 'bg-[#F6F3F2]'}`}>
-              <div>
-                <span class={`material-symbols-outlined mb-6 block ${i < 2 ? '' : 'text-[#0056B3]'}`} style="font-size: 2.5rem;">{icon}</span>
-                <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4">{title}</h3>
-                <p class={`leading-relaxed text-sm ${i < 2 ? 'text-white/70' : 'text-[#5E5E5E]'}`}>{desc}</p>
+          {[
+            { ...sectors[0], img: '/images/compresor-planta.webp',      imgAlt: 'Compresor en faena minera' },
+            { ...sectors[1], img: '/images/motor-de-compresor.webp',    imgAlt: 'Motor de compresor industrial' },
+            { ...sectors[2], img: '/images/limpieza-mantencion.webp',   imgAlt: 'Mantenimiento preventivo industrial' },
+          ].map(({ icon, title, desc, img, imgAlt }, i) => (
+            <div class={`flex flex-col group hover:-translate-y-1 transition-transform duration-200 overflow-hidden ${i === 0 ? 'bg-[#003F87] text-white' : i === 1 ? 'bg-[#1B1C1C] text-white' : 'bg-[#F6F3F2]'}`}>
+              <div class="aspect-video overflow-hidden flex-shrink-0">
+                <img src={img} alt={imgAlt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" width="600" height="338" />
               </div>
-              {i < 2 && (
-                <a href="/contacto" class="mt-8 inline-flex items-center gap-2 text-white/60 hover:text-white font-bold uppercase text-xs tracking-widest transition-colors group-hover:gap-4">
-                  Consultar <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-                </a>
-              )}
+              <div class="p-10 flex flex-col flex-1 justify-between">
+                <div>
+                  <span class={`material-symbols-outlined mb-6 block ${i < 2 ? '' : 'text-[#0056B3]'}`} style="font-size: 2.5rem;">{icon}</span>
+                  <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4">{title}</h3>
+                  <p class={`leading-relaxed text-sm ${i < 2 ? 'text-white/70' : 'text-[#5E5E5E]'}`}>{desc}</p>
+                </div>
+                {i < 2 && (
+                  <a href="/contacto" class="mt-8 inline-flex items-center gap-2 text-white/60 hover:text-white font-bold uppercase text-xs tracking-widest transition-colors group-hover:gap-4">
+                    Consultar <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
