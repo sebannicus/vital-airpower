@@ -67,10 +67,10 @@ import Footer from '../components/layout/Footer.astro';
     <section class="py-10 bg-[#F6F3F2] border-y border-[#C2C6D4]/30" data-animate>
       <div class="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <span class="font-[Space_Grotesk] text-[#5E5E5E] font-bold text-xs uppercase tracking-widest whitespace-nowrap">Experiencia técnica en:</span>
-        <div class="flex flex-wrap items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
-          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">ATLAS COPCO</span>
-          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">INGERSOLL RAND</span>
-          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">KAESER</span>
+        <div class="flex flex-wrap items-center gap-10 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
+          <img src="/images/atlas-copco-logo.webp" alt="Atlas Copco" class="h-9 w-auto object-contain grayscale" width="130" height="36" />
+          <img src="/images/logo-ingersoll-rand.svg" alt="Ingersoll Rand" class="h-9 w-auto object-contain grayscale" width="130" height="36" />
+          <img src="/images/logo-kaeser.webp" alt="Kaeser" class="h-9 w-auto object-contain grayscale" width="130" height="36" />
         </div>
       </div>
     </section>
@@ -145,8 +145,27 @@ import Footer from '../components/layout/Footer.astro';
     <section class="py-24 px-6 md:px-12">
       <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 items-center gap-16">
         <div class="relative" data-animate="fade-left">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/compresor-planta.webp" alt="Compresor industrial en planta — Vital Airpower" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="800" height="600" />
+          <div class="aspect-[4/3] overflow-hidden relative" id="norte-carousel">
+            {[
+              { src: '/images/compresor-planta.webp',     alt: 'Compresor industrial en planta' },
+              { src: '/images/planta-de-aire.webp',       alt: 'Planta de aire comprimido industrial' },
+              { src: '/images/manguera-compresor.webp',   alt: 'Sistema de mangueras compresor' },
+              { src: '/images/cambio-de-rotores.webp',    alt: 'Técnico realizando cambio de rotores' },
+            ].map((img, i) => (
+              <img
+                src={img.src}
+                alt={img.alt}
+                class={`norte-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === 0 ? 'opacity-100' : 'opacity-0'}`}
+                data-slide={i}
+                width="800"
+                height="600"
+              />
+            ))}
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+              {[0,1,2,3].map(i => (
+                <button class={`norte-dot w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-white w-4' : 'bg-white/50'}`} data-dot={i} aria-label={`Foto ${i+1}`}></button>
+              ))}
+            </div>
           </div>
           <div class="absolute -bottom-6 -right-6 bg-white p-6 max-w-xs shadow-lg border border-[#C2C6D4]/30">
             <div class="flex items-center gap-3">
@@ -236,5 +255,26 @@ import Footer from '../components/layout/Footer.astro';
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => { clearInterval(timer); goTo(i); timer = setInterval(next, 5000); });
+  });
+
+  // ── Norte chico carousel ──────────────────────────────────────────────────
+  const nSlides = document.querySelectorAll<HTMLElement>('.norte-slide');
+  const nDots   = document.querySelectorAll<HTMLElement>('.norte-dot');
+  let nCur = 0;
+  let nTimer: ReturnType<typeof setInterval>;
+
+  function nGoTo(n: number) {
+    nSlides[nCur].classList.replace('opacity-100', 'opacity-0');
+    nDots[nCur].classList.remove('bg-white', 'w-4');
+    nDots[nCur].classList.add('bg-white/50');
+    nCur = n;
+    nSlides[nCur].classList.replace('opacity-0', 'opacity-100');
+    nDots[nCur].classList.add('bg-white', 'w-4');
+    nDots[nCur].classList.remove('bg-white/50');
+  }
+
+  nTimer = setInterval(() => nGoTo((nCur + 1) % nSlides.length), 4000);
+  nDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { clearInterval(nTimer); nGoTo(i); nTimer = setInterval(() => nGoTo((nCur + 1) % nSlides.length), 4000); });
   });
 </script>
