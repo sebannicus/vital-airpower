@@ -2,11 +2,173 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+
+const sectors = [
+  {
+    icon: 'landscape',
+    title: 'Minería',
+    desc: 'Soporte técnico para compresores en perforación y procesos extractivos. Conocemos las condiciones de operación en faenas del norte chico.',
+  },
+  {
+    icon: 'factory',
+    title: 'Industria General',
+    desc: 'Mantenimiento y soporte para líneas de producción, manufactura y procesos automatizados que dependen del aire comprimido.',
+  },
+  {
+    icon: 'loop',
+    title: 'Continuidad Operacional',
+    desc: 'Planes de mantenimiento preventivo y respuesta de contingencia para que el aire comprimido nunca sea el motivo de una parada.',
+  },
+];
+
+const protocol = [
+  { icon: 'manage_search', title: 'Diagnóstico previo', desc: 'Evaluación del estado real del equipo antes de intervenir.' },
+  { icon: 'assignment', title: 'Intervención documentada', desc: 'Registro de cada acción realizada durante el servicio.' },
+  { icon: 'verified', title: 'Verificación post-servicio', desc: 'El equipo se prueba bajo carga antes de ser entregado al cliente.' },
+];
+
+const specs = [
+  { param: 'Marcas soportadas', value: 'Atlas Copco, Ingersoll Rand, Kaeser' },
+  { param: 'Tipos de compresor', value: 'Tornillo, centrífugo, pistón' },
+  { param: 'Cobertura', value: 'La Serena, Coquimbo, norte chico' },
+  { param: 'Contingencia', value: '24/7 disponible' },
+];
 ---
-<BaseLayout title="Vital Airpower">
+
+<BaseLayout
+  title="Soluciones Industriales — Vital Airpower | Minería e industria del norte chico"
+  description="Sistemas de aire comprimido y soporte técnico para minería e industria. Cobertura en La Serena, Coquimbo y faenas mineras de la Región de Coquimbo."
+>
   <Header />
-  <main class="pt-[72px] min-h-screen flex items-center justify-center">
-    <p class="text-[#5E5E5E] font-[Space_Grotesk] font-bold uppercase tracking-widest">En construcción</p>
+
+  <main class="pt-[72px]">
+
+    <!-- HERO -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto">
+        <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
+          Ingeniería de potencia
+        </span>
+        <h1 class="font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
+          Soluciones industriales para su operación
+        </h1>
+        <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
+          Sistemas de aire comprimido y soporte técnico diseñados para la continuidad operativa en minería e industria del norte chico.
+        </p>
+      </div>
+    </section>
+
+    <!-- OPERACIÓN CRÍTICA -->
+    <section class="py-24 px-6 md:px-12">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-16">
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Para las operaciones que no pueden parar</h2>
+          <div class="w-20 h-1 bg-[#003F87]"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {sectors.map(({ icon, title, desc }, i) => (
+            <div class={`p-10 flex flex-col justify-between group hover:-translate-y-1 transition-transform ${i === 0 ? 'bg-[#003F87] text-white' : i === 1 ? 'bg-[#1B1C1C] text-white' : 'bg-[#F6F3F2]'}`}>
+              <div>
+                <span class={`material-symbols-outlined mb-6 block ${i < 2 ? '' : 'text-[#0056B3]'}`} style="font-size: 2.5rem;">{icon}</span>
+                <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4">{title}</h3>
+                <p class={`leading-relaxed text-sm ${i < 2 ? 'text-white/70' : 'text-[#5E5E5E]'}`}>{desc}</p>
+              </div>
+              {i < 2 && (
+                <a href="/contacto" class="mt-8 inline-flex items-center gap-2 text-white/60 hover:text-white font-bold uppercase text-xs tracking-widest transition-colors group-hover:gap-4">
+                  Consultar <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTOCOLO -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-6">Cada trabajo tiene un protocolo</h2>
+          <p class="text-[#5E5E5E] leading-relaxed mb-10">
+            En industria y minería, una intervención mal ejecutada cuesta más que la parada original. Por eso aplicamos un protocolo documentado en cada servicio.
+          </p>
+          <div class="space-y-4">
+            {protocol.map(({ icon, title, desc }) => (
+              <div class="flex items-start gap-4 bg-white p-6" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+                <span class="material-symbols-outlined text-[#003F87] flex-shrink-0" style="font-size: 1.5rem;">{icon}</span>
+                <div>
+                  <p class="font-bold text-sm text-[#1B1C1C] mb-1">{title}</p>
+                  <p class="text-sm text-[#5E5E5E]">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Tabla técnica -->
+        <div class="bg-[#1B1C1C] text-white p-10">
+          <h3 class="font-[Space_Grotesk] text-xs font-bold uppercase tracking-widest mb-8 text-white/50">Estándar técnico</h3>
+          <div class="space-y-0">
+            {specs.map(({ param, value }, i) => (
+              <div class={`flex justify-between items-center py-5 ${i < specs.length - 1 ? 'border-b border-white/10' : ''}`}>
+                <span class="text-sm text-white/50 font-medium">{param}</span>
+                <span class="text-sm font-bold text-right max-w-[55%]">{value}</span>
+              </div>
+            ))}
+          </div>
+          <div class="mt-10 pt-8 border-t border-white/10">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span class="text-xs text-white/40 uppercase font-bold tracking-widest">Contingencia activa 24/7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COBERTURA REGIONAL -->
+    <section class="py-24 px-6 md:px-12">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-16">
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Cobertura en el norte chico</h2>
+          <div class="w-20 h-1 bg-[#003F87]"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[
+            { loc: 'Quilacán', role: 'Base técnica principal', desc: 'Taller con banco de pruebas y stock de repuestos.', primary: true },
+            { loc: 'La Serena', role: 'Cobertura operacional', desc: 'Atención técnica y soporte en terreno.', primary: false },
+            { loc: 'Coquimbo', role: 'Cobertura operacional', desc: 'Respuesta de emergencia y mantenimiento preventivo.', primary: false },
+            { loc: 'Faenas mineras norte chico', role: 'Servicio en terreno', desc: 'Desplazamiento a faenas mineras de la región.', primary: false },
+          ].map(({ loc, role, desc, primary }) => (
+            <div class={`p-8 ${primary ? 'bg-[#003F87] text-white' : 'bg-[#F6F3F2]'}`}>
+              <span class={`material-symbols-outlined mb-4 block ${primary ? '' : 'text-[#0056B3]'}`} style="font-size: 1.5rem;">location_on</span>
+              <h3 class={`font-[Space_Grotesk] text-xl font-bold mb-1 ${primary ? '' : 'text-[#1B1C1C]'}`}>{loc}</h3>
+              <p class={`text-xs font-bold uppercase tracking-widest mb-3 ${primary ? 'text-white/60' : 'text-[#003F87]'}`}>{role}</p>
+              <p class={`text-sm leading-relaxed ${primary ? 'text-white/70' : 'text-[#5E5E5E]'}`}>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2] text-center">
+      <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Listo para asegurar su proceso productivo?</h2>
+      <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Nuestros técnicos están disponibles para un diagnóstico de eficiencia en sus instalaciones sin costo inicial.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+          Solicitar diagnóstico
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+        </a>
+        <a href="https://wa.me/56512244588" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">chat</span>
+          Hablar con un técnico
+        </a>
+      </div>
+    </section>
+
   </main>
+
   <Footer />
 </BaseLayout>

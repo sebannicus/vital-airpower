@@ -2,11 +2,202 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+
+const whyUs = [
+  {
+    num: '01',
+    title: 'Experiencia comprobada',
+    desc: '25+ años de formación técnica directa en las marcas líderes del sector garantizan intervenciones eficientes y correctas.',
+  },
+  {
+    num: '02',
+    title: 'Repuestos originales',
+    desc: 'Utilizamos exclusivamente repuestos originales para mantener la integridad y rendimiento de sus equipos.',
+  },
+  {
+    num: '03',
+    title: 'Trazabilidad total',
+    desc: 'Cada servicio genera un reporte técnico con diagnóstico y métricas de rendimiento pre y post intervención.',
+  },
+];
 ---
-<BaseLayout title="Vital Airpower">
+
+<BaseLayout
+  title="Servicios — Vital Airpower | Mantenimiento, reparación y contingencia 24/7"
+  description="8 servicios técnicos especializados: mantenimiento industrial, reparación de airend, contingencia 24/7, rental, venta, tratamiento de aire, asesoría y grupos electrógenos."
+>
   <Header />
-  <main class="pt-[72px] min-h-screen flex items-center justify-center">
-    <p class="text-[#5E5E5E] font-[Space_Grotesk] font-bold uppercase tracking-widest">En construcción</p>
+
+  <main class="pt-[72px]">
+
+    <!-- HERO -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto">
+        <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
+          Ingeniería en movimiento
+        </span>
+        <h1 class="font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
+          Mantenimiento técnico especializado. Continuidad total.
+        </h1>
+        <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
+          Maximizamos la vida útil de sus equipos con servicios diseñados para eliminar paradas no programadas. Vital Airpower: el soporte técnico que su operación necesita.
+        </p>
+      </div>
+    </section>
+
+    <!-- ECOSISTEMA DE SERVICIOS -->
+    <section class="py-24 px-6 md:px-12">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-16">
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Ecosistema de Servicios</h2>
+          <div class="w-20 h-1 bg-[#003F87]"></div>
+        </div>
+
+        <!-- Fila 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <!-- Mantenimiento grande -->
+          <div class="md:col-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <div>
+              <span class="material-symbols-outlined text-[#0056B3] mb-6 block" style="font-size: 2.5rem;">settings_suggest</span>
+              <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 uppercase">Mantenimiento Industrial</h3>
+              <p class="text-[#5E5E5E] mb-6 leading-relaxed">
+                Programas preventivos y predictivos diseñados para eliminar tiempos de inactividad. Incluye análisis termográfico, monitoreo de vibraciones, cambio de lubricantes sintéticos, calibración de presostatos y revisión de elementos filtrantes.
+              </p>
+              <ul class="text-sm font-medium space-y-2 text-[#1B1C1C]">
+                {['Inspección de elementos de filtro', 'Cambio de lubricantes sintéticos', 'Calibración de presostatos'].map(b => (
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-[#003F87] inline-block flex-shrink-0"></span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all mt-8">
+              Agendar servicio <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Reparación -->
+          <div class="bg-[#EAE7E7] p-8 flex flex-col justify-between group hover:bg-white transition-colors">
+            <div>
+              <span class="material-symbols-outlined text-[#0056B3] mb-4 block" style="font-size: 2rem;">build</span>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Reparación Técnica Especializada</h3>
+              <p class="text-sm text-[#5E5E5E] leading-relaxed">
+                Reconstrucción de cabezales de tornillo (airend), cambio de sellos mecánicos y restauración de componentes críticos. Reporte técnico post-intervención.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contingencia 24/7 -->
+          <div class="bg-[#003F87] text-white p-8 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 opacity-10">
+              <span class="material-symbols-outlined" style="font-size: 8rem;">emergency_home</span>
+            </div>
+            <div class="relative z-10">
+              <span class="material-symbols-outlined mb-4 block" style="font-size: 2rem;">emergency_home</span>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Contingencia 24/7</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Respuesta de emergencia para paradas críticas. Disponibles los 365 días del año.</p>
+            </div>
+            <a href="/contacto" class="relative z-10 mt-6 py-3 bg-white text-[#003F87] font-bold uppercase text-xs tracking-widest text-center hover:bg-[#D7E2FF] transition-colors block">
+              Línea de emergencia
+            </a>
+          </div>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <!-- Rental -->
+          <div class="bg-white p-8 border border-[#C2C6D4]/30 flex flex-col justify-between" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <span class="material-symbols-outlined text-[#0056B3] mb-4" style="font-size: 2rem;">schedule</span>
+            <div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Rental Industrial</h3>
+              <p class="text-sm text-[#5E5E5E]">Equipos portátiles para peaks de demanda o paradas de planta programadas.</p>
+            </div>
+          </div>
+
+          <!-- Venta grande -->
+          <div class="md:col-span-2 bg-[#F6F3F2] p-8 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+            <div>
+              <span class="material-symbols-outlined text-[#0056B3] mb-4 block" style="font-size: 2rem;">sell</span>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Venta de Equipos</h3>
+              <p class="text-sm text-[#5E5E5E] leading-relaxed">
+                Equipos industriales con asesoría técnica incluida. Le ayudamos a seleccionar el compresor correcto para su aplicación, con instalación y puesta en marcha.
+              </p>
+            </div>
+            <a href="/equipos" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all mt-6">
+              Ver catálogo <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Tratamiento -->
+          <div class="bg-white p-8 border border-[#C2C6D4]/30 flex flex-col justify-between" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <span class="material-symbols-outlined text-[#0056B3] mb-4" style="font-size: 2rem;">air</span>
+            <div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Tratamiento de Aire</h3>
+              <p class="text-sm text-[#5E5E5E]">Secadores, filtros y trampas para aire limpio y seco en procesos sensibles.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Asesoría -->
+          <div class="bg-[#EAE7E7] p-8 flex items-center gap-6 group hover:bg-white transition-colors">
+            <span class="material-symbols-outlined text-[#0056B3] flex-shrink-0" style="font-size: 2.5rem;">graphic_eq</span>
+            <div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Asesoría Técnica Industrial</h3>
+              <p class="text-sm text-[#5E5E5E] leading-relaxed">Auditorías energéticas por ultrasonido y diseño de redes de tuberías. Identifique dónde pierde energía en su sistema.</p>
+            </div>
+          </div>
+
+          <!-- Electrógenos -->
+          <div class="bg-[#1B1C1C] text-white p-8 flex items-center gap-6">
+            <span class="material-symbols-outlined flex-shrink-0" style="font-size: 2.5rem;">bolt</span>
+            <div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Grupos Electrógenos</h3>
+              <p class="text-sm text-white/60 leading-relaxed">Mantenimiento, reparación y arriendo de grupos electrógenos para respaldo energético en procesos críticos.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- POR QUÉ CONFIAR -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-16">
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Por qué confiar en Vital Airpower</h2>
+          <div class="w-20 h-1 bg-[#003F87]"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {whyUs.map(({ num, title, desc }) => (
+            <div class="bg-white p-8" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+              <p class="font-[Space_Grotesk] text-5xl font-black text-[#003F87]/20 mb-4">{num}</p>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">{title}</h3>
+              <p class="text-sm text-[#5E5E5E] leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 md:px-12 text-center">
+      <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Listo para potenciar su planta?</h2>
+      <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Agende un diagnóstico técnico sin costo y descubra el estado real de su sistema de aire comprimido.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+          Solicitar diagnóstico
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+        </a>
+        <a href="/contacto" class="border border-[#C2C6D4] text-[#1B1C1C] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:border-[#003F87] hover:text-[#003F87] transition-colors">
+          Consultar disponibilidad
+        </a>
+      </div>
+    </section>
+
   </main>
+
   <Footer />
 </BaseLayout>

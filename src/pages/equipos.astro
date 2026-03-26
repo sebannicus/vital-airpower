@@ -2,11 +2,198 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+
+const categories = [
+  {
+    icon: 'compress',
+    title: 'Compresores Industriales',
+    desc: 'Compresores de tornillo rotativos para aplicaciones industriales y mineras. Asesoría técnica para seleccionar la capacidad correcta según su demanda.',
+    bullets: ['De tornillo rotativo', 'Centrífugos', 'De pistón'],
+    large: true,
+  },
+  {
+    icon: 'air',
+    title: 'Tratamiento de Aire',
+    desc: 'Secadores refrigerativos y de adsorción, filtros coalescentes y trampas de condensado. Aire limpio y seco para procesos sensibles.',
+    bullets: [],
+    large: false,
+  },
+  {
+    icon: 'bolt',
+    title: 'Grupos Electrógenos',
+    desc: 'Grupos electrógenos industriales para respaldo energético en operaciones críticas. Disponibles para mantenimiento, reparación y arriendo.',
+    bullets: [],
+    large: true,
+  },
+];
 ---
-<BaseLayout title="Vital Airpower">
+
+<BaseLayout
+  title="Equipos — Vital Airpower | Compresores, tratamiento de aire y grupos electrógenos"
+  description="Venta y arriendo de compresores industriales, sistemas de tratamiento de aire y grupos electrógenos. Asesoría técnica incluida en La Serena y Coquimbo."
+>
   <Header />
-  <main class="pt-[72px] min-h-screen flex items-center justify-center">
-    <p class="text-[#5E5E5E] font-[Space_Grotesk] font-bold uppercase tracking-widest">En construcción</p>
+
+  <main class="pt-[72px]">
+
+    <!-- HERO -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto">
+        <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
+          Catálogo técnico
+        </span>
+        <h1 class="font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
+          Equipos para cada proceso industrial
+        </h1>
+        <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
+          Compresores, sistemas de tratamiento de aire y grupos electrógenos. Venta con asesoría técnica incluida e instalación.
+        </p>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="py-24 px-6 md:px-12">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-16">
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Líneas de producto</h2>
+          <div class="w-20 h-1 bg-[#003F87]"></div>
+        </div>
+
+        <!-- Compresores grande -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <div>
+              <div class="aspect-video bg-[#EAE7E7] mb-8 flex items-center justify-center overflow-hidden relative">
+                <div class="w-full h-full bg-gradient-to-br from-[#003F87]/10 to-[#1B1C1C]/20 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[#003F87]/20" style="font-size: 6rem;">compress</span>
+                </div>
+                <span class="absolute top-4 left-4 bg-[#003F87] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">Línea principal</span>
+              </div>
+              <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 uppercase">Compresores Industriales</h3>
+              <p class="text-[#5E5E5E] mb-6 leading-relaxed">
+                Compresores de tornillo rotativos para aplicaciones industriales y mineras. Asesoría técnica para seleccionar la capacidad correcta según su demanda real.
+              </p>
+              <ul class="text-sm font-medium space-y-2 text-[#1B1C1C]">
+                {['De tornillo rotativo', 'Centrífugos', 'De pistón'].map(b => (
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-[#003F87] inline-block flex-shrink-0"></span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all mt-8">
+              Consultar disponibilidad <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Tratamiento de aire -->
+          <div class="md:col-span-2 bg-[#EAE7E7] p-8 flex flex-col justify-between group hover:bg-white transition-colors">
+            <div class="aspect-[16/6] bg-[#D4D0CF] mb-6 flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#5E5E5E]/40" style="font-size: 4rem;">air</span>
+            </div>
+            <div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Tratamiento de Aire</h3>
+              <p class="text-sm text-[#5E5E5E] leading-relaxed">
+                Secadores refrigerativos y de adsorción, filtros coalescentes y trampas de condensado. Aire limpio y seco para procesos sensibles.
+              </p>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
+              Cotizar <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Grupos electrógenos -->
+          <div class="md:col-span-2 bg-[#1B1C1C] text-white p-8 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-8 -bottom-8 opacity-5">
+              <span class="material-symbols-outlined" style="font-size: 12rem;">bolt</span>
+            </div>
+            <div class="relative z-10">
+              <div class="aspect-[16/6] bg-white/5 mb-6 flex items-center justify-center border border-white/10">
+                <span class="material-symbols-outlined text-white/20" style="font-size: 4rem;">bolt</span>
+              </div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Grupos Electrógenos</h3>
+              <p class="text-sm text-white/60 leading-relaxed">
+                Grupos electrógenos industriales para respaldo energético en operaciones críticas. Disponibles para mantenimiento, reparación y arriendo.
+              </p>
+            </div>
+            <a href="/contacto" class="relative z-10 mt-6 py-3 bg-white/10 text-white font-bold uppercase text-xs tracking-widest text-center hover:bg-white/20 transition-colors block border border-white/20">
+              Consultar disponibilidad
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS TÉCNICAS -->
+    <section class="py-16 bg-[#F6F3F2] border-y border-[#C2C6D4]/30">
+      <div class="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <span class="font-[Space_Grotesk] text-[#5E5E5E] font-bold text-xs uppercase tracking-widest whitespace-nowrap">Servicio técnico certificado:</span>
+        <div class="flex flex-wrap items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
+          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">ATLAS COPCO</span>
+          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">INGERSOLL RAND</span>
+          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">KAESER</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- POST-VENTA -->
+    <section class="py-24 px-6 md:px-12">
+      <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-6">Servicios post-venta incluidos</h2>
+          <p class="text-[#5E5E5E] mb-8 leading-relaxed">
+            Todo equipo vendido incluye instalación, puesta en marcha y plan de mantenimiento preventivo. No vendemos equipos — entregamos soluciones funcionando.
+          </p>
+          <div class="space-y-4">
+            {[
+              { icon: 'construction', title: 'Instalación en terreno', desc: 'Montaje e instalación por técnicos especializados.' },
+              { icon: 'start', title: 'Puesta en marcha', desc: 'Verificación de parámetros y prueba bajo carga real.' },
+              { icon: 'event_repeat', title: 'Plan de mantenimiento', desc: 'Programa preventivo para extender la vida útil del equipo.' },
+              { icon: 'support_agent', title: 'Soporte técnico 24/7', desc: 'Respuesta ante fallas durante las primeras 1.000 horas.' },
+            ].map(({ icon, title, desc }) => (
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-[#003F87] flex-shrink-0" style="font-size: 1.3rem;">{icon}</span>
+                <div>
+                  <p class="font-bold text-sm text-[#1B1C1C] mb-0.5">{title}</p>
+                  <p class="text-sm text-[#5E5E5E]">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="bg-[#003F87] text-white p-10">
+          <span class="material-symbols-outlined mb-6 block" style="font-size: 3rem;">headset_mic</span>
+          <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4">¿No encuentra lo que busca?</h3>
+          <p class="text-white/70 leading-relaxed mb-8">
+            Cuéntenos su proceso y presupuesto. Le recomendamos la solución técnica más adecuada para su operación, sin compromisos.
+          </p>
+          <a href="/contacto" class="inline-flex items-center gap-3 bg-white text-[#003F87] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#D7E2FF] transition-colors">
+            Consultar con un técnico
+            <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2] text-center">
+      <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Necesita asesoría para elegir el equipo correcto?</h2>
+      <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Cuéntenos su proceso y le recomendamos la solución técnica más adecuada.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+          Consultar con un técnico
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+        </a>
+        <a href="https://wa.me/56512244588" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">chat</span>
+          WhatsApp
+        </a>
+      </div>
+    </section>
+
   </main>
+
   <Footer />
 </BaseLayout>
