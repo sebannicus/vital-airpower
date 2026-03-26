@@ -18,10 +18,12 @@ import Footer from '../components/layout/Footer.astro';
       <div class="absolute inset-0 z-0" id="hero-carousel">
         <div class="absolute inset-0 bg-gradient-to-r from-[#1B1C1C]/85 via-[#1B1C1C]/60 to-[#1B1C1C]/20 z-10"></div>
         {[
-          { src: '/images/planta-de-aire.webp',          alt: 'Planta de aire comprimido industrial' },
-          { src: '/images/compresor-planta.webp',         alt: 'Compresor en planta industrial' },
-          { src: '/images/ingersoll-generador-planta.webp', alt: 'Generador Ingersoll Rand en operación' },
-          { src: '/images/limpieza-mantencion-2.webp',    alt: 'Técnico en mantenimiento de compresor' },
+          { src: '/images/CES_Banner_47-52450.webp',      alt: 'Vital Airpower — Continuidad operacional' },
+          { src: '/images/hero-lureye.webp',              alt: 'Equipos industriales Vital Airpower' },
+          { src: '/images/generador-kaeser.webp',         alt: 'Generador Kaeser — Vital Airpower' },
+          { src: '/images/generador-ingersoll-rand.webp', alt: 'Generador Ingersoll Rand en operación' },
+          { src: '/images/hero-ingersoll-rand.webp',      alt: 'Ingersoll Rand — servicio técnico especializado' },
+          { src: '/images/logo2.webp',                    alt: 'Vital Airpower Compresores Industriales' },
         ].map((img, i) => (
           <img
             src={img.src}
@@ -34,7 +36,7 @@ import Footer from '../components/layout/Footer.astro';
         ))}
         <!-- Puntos de navegación -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-          {[0,1,2,3].map(i => (
+          {[0,1,2,3,4,5].map(i => (
             <button class={`hero-dot w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-white w-6' : 'bg-white/40'}`} data-dot={i} aria-label={`Slide ${i+1}`}></button>
           ))}
         </div>
@@ -212,7 +214,7 @@ import Footer from '../components/layout/Footer.astro';
         </p>
         <div class="inline-flex items-center gap-4 bg-white text-[#003F87] px-10 py-5 font-black text-xl tracking-tight">
           <span class="material-symbols-outlined">call</span>
-          +56 51 224 4588
+          +56 9 7640 0195
         </div>
       </div>
     </section>
@@ -221,7 +223,7 @@ import Footer from '../components/layout/Footer.astro';
     <section class="py-24 px-6 md:px-12 text-center" data-animate>
       <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Listo para asegurar su proceso productivo?</h2>
       <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Hable directamente con un técnico especialista para un diagnóstico preliminar sin costo.</p>
-      <a href="https://wa.me/56512244588" target="_blank" rel="noopener noreferrer"
+      <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer"
         class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold hover:scale-105 transition-transform">
         <span class="material-symbols-outlined" style="font-size: 1.2rem;">chat</span>
         Contactar vía WhatsApp
