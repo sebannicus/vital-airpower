@@ -50,10 +50,8 @@ import Footer from '../components/layout/Footer.astro';
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6" data-animate-stagger>
           <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
             <div>
-              <div class="aspect-video bg-[#EAE7E7] mb-8 flex items-center justify-center overflow-hidden relative">
-                <div class="w-full h-full bg-gradient-to-br from-[#003F87]/10 to-[#1B1C1C]/20 flex items-center justify-center">
-                  <span class="material-symbols-outlined text-[#003F87]/20" style="font-size: 6rem;">compress</span>
-                </div>
+              <div class="aspect-video mb-8 overflow-hidden relative">
+                <img src="/images/kaeser-csd105.jpeg" alt="Compresor Kaeser CSD105 industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="450" />
                 <span class="absolute top-4 left-4 bg-[#003F87] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">Línea principal</span>
               </div>
               <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 uppercase">Compresores Industriales</h3>
@@ -76,8 +74,8 @@ import Footer from '../components/layout/Footer.astro';
 
           <!-- Tratamiento de aire -->
           <div class="md:col-span-2 bg-[#EAE7E7] p-8 flex flex-col justify-between group hover:bg-white hover:-translate-y-1 transition-all duration-200">
-            <div class="aspect-[16/6] bg-[#D4D0CF] mb-6 flex items-center justify-center">
-              <span class="material-symbols-outlined text-[#5E5E5E]/40" style="font-size: 4rem;">air</span>
+            <div class="aspect-[16/6] mb-6 overflow-hidden">
+              <img src="/images/filtro-compresor.jpeg" alt="Filtro de compresor industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="225" />
             </div>
             <div>
               <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Tratamiento de Aire</h3>
@@ -96,8 +94,8 @@ import Footer from '../components/layout/Footer.astro';
               <span class="material-symbols-outlined" style="font-size: 12rem;">bolt</span>
             </div>
             <div class="relative z-10">
-              <div class="aspect-[16/6] bg-white/5 mb-6 flex items-center justify-center border border-white/10">
-                <span class="material-symbols-outlined text-white/20" style="font-size: 4rem;">bolt</span>
+              <div class="aspect-[16/6] mb-6 overflow-hidden">
+                <img src="/images/generador-kaeser.jpeg" alt="Generador Kaeser industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="225" />
               </div>
               <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Grupos Electrógenos</h3>
               <p class="text-sm text-white/60 leading-relaxed">
@@ -108,6 +106,33 @@ import Footer from '../components/layout/Footer.astro';
               Consultar disponibilidad
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA MODELOS -->
+    <section class="py-16 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-10" data-animate>
+          <h2 class="font-[Space_Grotesk] text-2xl font-bold tracking-tighter mb-2">Equipos en stock</h2>
+          <div class="w-16 h-1 bg-[#003F87]"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-animate-stagger>
+          {[
+            { src: '/images/kaeser-sk25t.jpeg', label: 'Kaeser SK25T' },
+            { src: '/images/kaeser-sm12.jpeg', label: 'Kaeser SM12' },
+            { src: '/images/kaeser-ask32t.jpeg', label: 'Kaeser ASK32T' },
+            { src: '/images/ingersoll-rand-generador.jpeg', label: 'Ingersoll Rand' },
+          ].map(({ src, label }) => (
+            <div class="group overflow-hidden relative">
+              <div class="aspect-square overflow-hidden">
+                <img src={src} alt={label} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="400" height="400" />
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-[#1B1C1C]/70 px-4 py-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-white text-xs font-bold uppercase tracking-widest">{label}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
