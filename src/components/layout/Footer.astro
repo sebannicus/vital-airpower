@@ -1,0 +1,89 @@
+---
+const services = [
+  'Mantenimiento Industrial',
+  'Reparación Técnica',
+  'Contingencia 24/7',
+  'Rental Industrial',
+  'Venta de Equipos',
+  'Tratamiento de Aire',
+  'Asesoría Técnica',
+  'Grupos Electrógenos',
+];
+
+const company = [
+  { href: '/empresa', label: 'Quiénes somos' },
+  { href: '/empresa#taller', label: 'Taller Quilacán' },
+];
+---
+
+<footer class="bg-[#1B1C1C] w-full border-t border-white/10">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-12 py-20 max-w-[1920px] mx-auto">
+
+    <!-- Col 1: Marca -->
+    <div class="space-y-6">
+      <div class="text-xl font-bold text-white font-[Space_Grotesk]">Vital Airpower</div>
+      <p class="text-sm leading-relaxed text-white/60 max-w-xs">
+        Soluciones técnicas para continuidad operacional. Mantenimiento, reparación y soporte 24/7 para compresores industriales en la Región de Coquimbo.
+      </p>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-[0.65rem] text-white/40 uppercase font-bold tracking-widest">Disponible 24/7</span>
+      </div>
+    </div>
+
+    <!-- Col 2: Servicios -->
+    <div class="space-y-4">
+      <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Servicios</h5>
+      <nav class="flex flex-col gap-3">
+        {services.map(s => (
+          <a href="/servicios" class="text-sm text-white/50 hover:text-[#0056B3] transition-colors">{s}</a>
+        ))}
+      </nav>
+    </div>
+
+    <!-- Col 3: Empresa -->
+    <div class="space-y-4">
+      <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Empresa</h5>
+      <nav class="flex flex-col gap-3">
+        {company.map(({ href, label }) => (
+          <a href={href} class="text-sm text-white/50 hover:text-[#0056B3] transition-colors">{label}</a>
+        ))}
+      </nav>
+    </div>
+
+    <!-- Col 4: Contacto -->
+    <div class="space-y-6">
+      <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Contacto</h5>
+      <div class="space-y-4 text-sm text-white/50">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#0056B3]" style="font-size: 1.1rem;">location_on</span>
+          <span>Quilacán, Región de Coquimbo, Chile</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#0056B3]" style="font-size: 1.1rem;">call</span>
+          <span>+56 51 224 4588</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#0056B3]" style="font-size: 1.1rem;">mail</span>
+          <span>ops@vitalairpower.cl</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="px-6 md:px-12 py-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 max-w-[1920px] mx-auto">
+    <p class="text-xs text-white/30 uppercase tracking-widest">
+      © 2026 Vital Airpower. Quilacán, Región de Coquimbo, Chile.
+    </p>
+    <a
+      href="https://gautamadigital.cl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-xs text-white/20 hover:text-white/40 transition-colors"
+    >
+      Diseño: Gautama Digital
+    </a>
+  </div>
+</footer>

@@ -1,0 +1,52 @@
+---
+const navLinks = [
+  { href: '/',                    label: 'Inicio' },
+  { href: '/empresa',             label: 'Empresa' },
+  { href: '/servicios',           label: 'Servicios' },
+  { href: '/soluciones',          label: 'Soluciones Industriales' },
+  { href: '/equipos',             label: 'Equipos' },
+  { href: '/contacto',            label: 'Contacto' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav
+  class="fixed top-0 w-full z-50 bg-[#FCF9F8] border-b border-[#C2C6D4]/20"
+  aria-label="Navegación principal"
+>
+  <div class="flex justify-between items-center px-6 md:px-12 py-5 max-w-[1920px] mx-auto">
+
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-black tracking-tighter text-[#1B1C1C] font-[Space_Grotesk]">
+      Vital Airpower
+    </a>
+
+    <!-- Nav desktop -->
+    <div class="hidden md:flex items-center gap-8">
+      {navLinks.map(({ href, label }) => (
+        <a
+          href={href}
+          class={[
+            "font-[Space_Grotesk] uppercase tracking-widest text-[0.75rem] font-bold transition-colors duration-300",
+            currentPath === href
+              ? "text-[#0056B3] border-b-2 border-[#0056B3] pb-1"
+              : "text-[#5E5E5E] hover:text-[#0056B3]",
+          ].join(' ')}
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+
+    <!-- CTA nav -->
+    <a
+      href="/contacto"
+      class="flex items-center gap-2 bg-[#003F87] text-white px-6 py-2 text-xs font-bold tracking-widest uppercase transition-transform scale-95 hover:scale-100 active:scale-90"
+    >
+      <span class="material-symbols-outlined text-sm" style="font-size: 1rem;">support_agent</span>
+      Soporte 24/7
+    </a>
+
+  </div>
+</nav>

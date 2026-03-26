@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="Vital Airpower — Mantenimiento técnico especializado para continuidad operacional"
+  description="Mantenimiento, reparación y contingencia 24/7 para compresores industriales en la Región de Coquimbo. 25+ años de experiencia en Atlas Copco, Ingersoll Rand y Kaeser."
+>
+  <Header />
+
+  <main class="pt-[72px]">
+
+    <!-- HERO -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1B1C1C]/85 via-[#1B1C1C]/50 to-transparent z-10"></div>
+        <div class="w-full h-full bg-gradient-to-br from-[#003F87]/40 to-[#1B1C1C]"></div>
+      </div>
+      <div class="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-8 lg:col-span-7">
+          <span class="inline-block px-3 py-1 bg-[#D7E2FF] text-[#003F87] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+            Continuidad Operacional
+          </span>
+          <h1 class="font-[Space_Grotesk] text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tighter mb-8">
+            Soluciones técnicas para que su planta no se detenga
+          </h1>
+          <p class="text-white/80 text-xl max-w-xl mb-10 font-light leading-relaxed">
+            Mantenimiento, reparación y contingencia de compresores industriales en la Región de Coquimbo. 25+ años de experiencia en las marcas líderes.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+              Solicitar asistencia técnica
+              <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+            </a>
+            <a href="/equipos" class="border border-white/30 text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white/10 transition-colors">
+              Ver equipos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="py-10 bg-[#F6F3F2] border-y border-[#C2C6D4]/30">
+      <div class="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <span class="font-[Space_Grotesk] text-[#5E5E5E] font-bold text-xs uppercase tracking-widest whitespace-nowrap">Experiencia técnica en:</span>
+        <div class="flex flex-wrap items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
+          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">ATLAS COPCO</span>
+          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">INGERSOLL RAND</span>
+          <span class="text-xl font-bold font-[Space_Grotesk] tracking-tight">KAESER</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS BENTO -->
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1920px] mx-auto">
+        <div class="mb-16">
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Ecosistema de Servicios</h2>
+          <div class="w-20 h-1 bg-[#003F87]"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <!-- Mantenimiento grande -->
+          <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <div>
+              <span class="material-symbols-outlined text-[#0056B3] mb-6 block" style="font-size: 2.5rem;">settings_suggest</span>
+              <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 uppercase">Mantenimiento Industrial</h3>
+              <p class="text-[#5E5E5E] mb-6 leading-relaxed">Programas preventivos y correctivos diseñados para eliminar tiempos de inactividad. Análisis de estado, cambio de lubricantes sintéticos, calibración de presostatos y revisión de elementos filtrantes.</p>
+              <ul class="text-sm font-medium space-y-2 text-[#1B1C1C]">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#003F87] inline-block"></span> Inspección de elementos de filtro</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#003F87] inline-block"></span> Cambio de lubricantes sintéticos</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#003F87] inline-block"></span> Calibración de presostatos</li>
+              </ul>
+            </div>
+            <a href="/servicios" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all mt-8">
+              Ver protocolo <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <!-- Reparación -->
+          <div class="md:col-span-2 bg-[#EAE7E7] p-8 flex items-center justify-between group hover:bg-white transition-colors">
+            <div class="flex gap-6 items-center">
+              <span class="material-symbols-outlined text-[#0056B3]" style="font-size: 2rem;">build</span>
+              <div>
+                <h3 class="font-[Space_Grotesk] text-xl font-bold">Reparación Técnica</h3>
+                <p class="text-sm text-[#5E5E5E]">Overhaul completo de airend y componentes críticos.</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-[#5E5E5E] opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+          </div>
+          <!-- Contingencia -->
+          <div class="bg-[#003F87] text-white p-8 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 opacity-10">
+              <span class="material-symbols-outlined" style="font-size: 8rem;">emergency_home</span>
+            </div>
+            <div class="relative z-10">
+              <span class="material-symbols-outlined mb-4 block" style="font-size: 2rem;">emergency_home</span>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Contingencia 24/7</h3>
+              <p class="text-white/70 text-sm">Respuesta inmediata ante paradas críticas. Disponibles los 365 días.</p>
+            </div>
+            <a href="/contacto" class="relative z-10 mt-6 py-3 bg-white text-[#003F87] font-bold uppercase text-xs tracking-widest text-center hover:bg-[#D7E2FF] transition-colors block">
+              Línea de emergencia
+            </a>
+          </div>
+          <!-- Rental -->
+          <div class="bg-white p-8 border border-[#C2C6D4]/30 flex flex-col justify-between" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
+            <span class="material-symbols-outlined text-[#0056B3]" style="font-size: 2rem;">schedule</span>
+            <div>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-2">Rental Industrial</h3>
+              <p class="text-xs text-[#5E5E5E]">Equipos portátiles para obras o paradas de planta.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="/servicios" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all">
+            Ver todos los servicios <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIA CRÍTICA -->
+    <section class="py-24 px-6 md:px-12">
+      <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 items-center gap-16">
+        <div class="relative">
+          <div class="aspect-[4/3] bg-[#EAE7E7] overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-[#003F87]/20 to-[#1B1C1C]/20 flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#003F87]/30" style="font-size: 8rem;">factory</span>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-white p-6 max-w-xs shadow-lg border border-[#C2C6D4]/30">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[#003F87]">verified</span>
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-[#5E5E5E]">Experiencia real</p>
+                <p class="font-bold text-[#1B1C1C]">25+ años en terreno</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">Minería e Industria</span>
+          <h2 class="font-[Space_Grotesk] text-4xl font-bold mb-6">Conocemos las condiciones del norte chico</h2>
+          <p class="text-[#5E5E5E] mb-8 leading-relaxed">Operamos en la Región de Coquimbo, con cobertura hacia La Serena, Coquimbo y faenas mineras. Entendemos que en una operación industrial, el aire comprimido no es solo un recurso — es el pulso de la planta. Por eso nuestra respuesta es técnica, rápida y en terreno.</p>
+          <div class="space-y-4">
+            {[
+              'Soporte técnico en terreno, no solo diagnóstico remoto',
+              'Respaldo en Atlas Copco, Ingersoll Rand y Kaeser',
+              'Taller propio en Quilacán con banco de pruebas',
+            ].map(text => (
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-[#003F87]" style="font-size: 1.1rem;">check_circle</span>
+                <span class="text-sm">{text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER 24/7 -->
+    <section class="bg-[#003F87] text-white py-24 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5 flex items-center justify-center pointer-events-none select-none">
+        <span class="font-[Space_Grotesk] text-[20rem] font-black uppercase tracking-tighter">CONTINGENCIA</span>
+      </div>
+      <div class="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 text-center">
+        <span class="material-symbols-outlined mb-6 block mx-auto" style="font-size: 3.5rem;">emergency_home</span>
+        <h2 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold mb-6 tracking-tighter">
+          Disponibilidad 24/7<br/>Respuesta Inmediata
+        </h2>
+        <p class="text-white/70 text-xl max-w-2xl mx-auto mb-12 font-light">
+          Protocolo de contingencia para paradas críticas. Equipo técnico listo para despliegue en terreno los 365 días del año.
+        </p>
+        <div class="inline-flex items-center gap-4 bg-white text-[#003F87] px-10 py-5 font-black text-xl tracking-tight">
+          <span class="material-symbols-outlined">call</span>
+          +56 51 224 4588
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA WHATSAPP -->
+    <section class="py-24 px-6 md:px-12 text-center">
+      <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Listo para asegurar su proceso productivo?</h2>
+      <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Hable directamente con un técnico especialista para un diagnóstico preliminar sin costo.</p>
+      <a href="https://wa.me/56512244588" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined" style="font-size: 1.2rem;">chat</span>
+        Contactar vía WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
