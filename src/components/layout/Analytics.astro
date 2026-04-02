@@ -1,0 +1,45 @@
+---
+/**
+ * Analytics.astro — GA4 + Google Tag Manager + Vercel Analytics
+ * Variables de entorno requeridas (ver .env.example):
+ *   PUBLIC_GA_ID     → G-XXXXXXXXXX
+ *   PUBLIC_GTM_ID    → GTM-XXXXXXX
+ */
+const GA_ID  = import.meta.env.PUBLIC_GA_ID;
+const GTM_ID = import.meta.env.PUBLIC_GTM_ID;
+---
+
+{GTM_ID && (
+  <>
+    <!-- Google Tag Manager — head snippet -->
+    <script is:inline define:vars={{ GTM_ID }}>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer', GTM_ID);
+    </script>
+  </>
+)}
+
+{GA_ID && (
+  <>
+    <!-- Google Analytics GA4 -->
+    <script is:inline define:vars={{ GA_ID }} async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+    <script is:inline define:vars={{ GA_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        page_path: window.location.pathname,
+        anonymize_ip: true
+      });
+    </script>
+  </>
+)}
+
+<!-- Vercel Analytics -->
+<script>
+  import { inject } from '@vercel/analytics';
+  inject();
+</script>

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/layout/Analytics.astro';
 
 interface Props {
   title: string;
@@ -137,6 +138,9 @@ const schemaBreadcrumb = {
     <script type="application/ld+json" set:html={JSON.stringify(schemaLocalBusiness)} />
     <script type="application/ld+json" set:html={JSON.stringify(schemaFAQ)} />
     <script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} />
+
+    <!-- Analytics: GA4 + GTM + Vercel -->
+    <Analytics />
   </head>
   <body class="bg-[#FCF9F8] font-[Inter] text-[#1B1C1C] antialiased">
     <slot />
@@ -170,6 +174,27 @@ const schemaBreadcrumb = {
         { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
       );
       document.querySelectorAll('[data-animate], [data-animate-stagger]').forEach((el) => observer.observe(el));
+
+      // Counter animation
+      const counterObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          const target = parseInt(el.dataset.count || '0');
+          const duration = 1400;
+          const start = performance.now();
+          function tick(now: number) {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = String(Math.floor(eased * target));
+            if (p < 1) requestAnimationFrame(tick);
+            else el.textContent = String(target);
+          }
+          requestAnimationFrame(tick);
+          counterObs.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
     </script>
   </body>
 </html>
