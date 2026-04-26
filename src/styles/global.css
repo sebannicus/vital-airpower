@@ -120,3 +120,107 @@ h1, h2, h3, h4, h5, h6 {
   100% { width: 100%; opacity: 1; }
 }
 
+/* ============================================
+   ANIMATED BACKGROUNDS & ORB EFFECTS
+   ============================================ */
+
+/* Floating gradient orbs */
+@keyframes orb-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  35%       { transform: translate(45px, -30px) scale(1.05); }
+  70%       { transform: translate(-25px, 20px) scale(0.97); }
+}
+@keyframes orb-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-40px, 30px) scale(1.03); }
+  80%       { transform: translate(25px, -20px) scale(0.98); }
+}
+.orb-a { animation: orb-drift-a 16s ease-in-out infinite; }
+.orb-b { animation: orb-drift-b 22s ease-in-out infinite; }
+.orb-c { animation: orb-drift-a 12s ease-in-out infinite reverse; }
+
+/* Animated grid overlays */
+@keyframes grid-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 60px; }
+}
+.bg-grid-hero {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-drift 18s linear infinite;
+}
+.bg-grid-section {
+  background-image:
+    linear-gradient(rgba(0,63,135,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,63,135,0.045) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-drift 18s linear infinite;
+}
+
+/* Animated gradient for dark sections */
+@keyframes bg-pan {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-animated-blue {
+  background: linear-gradient(-45deg, #001a3a, #003F87, #001f43, #0051af, #002855);
+  background-size: 400% 400%;
+  animation: bg-pan 18s ease infinite;
+}
+
+/* Scanning line for dark sections */
+@keyframes scanline {
+  0%   { top: -1%; }
+  100% { top: 101%; }
+}
+.has-scanline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(100,160,255,0.15) 20%,
+    rgba(140,200,255,0.5) 50%,
+    rgba(100,160,255,0.15) 80%,
+    transparent 100%
+  );
+  top: -1%;
+  animation: scanline 10s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Shimmer sweep on accent lines */
+.line-glow {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #003F87, #0056B3);
+}
+.line-glow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.75), transparent);
+  animation: shimmer-sweep 3.5s ease-in-out infinite 1.8s;
+}
+@keyframes shimmer-sweep {
+  from { left: -50%; }
+  to   { left: 160%; }
+}
+
+/* Float badge gentle up-down */
+@keyframes float-updown {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-7px); }
+}
+.float-badge { animation: float-updown 4s ease-in-out infinite; }
+

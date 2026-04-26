@@ -3,96 +3,94 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 
-const sectors = [
+const solutions = [
   {
-    icon: 'landscape',
-    title: 'Minería',
-    desc: 'Soporte técnico para compresores en perforación y procesos extractivos. Conocemos las condiciones de operación en faenas del norte chico.',
+    title: 'Eficiencia energética',
+    text: 'El costo energético domina el ciclo de vida del compresor. Vital Airpower usa esa mirada para levantar oportunidades concretas de mejora.',
   },
   {
-    icon: 'factory',
-    title: 'Industria General',
-    desc: 'Mantenimiento y soporte para líneas de producción, manufactura y procesos automatizados que dependen del aire comprimido.',
+    title: 'Recuperación de calor',
+    text: 'Kaeser indica que puede recuperarse hasta un 96 por ciento de la energía en forma de calor. Esta mirada sirve para proyectos donde el balance energético importa.',
   },
   {
-    icon: 'loop',
-    title: 'Continuidad Operacional',
-    desc: 'Planes de mantenimiento preventivo y respuesta de contingencia para que el aire comprimido nunca sea el motivo de una parada.',
+    title: 'Tratamiento de aire',
+    text: 'Secadores refrigerativos, configuraciones de tratamiento y filtros de línea para proteger equipos, procesos y redes.',
   },
-];
-
-const protocol = [
-  { icon: 'manage_search', title: 'Diagnóstico previo', desc: 'Evaluación del estado real del equipo antes de intervenir.' },
-  { icon: 'assignment', title: 'Intervención documentada', desc: 'Registro de cada acción realizada durante el servicio.' },
-  { icon: 'verified', title: 'Verificación post-servicio', desc: 'El equipo se prueba bajo carga antes de ser entregado al cliente.' },
-];
-
-const specs = [
-  { param: 'Marcas soportadas', value: 'Atlas Copco, Ingersoll Rand, Kaeser' },
-  { param: 'Tipos de compresor', value: 'Tornillo, centrífugo, pistón' },
-  { param: 'Cobertura', value: 'La Serena, Coquimbo, norte chico' },
-  { param: 'Contingencia', value: '24/7 disponible' },
+  {
+    title: 'Control del sistema',
+    text: 'SIGMA CONTROL 2 y soluciones de red ayudan a coordinar producción, consumo, eventos y visibilidad operativa.',
+  },
+  {
+    title: 'Proyección de red',
+    text: 'Diseño y crecimiento de líneas de aire comprimido con una lógica de sistema y no sólo de equipo suelto.',
+  },
+  {
+    title: 'Aire comprimido a medida',
+    text: 'Las soluciones completas se traducen en propuestas adaptadas a demanda real, continuidad y proyección del cliente.',
+  },
 ];
 ---
 
 <BaseLayout
-  title="Soluciones Industriales — Vital Airpower | Minería e industria del norte chico"
-  description="Sistemas de aire comprimido y soporte técnico para minería e industria. Cobertura en La Serena, Coquimbo y faenas mineras de la Región de Coquimbo."
+  title="Soluciones | Vital Airpower para eficiencia, tratamiento y sistemas de aire comprimido"
+  description="Soluciones de Vital Airpower para eficiencia energética, tratamiento de aire, control del sistema, líneas de aire comprimido y acompañamiento técnico basado en Kaeser."
 >
   <Header />
 
-  <main class="pt-[72px]">
-
-    <!-- HERO -->
+  <main class="pt-[96px] bg-[#f4f1eb]">
     <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1920px] mx-auto grid md:grid-cols-12 gap-12 items-center">
-        <div class="md:col-span-8">
-          <span class="animate-hero font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
-            Ingeniería de potencia
-          </span>
-          <h1 class="animate-hero-delay-1 font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
-            Soluciones industriales para su operación
+      <div class="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_0.8fr] gap-12 items-center">
+        <div>
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Soluciones</p>
+          <h1 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold tracking-tight text-[#1B1C1C] leading-[1.05] mb-6">
+            Soluciones de sistema para que el aire comprimido funcione mejor, no solo para que el equipo opere.
           </h1>
-          <p class="animate-hero-delay-2 text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
-            Sistemas de aire comprimido y soporte técnico diseñados para la continuidad operativa en minería e industria del norte chico.
+          <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-3xl">
+            Vital Airpower aplica conceptos de eficiencia, control, tratamiento y soluciones completas a medida desde una oferta práctica para clientes industriales.
           </p>
         </div>
-        <div class="animate-hero-delay-3 md:col-span-4 hidden md:block">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/planta-de-aire.webp" alt="Planta de aire comprimido industrial" class="w-full h-full object-cover" width="600" height="450" />
-          </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/images/planta-de-aire.webp" alt="Soluciones de sistema de aire comprimido" class="w-full h-full object-cover" width="900" height="700" />
         </div>
       </div>
     </section>
 
-    <!-- OPERACIÓN CRÍTICA -->
-    <section class="py-24 px-6 md:px-12">
-      <div class="max-w-[1920px] mx-auto">
-        <div class="mb-16" data-animate>
-          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Para las operaciones que no pueden parar</h2>
-          <div class="w-20 h-1 bg-[#003F87]"></div>
+    <section class="py-24 px-6 md:px-12 bg-white">
+      <div class="max-w-[1440px] mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+        {solutions.map((item) => (
+          <article class="bg-[#F6F3F2] border border-[#C2C6D4]/20 p-7 min-h-[220px]">
+            <span class="material-symbols-outlined text-[#003F87] mb-5 block" style="font-size: 1.5rem;">tune</span>
+            <h3 class="font-[Space_Grotesk] text-xl font-bold text-[#1B1C1C] mb-3">{item.title}</h3>
+            <p class="text-[#5E5E5E] leading-relaxed">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-12 bg-[#17211c] text-white">
+      <div class="max-w-[1440px] mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
+        <div>
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-4">Criterio técnico</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight mb-6">
+            Más aire comprimido por menos energía, llevado a un lenguaje de proyecto.
+          </h2>
+          <p class="text-white/72 text-lg leading-relaxed">
+            La propuesta considera costo de ciclo de vida, optimización del caudal, recuperación de calor, control de carga parcial, secadores protegidos térmicamente y conectividad del sistema.
+          </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
+        <div class="grid sm:grid-cols-2 gap-4">
           {[
-            { ...sectors[0], img: '/images/compresor-planta.webp',      imgAlt: 'Compresor en faena minera' },
-            { ...sectors[1], img: '/images/motor-de-compresor.webp',    imgAlt: 'Motor de compresor industrial' },
-            { ...sectors[2], img: '/images/limpieza-mantencion.webp',   imgAlt: 'Mantenimiento preventivo industrial' },
-          ].map(({ icon, title, desc, img, imgAlt }, i) => (
-            <div class={`flex flex-col group hover:-translate-y-1 transition-transform duration-200 overflow-hidden ${i === 0 ? 'bg-[#003F87] text-white' : i === 1 ? 'bg-[#1B1C1C] text-white' : 'bg-[#F6F3F2]'}`}>
-              <div class="aspect-video overflow-hidden flex-shrink-0">
-                <img src={img} alt={imgAlt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" width="600" height="338" />
-              </div>
-              <div class="p-10 flex flex-col flex-1 justify-between">
-                <div>
-                  <span class={`material-symbols-outlined mb-6 block ${i < 2 ? '' : 'text-[#0056B3]'}`} style="font-size: 2.5rem;">{icon}</span>
-                  <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4">{title}</h3>
-                  <p class={`leading-relaxed text-sm ${i < 2 ? 'text-white/70' : 'text-[#5E5E5E]'}`}>{desc}</p>
-                </div>
-                {i < 2 && (
-                  <a href="/contacto" class="mt-8 inline-flex items-center gap-2 text-white/60 hover:text-white font-bold uppercase text-xs tracking-widest transition-colors group-hover:gap-4">
-                    Consultar <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-                  </a>
-                )}
+            'Hasta 30 por ciento de potencial de ahorro energético referencial.',
+            'Hasta 96 por ciento de recuperación de calor aprovechable.',
+            'Secadores refrigerativos en carcasas separadas para mejorar seguridad operativa.',
+            'Filtros Kaeser con referencia a pureza de aire bajo ISO 8573-1.',
+            'SIGMA NETWORK y control maestro para estaciones más integradas.',
+            'Gestión térmica ETM para reducir humedad y daños asociados.',
+          ].map((item) => (
+            <div class="border border-white/10 bg-white/5 p-6">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#e3d6be]" style="font-size: 1.15rem;">dataset_linked</span>
+                <p class="text-white/82 leading-relaxed">{item}</p>
               </div>
             </div>
           ))}
@@ -100,143 +98,21 @@ const specs = [
       </div>
     </section>
 
-    <!-- PROTOCOLO -->
     <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-16 items-start">
-        <div data-animate="fade-left">
-          <div class="aspect-[16/7] overflow-hidden mb-10 relative" id="proto-carousel">
-            {[
-              { src: '/images/servicios-portada.webp',    alt: 'Diagnóstico previo en terreno' },
-              { src: '/images/servicios-portada2.webp',   alt: 'Intervención técnica documentada' },
-              { src: '/images/servicios-portada3.webp',   alt: 'Verificación post-servicio' },
-              { src: '/images/limpieza-mantencion-2.webp', alt: 'Mantenimiento industrial en faena' },
-            ].map((img, i) => (
-              <img
-                src={img.src}
-                alt={img.alt}
-                class={`proto-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === 0 ? 'opacity-100' : 'opacity-0'}`}
-                data-slide={i}
-                width="800"
-                height="350"
-              />
-            ))}
-            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-              {[0,1,2,3].map(i => (
-                <button class={`proto-dot w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-white w-4' : 'bg-white/50'}`} data-dot={i} aria-label={`Foto ${i+1}`}></button>
-              ))}
-            </div>
-          </div>
-          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-6">Cada trabajo tiene un protocolo</h2>
-          <p class="text-[#5E5E5E] leading-relaxed mb-10">
-            En industria y minería, una intervención mal ejecutada cuesta más que la parada original. Por eso aplicamos un protocolo documentado en cada servicio.
-          </p>
-          <div class="space-y-4">
-            {protocol.map(({ icon, title, desc }) => (
-              <div class="flex items-start gap-4 bg-white p-6 hover:-translate-y-0.5 transition-transform duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
-                <span class="material-symbols-outlined text-[#003F87] flex-shrink-0" style="font-size: 1.5rem;">{icon}</span>
-                <div>
-                  <p class="font-bold text-sm text-[#1B1C1C] mb-1">{title}</p>
-                  <p class="text-sm text-[#5E5E5E]">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <!-- Tabla técnica -->
-        <div class="bg-[#1B1C1C] text-white p-10 relative overflow-hidden" data-animate="fade-right">
-          <div class="absolute -right-8 -bottom-8 opacity-5">
-            <img src="/images/logo.webp" alt="" aria-hidden="true" width="220" height="220" class="brightness-0 invert" />
-          </div>
-          <h3 class="font-[Space_Grotesk] text-xs font-bold uppercase tracking-widest mb-8 text-white/50">Estándar técnico</h3>
-          <div class="space-y-0">
-            {specs.map(({ param, value }, i) => (
-              <div class={`flex justify-between items-center py-5 ${i < specs.length - 1 ? 'border-b border-white/10' : ''}`}>
-                <span class="text-sm text-white/50 font-medium">{param}</span>
-                <span class="text-sm font-bold text-right max-w-[55%]">{value}</span>
-              </div>
-            ))}
-          </div>
-          <div class="mt-10 pt-8 border-t border-white/10">
-            <div class="flex items-center gap-3">
-              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span class="text-xs text-white/40 uppercase font-bold tracking-widest">Contingencia activa 24/7</span>
-            </div>
-          </div>
-        </div>
+      <div class="max-w-[1200px] mx-auto text-center">
+        <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#1B1C1C] mb-6">
+          El foco es construir mejores decisiones técnicas para cada sistema de aire comprimido.
+        </h2>
+        <p class="text-[#5E5E5E] text-lg max-w-3xl mx-auto mb-10">
+          Vital Airpower se enfoca en eficiencia, tratamiento, control y soluciones que mejoran la operación completa.
+        </p>
+        <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase">
+          Solicitar evaluación
+          <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+        </a>
       </div>
     </section>
-
-    <!-- COBERTURA REGIONAL -->
-    <section class="py-24 px-6 md:px-12">
-      <div class="max-w-[1920px] mx-auto">
-        <div class="mb-16" data-animate>
-          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Cobertura en el norte chico</h2>
-          <div class="w-20 h-1 bg-[#003F87]"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6" data-animate-stagger>
-          {[
-            { loc: 'Quilacán', role: 'Base técnica principal', desc: 'Taller con banco de pruebas y stock de repuestos.', primary: true },
-            { loc: 'La Serena', role: 'Cobertura operacional', desc: 'Atención técnica y soporte en terreno.', primary: false },
-            { loc: 'Coquimbo', role: 'Cobertura operacional', desc: 'Respuesta de emergencia y mantenimiento preventivo.', primary: false },
-            { loc: 'Faenas mineras norte chico', role: 'Servicio en terreno', desc: 'Desplazamiento a faenas mineras de la región.', primary: false },
-          ].map(({ loc, role, desc, primary }) => (
-            <div class={`p-8 hover:-translate-y-1 transition-transform duration-200 ${primary ? 'bg-[#003F87] text-white' : 'bg-[#F6F3F2]'}`}>
-              <span class={`material-symbols-outlined mb-4 block ${primary ? '' : 'text-[#0056B3]'}`} style="font-size: 1.5rem;">location_on</span>
-              <h3 class={`font-[Space_Grotesk] text-xl font-bold mb-1 ${primary ? '' : 'text-[#1B1C1C]'}`}>{loc}</h3>
-              <p class={`text-xs font-bold uppercase tracking-widest mb-3 ${primary ? 'text-white/60' : 'text-[#003F87]'}`}>{role}</p>
-              <p class={`text-sm leading-relaxed ${primary ? 'text-white/70' : 'text-[#5E5E5E]'}`}>{desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-24 px-6 md:px-12 bg-[#003F87] relative overflow-hidden" data-animate="scale-in">
-      <div class="absolute right-0 top-0 h-full flex items-center opacity-5 pointer-events-none">
-        <img src="/images/logo.webp" alt="" aria-hidden="true" width="400" height="400" class="h-full w-auto brightness-0 invert" />
-      </div>
-      <div class="relative z-10 max-w-[1920px] mx-auto text-center">
-        <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter text-white">¿Listo para asegurar su proceso productivo?</h2>
-        <p class="text-white/70 mb-10 max-w-lg mx-auto">Nuestros técnicos están disponibles para un diagnóstico de eficiencia en sus instalaciones sin costo inicial.</p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a href="/contacto" class="flex items-center gap-3 bg-white text-[#003F87] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#D7E2FF] hover:-translate-y-0.5 transition-all duration-200">
-            Solicitar diagnóstico
-            <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
-          </a>
-          <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer"
-            class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:scale-105 hover:-translate-y-0.5 transition-all duration-200">
-            <span class="material-symbols-outlined" style="font-size: 1.1rem;">chat</span>
-            Hablar con un técnico
-          </a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <Footer />
 </BaseLayout>
-
-<script>
-  const pSlides = document.querySelectorAll<HTMLElement>('.proto-slide');
-  const pDots   = document.querySelectorAll<HTMLElement>('.proto-dot');
-  let pCur = 0;
-  let pTimer: ReturnType<typeof setInterval>;
-
-  function pGoTo(n: number) {
-    pSlides[pCur].classList.replace('opacity-100', 'opacity-0');
-    pDots[pCur].classList.remove('bg-white', 'w-4');
-    pDots[pCur].classList.add('bg-white/50');
-    pCur = n;
-    pSlides[pCur].classList.replace('opacity-0', 'opacity-100');
-    pDots[pCur].classList.add('bg-white', 'w-4');
-    pDots[pCur].classList.remove('bg-white/50');
-  }
-
-  pTimer = setInterval(() => pGoTo((pCur + 1) % pSlides.length), 4000);
-  pDots.forEach((dot, i) => {
-    dot.addEventListener('click', () => { clearInterval(pTimer); pGoTo(i); pTimer = setInterval(() => pGoTo((pCur + 1) % pSlides.length), 4000); });
-  });
-</script>

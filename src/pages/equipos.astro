@@ -2,244 +2,130 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+
+const families = [
+  {
+    title: 'SX, SM, SK y ASK',
+    range: 'Hasta 22 kW',
+    text: 'Familias compactas con bajo ruido, mantenimiento accesible y rango de presión entre 5,5 y 15 bar según configuración.',
+  },
+  {
+    title: 'AIRCENTER',
+    range: 'Hasta 15 kW',
+    text: 'Sistemas completos con secador refrigerativo integrado para instalaciones compactas y ordenadas.',
+  },
+  {
+    title: 'ASD a HSD',
+    range: '18,5 a 500 kW',
+    text: 'Gama media y pesada con motores eficientes, termogestión ETM y mayor escala de caudal.',
+  },
+  {
+    title: 'Versiones T',
+    range: 'Hasta 132 kW',
+    text: 'Compresores modulares con secador refrigerativo, protección térmica del secador y configuraciones compactas.',
+  },
+  {
+    title: 'Versiones SFC',
+    range: 'Hasta 515 kW',
+    text: 'Velocidad variable para adaptar caudal a la demanda real y mejorar eficiencia en carga parcial.',
+  },
+];
+
+const selectedModels = [
+  'SX 3 a SX 8: 0,26 a 0,80 m3/min y 2,2 a 5,5 kW.',
+  'SM 10 a SM 16: 0,60 a 1,62 m3/min y 5,5 a 9 kW.',
+  'SK 22: alrededor de 2,16 m3/min y 11 kW.',
+  'DSD 145 a DSD 240: 14,00 a 25,15 m3/min y 75 a 132 kW.',
+  'ESD 375 a FSD 475: 37,85 a 48,20 m3/min y 200 a 250 kW.',
+  'SFC compactos como SM 13 SFC o SK 22 SFC para demanda variable.',
+];
 ---
 
 <BaseLayout
-  title="Equipos — Vital Airpower | Compresores, tratamiento de aire y grupos electrógenos"
-  description="Venta y arriendo de compresores industriales, sistemas de tratamiento de aire y grupos electrógenos. Asesoría técnica incluida en La Serena y Coquimbo."
+  title="Equipos | Kaeser para distintas escalas de operación con Vital Airpower"
+  description="Familias de equipos Kaeser relevantes para Vital Airpower: compresores compactos, AIRCENTER, gama media y pesada, versiones T con secador y variantes SFC."
 >
   <Header />
 
-  <main class="pt-[72px]">
-
-    <!-- HERO -->
+  <main class="pt-[96px] bg-[#f4f1eb]">
     <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1920px] mx-auto grid md:grid-cols-12 gap-12 items-center">
-        <div class="md:col-span-8">
-          <span class="animate-hero font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4 block">
-            Catálogo técnico
-          </span>
-          <h1 class="animate-hero-delay-1 font-[Space_Grotesk] text-5xl md:text-6xl font-bold tracking-tighter text-[#1B1C1C] leading-[1.05] mb-6 max-w-3xl">
-            Equipos para cada proceso industrial
+      <div class="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_0.8fr] gap-12 items-center">
+        <div>
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Equipos</p>
+          <h1 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold tracking-tight text-[#1B1C1C] leading-[1.05] mb-6">
+            Familias Kaeser relevantes para la propuesta actual de Vital Airpower.
           </h1>
-          <p class="animate-hero-delay-2 text-[#5E5E5E] text-xl leading-relaxed max-w-2xl">
-            Compresores, sistemas de tratamiento de aire y grupos electrógenos. Venta con asesoría técnica incluida e instalación.
+          <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-3xl">
+            Seleccionamos las familias y rangos que ayudan a construir una oferta clara, corporativa y útil para clientes industriales.
           </p>
         </div>
-        <div class="animate-hero-delay-3 md:col-span-4 hidden md:block">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/kaeser-csd105.webp" alt="Compresor industrial Kaeser" class="w-full h-full object-cover" width="600" height="450" />
-          </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/images/kaeser-csd105.webp" alt="Compresor Kaeser" class="w-full h-full object-cover" width="900" height="700" />
         </div>
       </div>
     </section>
 
-    <!-- CATEGORÍAS -->
-    <section class="py-24 px-6 md:px-12">
-      <div class="max-w-[1920px] mx-auto">
-        <div class="mb-16" data-animate>
-          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-3">Líneas de producto</h2>
-          <div class="w-20 h-1 bg-[#003F87]"></div>
-        </div>
-
-        <!-- Compresores grande -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6" data-animate-stagger>
-          <div class="md:col-span-2 md:row-span-2 bg-white p-10 border-l-4 border-[#003F87] flex flex-col justify-between group hover:-translate-y-1 transition-transform duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
-            <div>
-              <div class="aspect-video mb-8 overflow-hidden relative">
-                <img src="/images/kaeser-csd105.webp" alt="Compresor Kaeser CSD105 industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="450" />
-                <span class="absolute top-4 left-4 bg-[#003F87] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">Línea principal</span>
-              </div>
-              <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 uppercase">Compresores Industriales</h3>
-              <p class="text-[#5E5E5E] mb-6 leading-relaxed">
-                Compresores de tornillo rotativos para aplicaciones industriales y mineras. Asesoría técnica para seleccionar la capacidad correcta según su demanda real.
-              </p>
-              <ul class="text-sm font-medium space-y-2 text-[#1B1C1C]">
-                {['De tornillo rotativo', 'Centrífugos', 'De pistón'].map(b => (
-                  <li class="flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 bg-[#003F87] inline-block flex-shrink-0"></span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all mt-8">
-              Consultar disponibilidad <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-            </a>
-          </div>
-
-          <!-- Tratamiento de aire -->
-          <div class="md:col-span-2 bg-[#EAE7E7] p-8 flex flex-col justify-between group hover:bg-white hover:-translate-y-1 transition-all duration-200">
-            <div class="aspect-[16/6] mb-6 overflow-hidden">
-              <img src="/images/filtro-compresor.webp" alt="Filtro de compresor industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="225" />
-            </div>
-            <div>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Tratamiento de Aire</h3>
-              <p class="text-sm text-[#5E5E5E] leading-relaxed">
-                Secadores refrigerativos y de adsorción, filtros coalescentes y trampas de condensado. Aire limpio y seco para procesos sensibles.
-              </p>
-            </div>
-            <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#003F87] font-bold uppercase text-xs tracking-widest mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
-              Cotizar por WhatsApp <span class="material-symbols-outlined" style="font-size: 1rem;">chat</span>
-            </a>
-          </div>
-
-          <!-- Grupos electrógenos -->
-          <div class="md:col-span-2 bg-[#1B1C1C] text-white p-8 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1 transition-transform duration-200">
-            <div class="absolute -right-8 -bottom-8 opacity-5">
-              <span class="material-symbols-outlined" style="font-size: 12rem;">bolt</span>
-            </div>
-            <div class="relative z-10">
-              <div class="aspect-[16/6] mb-6 overflow-hidden">
-                <img src="/images/generador-kaeser.webp" alt="Generador Kaeser industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="225" />
-              </div>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold mb-3">Grupos Electrógenos</h3>
-              <p class="text-sm text-white/60 leading-relaxed">
-                Grupos electrógenos industriales para respaldo energético en operaciones críticas. Disponibles para mantenimiento, reparación y arriendo.
-              </p>
-            </div>
-            <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="relative z-10 mt-6 py-3 bg-[#25D366] text-white font-bold uppercase text-xs tracking-widest text-center hover:bg-[#1ebe5d] transition-colors flex items-center justify-center gap-2">
-              <span class="material-symbols-outlined" style="font-size: 1rem;">chat</span> Consultar por WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALERÍA COMPRESORES KAESER -->
-    <section class="py-16 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1920px] mx-auto">
-        <div class="mb-10" data-animate>
-          <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-2 block">Kaeser Kompressoren</span>
-          <h2 class="font-[Space_Grotesk] text-2xl font-bold tracking-tighter mb-2">Modelos en stock</h2>
-          <div class="w-16 h-1 bg-[#003F87]"></div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4" data-animate-stagger>
-          {[
-            { src: '/images/kaeser-sk25t.webp',  label: 'Kaeser SK25T',  desc: 'Compresor tornillo compacto' },
-            { src: '/images/kaeser-sm12.webp',   label: 'Kaeser SM12',   desc: 'Compresor mini' },
-            { src: '/images/kaeser-ask32t.webp', label: 'Kaeser ASK32T', desc: 'Compresor de tornillo' },
-          ].map(({ src, label, desc }) => (
-            <div class="group overflow-hidden relative bg-white" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src={src} alt={label} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="600" height="450" />
-              </div>
-              <div class="p-5">
-                <p class="font-[Space_Grotesk] font-bold text-[#1B1C1C]">{label}</p>
-                <p class="text-xs text-[#5E5E5E] mt-1">{desc}</p>
-              </div>
-              <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="absolute inset-0 flex items-end justify-end p-5 opacity-0 group-hover:opacity-100 transition-opacity bg-[#003F87]/5">
-                <span class="bg-[#25D366] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-2">WhatsApp →</span>
-              </a>
-            </div>
+    <section class="py-24 px-6 md:px-12 bg-white">
+      <div class="max-w-[1440px] mx-auto">
+        <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-5 mb-12">
+          {families.map((item) => (
+            <article class="bg-[#F6F3F2] border border-[#C2C6D4]/20 p-6 min-h-[220px]">
+              <p class="text-sm uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-3">{item.range}</p>
+              <h3 class="font-[Space_Grotesk] text-xl font-bold text-[#1B1C1C] mb-3">{item.title}</h3>
+              <p class="text-[#5E5E5E] leading-relaxed text-sm">{item.text}</p>
+            </article>
           ))}
         </div>
-      </div>
-    </section>
 
-    <!-- GENERADORES — MARCAS QUE TRABAJAMOS -->
-    <section class="py-16 px-6 md:px-12">
-      <div class="max-w-[1920px] mx-auto">
-        <div class="mb-10" data-animate>
-          <span class="font-[Space_Grotesk] text-[10px] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-2 block">Grupos Electrógenos</span>
-          <h2 class="font-[Space_Grotesk] text-2xl font-bold tracking-tighter mb-2">Generadores que mantenemos</h2>
-          <div class="w-16 h-1 bg-[#003F87]"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-animate-stagger>
-          {[
-            { src: '/images/generador-kaeser.webp',         label: 'Kaeser Kompressoren',  desc: 'Mantenimiento, reparación y arriendo de grupos electrógenos Kaeser.' },
-            { src: '/images/generador-ingersoll-rand.webp',  label: 'Ingersoll Rand',       desc: 'Servicio técnico especializado para generadores Ingersoll Rand.' },
-            { src: '/images/ingersoll-rand-generador.webp',  label: 'Ingersoll Rand Industrial', desc: 'Reparación y puesta en marcha de grupos electrógenos industriales.' },
-            { src: '/images/ingersoll-generador-planta.webp',label: 'Generadores en planta', desc: 'Instalación y soporte técnico para operaciones de planta continua.' },
-          ].map(({ src, label, desc }) => (
-            <div class="group flex gap-6 bg-[#F6F3F2] overflow-hidden hover:bg-white hover:-translate-y-0.5 transition-all duration-200" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);">
-              <div class="w-40 flex-shrink-0 overflow-hidden">
-                <img src={src} alt={label} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="160" height="120" />
-              </div>
-              <div class="py-6 pr-6 flex flex-col justify-center">
-                <p class="font-[Space_Grotesk] font-bold text-[#1B1C1C] mb-1">{label}</p>
-                <p class="text-xs text-[#5E5E5E] leading-relaxed">{desc}</p>
-                <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-[#003F87] font-bold text-[0.65rem] uppercase tracking-widest group-hover:gap-2 transition-all">
-                  Consultar WhatsApp <span class="material-symbols-outlined" style="font-size: 0.9rem;">chat</span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- MARCAS TÉCNICAS -->
-    <section class="py-16 bg-[#F6F3F2] border-y border-[#C2C6D4]/30" data-animate>
-      <div class="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-        <span class="font-[Space_Grotesk] text-[#5E5E5E] font-bold text-xs uppercase tracking-widest whitespace-nowrap">Servicio técnico certificado:</span>
-        <div class="flex flex-wrap items-center gap-10 md:gap-16 opacity-60 hover:opacity-100 transition-opacity">
-          <img src="/images/atlas-copco-logo.webp" alt="Atlas Copco" class="h-9 w-auto object-contain grayscale" width="130" height="36" />
-          <img src="/images/logo-ingersoll-rand.svg" alt="Ingersoll Rand" class="h-9 w-auto object-contain grayscale" width="130" height="36" />
-          <img src="/images/logo-kaeser.webp" alt="Kaeser" class="h-9 w-auto object-contain grayscale" width="130" height="36" />
-        </div>
-      </div>
-    </section>
-
-    <!-- POST-VENTA -->
-    <section class="py-24 px-6 md:px-12">
-      <div class="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div data-animate="fade-left">
-          <h2 class="font-[Space_Grotesk] text-4xl font-bold tracking-tighter mb-6">Servicios post-venta incluidos</h2>
-          <p class="text-[#5E5E5E] mb-8 leading-relaxed">
-            Todo equipo vendido incluye instalación, puesta en marcha y plan de mantenimiento preventivo. No vendemos equipos — entregamos soluciones funcionando.
-          </p>
-          <div class="space-y-4">
-            {[
-              { icon: 'construction', title: 'Instalación en terreno', desc: 'Montaje e instalación por técnicos especializados.' },
-              { icon: 'start', title: 'Puesta en marcha', desc: 'Verificación de parámetros y prueba bajo carga real.' },
-              { icon: 'event_repeat', title: 'Plan de mantenimiento', desc: 'Programa preventivo para extender la vida útil del equipo.' },
-              { icon: 'support_agent', title: 'Soporte técnico 24/7', desc: 'Respuesta ante fallas durante las primeras 1.000 horas.' },
-            ].map(({ icon, title, desc }) => (
-              <div class="flex items-start gap-4 p-4 hover:bg-[#F6F3F2] transition-colors duration-200 rounded-sm">
-                <span class="material-symbols-outlined text-[#003F87] flex-shrink-0" style="font-size: 1.3rem;">{icon}</span>
-                <div>
-                  <p class="font-bold text-sm text-[#1B1C1C] mb-0.5">{title}</p>
-                  <p class="text-sm text-[#5E5E5E]">{desc}</p>
+        <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-8">
+          <div class="bg-[#17211c] text-white p-8">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] font-bold text-[#d5c6ac] mb-3">Rango general Kaeser</p>
+            <p class="text-3xl font-bold mb-3">0,25 a 87,3 m3/min</p>
+            <p class="text-white/72 leading-relaxed mb-6">
+              La gama Kaeser cubre un rango amplio de aire comprimido con presiones desde 5,5 a 15 bar y distintas escalas de potencia.
+            </p>
+            <img src="/images/logo-kaeser.webp" alt="Kaeser" width="150" height="40" class="h-9 w-auto object-contain" />
+          </div>
+          <div class="bg-[#F6F3F2] border border-[#C2C6D4]/20 p-8">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-4">Modelos y referencias seleccionadas</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              {selectedModels.map((item) => (
+                <div class="bg-white border border-[#C2C6D4]/20 p-4">
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#003F87]" style="font-size: 1.15rem;">tune</span>
+                    <p class="text-[#1B1C1C] leading-relaxed text-sm">{item}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-        <div class="bg-[#003F87] text-white p-10 relative overflow-hidden" data-animate="fade-right">
-          <div class="absolute -right-8 -bottom-8 opacity-10">
-            <img src="/images/logo.webp" alt="" aria-hidden="true" width="200" height="200" class="brightness-0 invert" />
-          </div>
-          <span class="material-symbols-outlined mb-6 block relative z-10" style="font-size: 3rem;">headset_mic</span>
-          <h3 class="font-[Space_Grotesk] text-2xl font-bold mb-4 relative z-10">¿No encuentra lo que busca?</h3>
-          <p class="text-white/70 leading-relaxed mb-8 relative z-10">
-            Cuéntenos su proceso y presupuesto. Le recomendamos la solución técnica más adecuada para su operación, sin compromisos.
-          </p>
-          <a href="/contacto" class="relative z-10 inline-flex items-center gap-3 bg-white text-[#003F87] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#D7E2FF] hover:-translate-y-0.5 transition-all duration-200">
-            Consultar con un técnico
-            <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2] text-center" data-animate>
-      <h2 class="font-[Space_Grotesk] text-3xl font-bold mb-4 uppercase tracking-tighter">¿Necesita asesoría para elegir el equipo correcto?</h2>
-      <p class="text-[#5E5E5E] mb-10 max-w-lg mx-auto">Cuéntenos su proceso y le recomendamos la solución técnica más adecuada.</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:-translate-y-0.5 transition-all duration-200">
-          Consultar con un técnico
-          <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
-        </a>
-        <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer"
-          class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:scale-105 hover:-translate-y-0.5 transition-all duration-200">
-          <span class="material-symbols-outlined" style="font-size: 1.1rem;">chat</span>
-          WhatsApp
-        </a>
+    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
+      <div class="max-w-[1440px] mx-auto grid md:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'PERFIL SIGMA',
+            text: 'Kaeser presenta el PERFIL SIGMA como parte central de su propuesta de eficiencia y rendimiento.',
+          },
+          {
+            title: 'Secadores y versiones T',
+            text: 'Los equipos con secador refrigerativo se usan aqui como soporte para hablar de calidad de aire y sistemas compactos.',
+          },
+          {
+            title: 'SFC y demanda variable',
+            text: 'Las versiones con velocidad variable sirven para procesos con carga parcial y variaciones de consumo.',
+          },
+        ].map((card) => (
+          <article class="bg-white border border-[#C2C6D4]/20 p-8">
+            <h3 class="font-[Space_Grotesk] text-2xl font-bold text-[#1B1C1C] mb-4">{card.title}</h3>
+            <p class="text-[#5E5E5E] leading-relaxed">{card.text}</p>
+          </article>
+        ))}
       </div>
     </section>
-
   </main>
 
   <Footer />
