@@ -8,27 +8,47 @@ const families = [
     title: 'SX, SM, SK y ASK',
     range: 'Hasta 22 kW',
     text: 'Familias compactas con bajo ruido, mantenimiento accesible y rango de presión entre 5,5 y 15 bar según configuración.',
+    image: null,
   },
   {
     title: 'AIRCENTER',
     range: 'Hasta 15 kW',
     text: 'Sistemas completos con secador refrigerativo integrado para instalaciones compactas y ordenadas.',
+    image: null,
   },
   {
     title: 'ASD a HSD',
     range: '18,5 a 500 kW',
     text: 'Gama media y pesada con motores eficientes, termogestión ETM y mayor escala de caudal.',
+    image: null,
   },
   {
     title: 'Versiones T',
     range: 'Hasta 132 kW',
     text: 'Compresores modulares con secador refrigerativo, protección térmica del secador y configuraciones compactas.',
+    image: null,
   },
   {
     title: 'Versiones SFC',
     range: 'Hasta 515 kW',
     text: 'Velocidad variable para adaptar caudal a la demanda real y mejorar eficiencia en carga parcial.',
+    image: null,
   },
+];
+
+const equipmentModels = [
+  { model: 'SX 3 – SX 8',    family: 'SX',       range: '2,2 – 5,5 kW',    image: null },
+  { model: 'SM 10 – SM 16',  family: 'SM',       range: '5,5 – 9 kW',      image: null },
+  { model: 'SK 22',          family: 'SK',       range: '11 kW',           image: '/images/kaeser-sk25t.webp' },
+  { model: 'ASK 32 T',       family: 'ASK',      range: 'Hasta 22 kW',     image: '/images/kaeser-ask32t.webp' },
+  { model: 'SM 12',          family: 'SM',       range: '7,5 kW',          image: '/images/kaeser-sm12.webp' },
+  { model: 'CSD 105',        family: 'CSD',      range: '55 kW',           image: '/images/kaeser-csd105.webp' },
+  { model: 'DSD 145 – 240',  family: 'DSD',      range: '75 – 132 kW',     image: null },
+  { model: 'ESD 375 – FSD 475', family: 'ESD/FSD', range: '200 – 250 kW', image: null },
+  { model: 'SM 13 SFC',      family: 'SFC',      range: 'Demanda variable', image: null },
+  { model: 'SK 22 SFC',      family: 'SFC',      range: 'Demanda variable', image: null },
+  { model: 'AIRCENTER SX',   family: 'AIRCENTER',range: 'Hasta 5,5 kW',    image: null },
+  { model: 'AIRCENTER SM',   family: 'AIRCENTER',range: 'Hasta 9 kW',      image: null },
 ];
 
 const selectedModels = [
@@ -69,10 +89,22 @@ const selectedModels = [
       <div class="max-w-[1440px] mx-auto">
         <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-5 mb-12">
           {families.map((item) => (
-            <article class="bg-[#F6F3F2] border border-[#C2C6D4]/20 p-6 min-h-[220px]">
-              <p class="text-sm uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-3">{item.range}</p>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold text-[#1B1C1C] mb-3">{item.title}</h3>
-              <p class="text-[#5E5E5E] leading-relaxed text-sm">{item.text}</p>
+            <article class="bg-[#F6F3F2] border border-[#C2C6D4]/20 overflow-hidden">
+              <div class="relative h-44 bg-[#e8e4dc] border-b border-[#C2C6D4]/20 flex items-center justify-center">
+                {item.image ? (
+                  <img src={item.image} alt={item.title} class="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <div class="flex flex-col items-center gap-2 text-[#9a9080]">
+                    <span class="material-symbols-outlined" style="font-size:2rem;">add_photo_alternate</span>
+                    <span class="text-[0.65rem] uppercase tracking-widest font-bold">Espacio por rellenar</span>
+                  </div>
+                )}
+              </div>
+              <div class="p-6">
+                <p class="text-xs uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">{item.range}</p>
+                <h3 class="font-[Space_Grotesk] text-lg font-bold text-[#1B1C1C] mb-2">{item.title}</h3>
+                <p class="text-[#5E5E5E] leading-relaxed text-sm">{item.text}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -124,6 +156,41 @@ const selectedModels = [
             <p class="text-[#5E5E5E] leading-relaxed">{card.text}</p>
           </article>
         ))}
+      </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-12 bg-white">
+      <div class="max-w-[1440px] mx-auto">
+        <div class="max-w-2xl mb-12">
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Modelos</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#1B1C1C] mb-4">
+            Equipos por modelo — galería en construcción.
+          </h2>
+          <p class="text-[#5E5E5E] leading-relaxed">
+            Cada espacio está reservado para la fotografía del equipo correspondiente.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+          {equipmentModels.map((item) => (
+            <article class="border border-[#C2C6D4]/20 overflow-hidden bg-[#F6F3F2]">
+              <div class="relative h-52 bg-[#e8e4dc] border-b border-[#C2C6D4]/20 flex items-center justify-center">
+                {item.image ? (
+                  <img src={item.image} alt={item.model} class="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <div class="flex flex-col items-center gap-2 text-[#9a9080]">
+                    <span class="material-symbols-outlined" style="font-size:2.5rem;">add_photo_alternate</span>
+                    <span class="text-[0.65rem] uppercase tracking-widest font-bold">Espacio por rellenar</span>
+                  </div>
+                )}
+              </div>
+              <div class="p-5">
+                <p class="text-[0.65rem] uppercase tracking-widest font-bold text-[#003F87] mb-1">{item.family}</p>
+                <h3 class="font-[Space_Grotesk] text-lg font-bold text-[#1B1C1C] mb-1">{item.model}</h3>
+                <p class="text-xs text-[#7a6b57] font-medium">{item.range}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   </main>
