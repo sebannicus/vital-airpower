@@ -79,80 +79,105 @@ const faqs = [
   <Header />
 
   <main class="pt-[96px] bg-[#f4f1eb]">
-    <section id="sobre-nosotros" class="relative overflow-hidden border-b border-[#0f3d2f]/10 bg-[linear-gradient(135deg,#f4f1eb_0%,#ebe7df_54%,#ddd4c6_100%)]">
-      <div class="absolute inset-0 opacity-[0.08] pointer-events-none bg-[radial-gradient(circle_at_top_left,_#0f3d2f_0,_transparent_32%),radial-gradient(circle_at_bottom_right,_#c79a3b_0,_transparent_28%)]"></div>
-      <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-        <div>
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#0f3d2f] mb-4">Sobre Nosotros</p>
-          <h1 class="max-w-4xl text-4xl md:text-6xl font-bold tracking-tight text-[#17211c] leading-[1.02] mb-6">
-            Vital Airpower articula soluciones industriales con Kaeser como eje principal.
-          </h1>
-          <p class="max-w-2xl text-lg md:text-xl leading-relaxed text-[#3f4a43] mb-8">
-            Somos distribuidores oficiales Kaeser Chile y trabajamos para empresas que necesitan soporte técnico, información clara y una operación de aire comprimido más ordenada. Acompañamos proyectos, mantenciones y decisiones de eficiencia con una mirada corporativa y técnica.
-          </p>
-          <div class="grid sm:grid-cols-3 gap-4 mb-8">
-            <div class="border border-[#0f3d2f]/10 bg-white/70 p-5">
-              <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Cobertura</p>
-              <p class="text-2xl font-bold text-[#17211c]">Copiapó</p>
-              <p class="text-sm text-[#546056]">hasta Rancagua</p>
-            </div>
-            <div class="border border-[#0f3d2f]/10 bg-white/70 p-5">
-              <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Enfoque</p>
-              <p class="text-2xl font-bold text-[#17211c]">Kaeser</p>
-              <p class="text-sm text-[#546056]">distribución oficial</p>
-            </div>
-            <div class="border border-[#0f3d2f]/10 bg-white/70 p-5">
-              <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Perfil</p>
-              <p class="text-2xl font-bold text-[#17211c]">B2B</p>
-              <p class="text-sm text-[#546056]">corporativo y técnico</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap gap-4">
-            <a href="/contacto" class="inline-flex items-center gap-3 bg-[#0f3d2f] text-white px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] hover:bg-[#174c3b] transition-colors">
-              Solicitar asesoría técnica
-              <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-            </a>
-            <a href="/empresa" class="inline-flex items-center gap-3 border border-[#0f3d2f]/20 text-[#0f3d2f] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] bg-white/70 hover:bg-white transition-colors">
-              Conocer la empresa
-            </a>
-          </div>
-        </div>
+    <!-- Hero -->
+    <section class="relative min-h-[92vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#070e1a]/92 via-[#070e1a]/68 to-[#070e1a]/25 z-10"></div>
+        <div class="absolute inset-0 bg-grid-hero z-20 pointer-events-none"></div>
+        <img
+          src="/images/CES_Banner_47-52450.webp"
+          alt="Vital Airpower — Continuidad operacional industrial"
+          class="absolute inset-0 w-full h-full object-cover ken-burns"
+          width="1920"
+          height="1080"
+          loading="eager"
+        />
+      </div>
 
-        <div class="grid gap-4">
-          <div class="relative overflow-hidden min-h-[360px] border border-[#0f3d2f]/10 bg-[#17211c]">
-            <img
-              src="/images/hero-kaeser.webp"
-              alt="Equipo Kaeser en entorno industrial"
-              width="900"
-              height="900"
-              class="absolute inset-0 h-full w-full object-cover opacity-60"
-            />
-            <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,33,28,0.18)_0%,rgba(23,33,28,0.82)_100%)]"></div>
-            <div class="relative z-10 flex h-full flex-col justify-end p-8">
-              <img src="/images/logo-kaeser.webp" alt="Kaeser" width="168" height="44" class="h-10 w-auto object-contain mb-5" />
-              <p class="text-sm uppercase tracking-[0.18em] font-bold text-[#e3d6be] mb-2">Distribuidor oficial Kaeser Chile</p>
-              <p class="text-white text-lg leading-relaxed max-w-md">
-                Calidad, eficiencia y respaldo técnico para compañías que dependen del aire comprimido como parte crítica de su operación.
-              </p>
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            {highlights.map((item) => (
-              <div class="border border-[#0f3d2f]/10 bg-white p-5">
-                <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-[#0f3d2f]" style="font-size: 1.15rem;">verified</span>
-                  <p class="text-sm leading-relaxed text-[#2f3a34]">{item}</p>
-                </div>
-              </div>
-            ))}
+      <div class="relative z-30 max-w-[1440px] mx-auto px-6 md:px-12 py-24 grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-8 lg:col-span-7">
+          <span class="animate-hero inline-block px-3 py-1 bg-[#D7E2FF] text-[#003F87] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+            Distribuidor Oficial Kaeser Chile
+          </span>
+          <h1 class="animate-hero-delay-1 font-[Space_Grotesk] text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tighter mb-8">
+            Soluciones técnicas para que su operación no se detenga
+          </h1>
+          <p class="animate-hero-delay-2 text-white/80 text-xl max-w-xl mb-10 font-light leading-relaxed">
+            Soporte técnico, proyectos y equipos Kaeser para empresas industriales. Cobertura desde Copiapó hasta Rancagua.
+          </p>
+          <div class="animate-hero-delay-3 flex flex-wrap gap-4">
+            <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:shadow-lg hover:shadow-[#003F87]/30 hover:-translate-y-0.5 transition-all duration-200">
+              Solicitar asesoría técnica
+              <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+            </a>
+            <a href="/equipos" class="border border-white/30 text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200">
+              Ver equipos
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-white border-b border-[#0f3d2f]/8">
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="border-b border-[#0f3d2f]/10 bg-[#f4f1eb]">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div class="max-w-3xl mb-12">
+        <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+          <div>
+            <p data-animate="fade-up" class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Sobre Nosotros</p>
+            <h2 data-animate="fade-up" style="transition-delay:0.1s" class="max-w-2xl text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] leading-[1.05] mb-6">
+              Vital Airpower articula soluciones industriales con Kaeser como eje principal.
+            </h2>
+            <p data-animate="fade-up" style="transition-delay:0.2s" class="max-w-2xl text-lg leading-relaxed text-[#3f4a43] mb-8">
+              Somos distribuidores oficiales Kaeser Chile y trabajamos para empresas que necesitan soporte técnico, información clara y una operación de aire comprimido más ordenada. Acompañamos proyectos, mantenciones y decisiones de eficiencia con una mirada corporativa y técnica.
+            </p>
+            <div data-animate="fade-up" style="transition-delay:0.3s" class="flex flex-wrap gap-4">
+              <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] hover:bg-[#0056B3] transition-colors">
+                Solicitar asesoría técnica
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+              <a href="/empresa" class="inline-flex items-center gap-3 border border-[#003F87]/20 text-[#003F87] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] bg-white hover:bg-[#D7E2FF]/40 transition-colors">
+                Conocer la empresa
+              </a>
+            </div>
+          </div>
+
+          <div class="grid gap-4">
+            <div data-animate-stagger class="grid grid-cols-3 gap-4">
+              <div class="border border-[#003F87]/12 bg-white p-5">
+                <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Cobertura</p>
+                <p class="text-2xl font-bold text-[#17211c]">Copiapó</p>
+                <p class="text-sm text-[#546056]">hasta Rancagua</p>
+              </div>
+              <div class="border border-[#003F87]/12 bg-white p-5">
+                <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Enfoque</p>
+                <p class="text-2xl font-bold text-[#17211c]">Kaeser</p>
+                <p class="text-sm text-[#546056]">distribución oficial</p>
+              </div>
+              <div class="border border-[#003F87]/12 bg-white p-5">
+                <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Perfil</p>
+                <p class="text-2xl font-bold text-[#17211c]">B2B</p>
+                <p class="text-sm text-[#546056]">corporativo y técnico</p>
+              </div>
+            </div>
+            <div data-animate-stagger class="grid gap-3">
+              {highlights.map((item) => (
+                <div class="border border-[#003F87]/10 bg-white p-5">
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#003F87]" style="font-size: 1.15rem;">verified</span>
+                    <p class="text-sm leading-relaxed text-[#2f3a34]">{item}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative bg-white border-b border-[#0f3d2f]/8 overflow-hidden">
+      <div class="absolute inset-0 bg-grid-section pointer-events-none opacity-60"></div>
+      <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24">
+        <div data-animate="fade-up" class="max-w-3xl mb-12">
           <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Servicios principales</p>
           <h2 class="text-3xl md:text-5xl font-bold text-[#17211c] tracking-tight mb-6">
             Una estructura simple para encontrar rápido la información que necesita su operación.
@@ -161,9 +186,9 @@ const faqs = [
             Desde la evaluación técnica hasta la selección de equipos, Vital Airpower ordena la conversación según el escenario real del cliente: servicio, solución de sistema o equipamiento Kaeser.
           </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-5">
+        <div data-animate-stagger class="grid md:grid-cols-3 gap-5">
           {keyServices.map((item) => (
-            <article class="border border-[#0f3d2f]/10 bg-[#f8f6f1] p-7 min-h-[230px] flex flex-col justify-between">
+            <article class="border border-[#0f3d2f]/10 bg-[#f8f6f1] p-7 min-h-[230px] flex flex-col justify-between hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 transition-all duration-300">
               <div>
                 <span class="material-symbols-outlined text-[#0f3d2f] mb-5 block" style="font-size: 1.5rem;">overview</span>
                 <h3 class="text-xl font-bold text-[#17211c] mb-3">{item.title}</h3>
@@ -179,16 +204,19 @@ const faqs = [
       </div>
     </section>
 
-    <section class="border-b border-[#0f3d2f]/8 bg-[#17211c] text-white">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24 grid lg:grid-cols-[1fr_1fr] gap-12 items-start">
-        <div>
+    <section class="relative border-b border-[#0f3d2f]/8 bg-[#17211c] text-white overflow-hidden has-scanline">
+      <!-- orbs de fondo -->
+      <div class="orb-a absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#003F87]/20 blur-3xl pointer-events-none"></div>
+      <div class="orb-b absolute -bottom-16 right-8 w-72 h-72 rounded-full bg-[#0056B3]/15 blur-3xl pointer-events-none"></div>
+      <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24 grid lg:grid-cols-[1fr_1fr] gap-12 items-start">
+        <div data-animate="fade-left">
           <p class="font-[Space_Grotesk] text-[0.7rem] uppercase tracking-[0.2em] font-bold text-[#d5c6ac] mb-4">Capacidad de soporte</p>
           <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Vital Airpower conecta servicio, equipos y criterio técnico.</h2>
           <p class="text-white/72 text-lg leading-relaxed mb-8">
             Trabajamos compresores de tornillo eléctricos estacionarios, secadores de aire, filtros de línea, líneas de aire comprimido, auditorías de fuga y soporte operacional para clientes con necesidades de continuidad y eficiencia.
           </p>
         </div>
-        <div class="grid sm:grid-cols-2 gap-4">
+        <div data-animate-stagger class="grid sm:grid-cols-2 gap-4">
           {[
             'Compresores de tornillo eléctricos estacionarios.',
             'Secadores de aire por refrigeración y absorción.',
@@ -197,7 +225,7 @@ const faqs = [
             'Auditorías de fugas por ultrasonido.',
             'Control de stock crítico para contratos de servicio.',
           ].map((item) => (
-            <div class="border border-white/10 bg-white/5 p-6">
+            <div class="border border-white/10 bg-white/5 p-6 hover:bg-white/8 hover:border-white/20 transition-colors duration-300">
               <div class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-[#e3d6be]" style="font-size: 1.15rem;">manufacturing</span>
                 <p class="text-white/82 leading-relaxed">{item}</p>
@@ -210,7 +238,7 @@ const faqs = [
 
     <section id="galeria" class="bg-white border-b border-[#0f3d2f]/8">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div class="max-w-3xl mb-12">
+        <div data-animate="fade-up" class="max-w-3xl mb-12">
           <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Galeria</p>
           <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] mb-6">
             Espacios preparados para imágenes de proyectos, equipos e instalaciones.
@@ -219,15 +247,15 @@ const faqs = [
             Esta seccion queda lista para reemplazar las imagenes actuales por registros propios de Vital Airpower. Cada espacio conserva proporcion, lectura y jerarquia visual.
           </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-animate-stagger class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {gallerySlots.map((item, index) => (
             <figure class="group relative overflow-hidden border border-[#0f3d2f]/10 bg-[#ebe7df] min-h-[260px]">
               <img src={item.src} alt={item.title} width="720" height="540" class="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,33,28,0.08)_0%,rgba(23,33,28,0.82)_100%)]"></div>
+              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,33,28,0.08)_0%,rgba(23,33,28,0.82)_100%)] transition-opacity duration-500 group-hover:opacity-80"></div>
               <figcaption class="relative z-10 flex h-full min-h-[260px] flex-col justify-end p-6 text-white">
                 <span class="mb-3 inline-flex w-fit bg-white/14 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/80">Espacio sin rellenar {index + 1}</span>
-                <p class="font-[Space_Grotesk] text-xl font-bold">{item.title}</p>
-                <p class="mt-2 text-sm text-white/68">Imagen referencial reemplazable.</p>
+                <p class="font-[Space_Grotesk] text-xl font-bold translate-y-1 group-hover:translate-y-0 transition-transform duration-300">{item.title}</p>
+                <p class="mt-2 text-sm text-white/68">{item.title}</p>
               </figcaption>
             </figure>
           ))}
@@ -237,16 +265,16 @@ const faqs = [
 
     <section id="faq" class="bg-[#f4f1eb]">
       <div class="max-w-[1100px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div class="max-w-2xl mb-12">
+        <div data-animate="fade-up" class="max-w-2xl mb-12">
           <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Preguntas y respuestas</p>
           <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] mb-6">Respuestas rápidas para clientes que buscan compresores Kaeser y soporte industrial.</h2>
         </div>
-        <div class="space-y-4">
+        <div data-animate-stagger class="space-y-4">
           {faqs.map((faq) => (
-            <details class="group border border-[#0f3d2f]/12 bg-white px-6 py-5">
+            <details class="group border border-[#0f3d2f]/12 bg-white px-6 py-5 hover:border-[#003F87]/20 transition-colors duration-200">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-bold text-[#17211c]">
                 <span>{faq.question}</span>
-                <span class="material-symbols-outlined text-[#0f3d2f] transition-transform group-open:rotate-45">add</span>
+                <span class="material-symbols-outlined text-[#0f3d2f] transition-transform duration-200 group-open:rotate-45">add</span>
               </summary>
               <p class="pt-4 pr-8 leading-relaxed text-[#4f5a53]">{faq.answer}</p>
             </details>

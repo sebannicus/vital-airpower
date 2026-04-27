@@ -103,6 +103,9 @@ h1, h2, h3, h4, h5, h6 {
 [data-animate-stagger].is-visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.25s; }
 [data-animate-stagger].is-visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.35s; }
 [data-animate-stagger].is-visible > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.45s; }
+[data-animate-stagger].is-visible > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.55s; }
+[data-animate-stagger].is-visible > *:nth-child(7) { opacity: 1; transform: none; transition-delay: 0.62s; }
+[data-animate-stagger].is-visible > *:nth-child(8) { opacity: 1; transform: none; transition-delay: 0.68s; }
 
 /* Hero: animación al cargar (sin JS) */
 @keyframes hero-enter {
@@ -113,6 +116,13 @@ h1, h2, h3, h4, h5, h6 {
 .animate-hero-delay-1 { animation: hero-enter 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .animate-hero-delay-2 { animation: hero-enter 0.9s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .animate-hero-delay-3 { animation: hero-enter 0.9s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Ken Burns — imagen hero zoom suave */
+@keyframes ken-burns {
+  from { transform: scale(1.07); }
+  to   { transform: scale(1); }
+}
+.ken-burns { animation: ken-burns 18s ease-out both; }
 
 /* Número/stat counter shimmer */
 @keyframes shimmer-line {
