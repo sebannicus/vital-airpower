@@ -49,15 +49,19 @@ const faqs = [
 
     <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
     <section class="relative min-h-[92vh] flex items-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 z-0 bg-[#070e1a]" data-hero-carousel>
+        {[
+          { src: '/images/hero-compresores.jpg',                       alt: 'Compresores industriales Kaeser' },
+          { src: '/images/hero-imagen-muchos-modelos-compresores.jpg', alt: 'Gama completa de compresores Kaeser' },
+          { src: '/images/hero-compresores-grandes.jpg',               alt: 'Grandes compresores industriales' },
+          { src: '/images/CES_Banner_47-52450.webp',                   alt: 'Vital Airpower — sistemas de aire comprimido' },
+        ].map((img, i) => (
+          <div data-hero-slide class="absolute inset-0 transition-opacity duration-1000" style={i === 0 ? 'opacity:1' : 'opacity:0'}>
+            <img src={img.src} alt={img.alt} class="w-full h-full object-contain object-center" loading={i === 0 ? 'eager' : 'lazy'} width="1920" height="1080" />
+          </div>
+        ))}
         <div class="absolute inset-0 bg-gradient-to-r from-[#070e1a]/92 via-[#070e1a]/68 to-[#070e1a]/25 z-10"></div>
         <div class="absolute inset-0 bg-grid-hero z-20 pointer-events-none"></div>
-        <img
-          src="/images/CES_Banner_47-52450.webp"
-          alt="Vital Airpower — Sistemas de aire comprimido industrial"
-          class="absolute inset-0 w-full h-full object-cover ken-burns"
-          width="1920" height="1080" loading="eager"
-        />
       </div>
       <div class="relative z-30 max-w-[1440px] mx-auto px-6 md:px-12 py-24 grid md:grid-cols-12 gap-12">
         <div class="md:col-span-8 lg:col-span-7">
@@ -170,9 +174,9 @@ const faqs = [
         </div>
         <div class="hidden lg:flex items-center justify-center">
           <img
-            src="/images/kaeser-mining-application-compressor.webp"
-            alt="Kaeser compresor aplicación minera"
-            class="w-full max-w-[440px] h-auto object-contain"
+            src="/images/logo2.webp"
+            alt="Vital Airpower"
+            class="w-full max-w-[340px] h-auto object-contain opacity-85"
             loading="lazy"
           />
         </div>
@@ -711,6 +715,19 @@ const faqs = [
   <Footer />
 
   <script>
+    const heroCarousel = document.querySelector('[data-hero-carousel]');
+    if (heroCarousel) {
+      const heroSlides = Array.from(heroCarousel.querySelectorAll('[data-hero-slide]')) as HTMLElement[];
+      if (heroSlides.length > 1) {
+        let cur = 0;
+        setInterval(() => {
+          heroSlides[cur].style.opacity = '0';
+          cur = (cur + 1) % heroSlides.length;
+          heroSlides[cur].style.opacity = '1';
+        }, 4000);
+      }
+    }
+
     document.querySelectorAll('[data-carousel]').forEach((container) => {
       const slides = Array.from(container.querySelectorAll('[data-slide]')) as HTMLElement[];
       if (slides.length < 2) return;
