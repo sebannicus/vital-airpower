@@ -50,7 +50,9 @@ const coverage = [
         <!-- Formulario (3/5) -->
         <div class="md:col-span-3 bg-white p-10" style="box-shadow: 0 20px 40px -20px rgba(27,28,28,0.08);" data-animate="fade-left">
           <h2 class="font-[Space_Grotesk] text-2xl font-bold tracking-tighter mb-8">Solicitud técnica</h2>
-          <form class="space-y-6" action="#" method="POST">
+          <!-- Formspree: crear form en formspree.io con ops@vitalairpower.cl y reemplazar YOUR_FORMSPREE_ID -->
+          <form id="contact-form" class="space-y-6" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <input type="hidden" name="_subject" value="Nueva solicitud técnica — Vital Airpower" />
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label class="block text-xs font-bold uppercase tracking-widest text-[#5E5E5E] mb-2" for="nombre">
@@ -75,6 +77,34 @@ const coverage = [
                   type="text"
                   class="w-full border border-[#C2C6D4] px-4 py-3 text-sm focus:outline-none focus:border-[#003F87] transition-colors bg-[#F6F3F2]"
                   placeholder="Empresa Industrial S.A."
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-widest text-[#5E5E5E] mb-2" for="email">
+                  Email de contacto
+                </label>
+                <input
+                  id="email"
+                  name="_replyto"
+                  type="email"
+                  required
+                  class="w-full border border-[#C2C6D4] px-4 py-3 text-sm focus:outline-none focus:border-[#003F87] transition-colors bg-[#F6F3F2]"
+                  placeholder="juan@empresa.cl"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-widest text-[#5E5E5E] mb-2" for="telefono">
+                  Teléfono (opcional)
+                </label>
+                <input
+                  id="telefono"
+                  name="telefono"
+                  type="tel"
+                  class="w-full border border-[#C2C6D4] px-4 py-3 text-sm focus:outline-none focus:border-[#003F87] transition-colors bg-[#F6F3F2]"
+                  placeholder="+56 9 XXXX XXXX"
                 />
               </div>
             </div>
@@ -114,13 +144,24 @@ const coverage = [
             </div>
 
             <button
+              id="submit-btn"
               type="submit"
-              class="w-full flex items-center justify-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:-translate-y-0.5 transition-all duration-200"
+              class="w-full flex items-center justify-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               Enviar solicitud técnica
               <span class="material-symbols-outlined" style="font-size: 1.1rem;">send</span>
             </button>
           </form>
+
+          <div id="form-success" class="hidden text-center py-12">
+            <span class="material-symbols-outlined text-[#25D366] mb-4 block" style="font-size:3rem;">check_circle</span>
+            <h3 class="font-[Space_Grotesk] text-2xl font-bold text-[#17211c] mb-3">Solicitud recibida</h3>
+            <p class="text-[#5E5E5E] leading-relaxed max-w-sm mx-auto">Le responderemos a la brevedad. Para urgencias, use el canal directo.</p>
+            <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-6 bg-[#25D366] text-white px-6 py-3 font-bold text-sm tracking-widest uppercase hover:bg-[#1ebe5d] transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1rem;">chat</span>
+              WhatsApp directo
+            </a>
+          </div>
         </div>
 
         <!-- Contacto directo (2/5) -->
@@ -177,7 +218,7 @@ const coverage = [
               <span class="material-symbols-outlined text-[#003F87] flex-shrink-0" style="font-size: 1.2rem;">mail</span>
               <div>
                 <p class="text-xs text-[#5E5E5E] uppercase tracking-widest mb-0.5">Email</p>
-                <a href="mailto:ventaskaeser@vitalairpower.com" class="font-bold text-[#1B1C1C] hover:text-[#003F87] transition-colors">ventaskaeser@vitalairpower.com</a>
+                <a href="mailto:ops@vitalairpower.cl" class="font-bold text-[#1B1C1C] hover:text-[#003F87] transition-colors">ops@vitalairpower.cl</a>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -240,4 +281,40 @@ const coverage = [
   </main>
 
   <Footer />
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const successMsg = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!submitBtn) return;
+
+      const origHTML = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Enviando...</span>';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+
+        if (res.ok) {
+          form.classList.add('hidden');
+          successMsg?.classList.remove('hidden');
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = origHTML;
+          alert('Error al enviar. Por favor intente nuevamente o contáctenos por WhatsApp.');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origHTML;
+        alert('Error de conexión. Por favor intente nuevamente o contáctenos por WhatsApp.');
+      }
+    });
+  </script>
 </BaseLayout>

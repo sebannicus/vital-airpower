@@ -67,6 +67,16 @@ const currentPath = Astro.url.pathname;
 
       <div class="flex items-center gap-3">
         <a
+          href="https://wa.me/56976400195"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden sm:flex items-center gap-2 bg-[#25D366] text-white px-4 py-2.5 text-[0.7rem] font-bold tracking-widest uppercase transition-all duration-200 hover:bg-[#1ebe5d] active:scale-95"
+          aria-label="Consultar por WhatsApp"
+        >
+          <span class="material-symbols-outlined" style="font-size: 0.95rem;">chat</span>
+          WhatsApp
+        </a>
+        <a
           href="/contacto"
           class="hidden sm:flex items-center gap-2 bg-[#003F87] text-white px-5 py-2.5 text-[0.7rem] font-bold tracking-widest uppercase transition-all duration-200 hover:bg-[#0056B3] hover:shadow-lg hover:shadow-[#003F87]/20 active:scale-95"
         >
@@ -116,8 +126,17 @@ const currentPath = Astro.url.pathname;
           </div>
         ))}
         <a
+          href="https://wa.me/56976400195"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-nav-link mt-4 flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 text-xs font-bold tracking-widest uppercase"
+        >
+          <span class="material-symbols-outlined" style="font-size: 1rem;">chat</span>
+          WhatsApp directo
+        </a>
+        <a
           href="/contacto"
-          class="mobile-nav-link mt-4 flex items-center justify-center gap-2 bg-[#003F87] text-white px-5 py-3 text-xs font-bold tracking-widest uppercase"
+          class="mobile-nav-link mt-2 flex items-center justify-center gap-2 bg-[#003F87] text-white px-5 py-3 text-xs font-bold tracking-widest uppercase"
         >
           <span class="material-symbols-outlined" style="font-size: 1rem;">support_agent</span>
           Contacto técnico
