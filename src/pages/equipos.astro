@@ -3,197 +3,273 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 
-const families = [
+const tornilloFamilies = [
   {
-    title: 'SX, SM, SK y ASK',
-    range: 'Hasta 22 kW',
-    text: 'Familias compactas con bajo ruido, mantenimiento accesible y rango de presión entre 5,5 y 15 bar según configuración.',
-    image: null,
+    label: 'Hasta 22 kW',
+    title: 'Pequeños — SX, SM, SK, ASK',
+    specs: '0,26–2,20 m³/min · 5,5–15 bar',
+    desc: 'Compactos y silenciosos para talleres, PYMES y puntos de consumo pequeños. Perfil SIGMA. Accionamiento por correa o directo. Bajo mantenimiento.',
+    image: '/images/compresor-de-tornillo-pequeño-hasta-22-kw-sxc-4.webp',
   },
   {
-    title: 'AIRCENTER',
-    range: 'Hasta 15 kW',
-    text: 'Sistemas completos con secador refrigerativo integrado para instalaciones compactas y ordenadas.',
-    image: null,
+    label: '18,5–110 kW',
+    title: 'Medianos — BSD, CSD, ASD',
+    specs: '1,64–12,30 m³/min · 5,5–15 bar',
+    desc: 'La gama más versátil. Versión T con secador integrado, versión SFC de caudal variable. Motores IE3 de alta eficiencia. Para industria y uso continuo.',
+    image: '/images/compresor-de-tornillo-csd-csdx-105.webp',
   },
   {
-    title: 'ASD a HSD',
-    range: '18,5 a 500 kW',
-    text: 'Gama media y pesada con motores eficientes, termogestión ETM y mayor escala de caudal.',
-    image: null,
-  },
-  {
-    title: 'Versiones T',
-    range: 'Hasta 132 kW',
-    text: 'Compresores modulares con secador refrigerativo, protección térmica del secador y configuraciones compactas.',
-    image: null,
-  },
-  {
-    title: 'Versiones SFC',
-    range: 'Hasta 515 kW',
-    text: 'Velocidad variable para adaptar caudal a la demanda real y mejorar eficiencia en carga parcial.',
-    image: null,
+    label: '75–515 kW',
+    title: 'Grandes — DSD, ESD, FSD, HSD',
+    specs: '7,50–87,30 m³/min · 5,5–15 bar',
+    desc: 'Para industria pesada, minería y planta de producción. Bajo consumo específico, alta disponibilidad. Opción SFC para regulación de velocidad sin pérdidas.',
+    image: '/images/gran-compresor-de-tornillo-hsd-782.webp',
   },
 ];
 
-const equipmentModels = [
-  { model: 'SX 3 – SX 8',    family: 'SX',       range: '2,2 – 5,5 kW',    image: null },
-  { model: 'SM 10 – SM 16',  family: 'SM',       range: '5,5 – 9 kW',      image: null },
-  { model: 'SK 22',          family: 'SK',       range: '11 kW',           image: '/images/kaeser-sk25t.webp' },
-  { model: 'ASK 32 T',       family: 'ASK',      range: 'Hasta 22 kW',     image: '/images/kaeser-ask32t.webp' },
-  { model: 'SM 12',          family: 'SM',       range: '7,5 kW',          image: '/images/kaeser-sm12.webp' },
-  { model: 'CSD 105',        family: 'CSD',      range: '55 kW',           image: '/images/kaeser-csd105.webp' },
-  { model: 'DSD 145 – 240',  family: 'DSD',      range: '75 – 132 kW',     image: null },
-  { model: 'ESD 375 – FSD 475', family: 'ESD/FSD', range: '200 – 250 kW', image: null },
-  { model: 'SM 13 SFC',      family: 'SFC',      range: 'Demanda variable', image: null },
-  { model: 'SK 22 SFC',      family: 'SFC',      range: 'Demanda variable', image: null },
-  { model: 'AIRCENTER SX',   family: 'AIRCENTER',range: 'Hasta 5,5 kW',    image: null },
-  { model: 'AIRCENTER SM',   family: 'AIRCENTER',range: 'Hasta 9 kW',      image: null },
-];
-
-const selectedModels = [
-  'SX 3 a SX 8: 0,26 a 0,80 m3/min y 2,2 a 5,5 kW.',
-  'SM 10 a SM 16: 0,60 a 1,62 m3/min y 5,5 a 9 kW.',
-  'SK 22: alrededor de 2,16 m3/min y 11 kW.',
-  'DSD 145 a DSD 240: 14,00 a 25,15 m3/min y 75 a 132 kW.',
-  'ESD 375 a FSD 475: 37,85 a 48,20 m3/min y 200 a 250 kW.',
-  'SFC compactos como SM 13 SFC o SK 22 SFC para demanda variable.',
+const otherFamilies = [
+  {
+    category: 'MOBILAIR',
+    label: '1–45,8 m³/min',
+    title: 'Portátiles para obras y faenas',
+    specs: '22 modelos · Diésel o eléctrico · Hasta 15 bar',
+    desc: 'Desde compactos de gasolina hasta el M 500-2 libre de aceite para refinerías. Preparados para altitud hasta 3.000 m.s.n.m. y temperaturas extremas.',
+    image: '/images/compresores-portatiles-para-obras-mobilair-m-450.webp',
+  },
+  {
+    category: 'Pistón',
+    label: 'Hasta 11 kW',
+    title: 'Classic, Premium e i.Comp',
+    specs: '0,13–1,40 m³/min · 7–15 bar',
+    desc: 'Para demanda variable y uso intermitente. Versiones con aceite o libres de aceite. Classic y Premium para talleres; i.Comp para procesos limpios.',
+    image: '/images/compresores-de-piston-clasicos.webp',
+  },
+  {
+    category: 'Pistón Industrial',
+    label: 'KCD / KCCD',
+    title: 'Industriales lubricados con aceite',
+    specs: '0,06–1,40 m³/min · Hasta 35 bar',
+    desc: 'Construcción de fundición para ciclos de trabajo intensos. Presiones de 7, 10, 15 o 35 bar en múltiples etapas. Boosters disponibles hasta 45 bar.',
+    image: '/images/compresores-de-piston-industriales-kcd-kccd-lubricados-con-aceite.webp',
+  },
+  {
+    category: 'Sopladores',
+    label: 'CBS → HBS',
+    title: 'Sopladores de tornillo Perfil SIGMA',
+    specs: '6–136 m³/min · Hasta 250 kW',
+    desc: '6 series para transporte neumático, tratamiento de aguas y procesos industriales de baja presión. Solución completa lista para puesta en marcha.',
+    image: '/images/sopladores-de-tornillo-hasta-250-kw-hbs-1600-c.webp',
+  },
 ];
 ---
 
 <BaseLayout
-  title="Equipos | Kaeser para distintas escalas de operación con Vital Airpower"
-  description="Familias de equipos Kaeser relevantes para Vital Airpower: compresores compactos, AIRCENTER, gama media y pesada, versiones T con secador y variantes SFC."
+  title="Equipos Kaeser | Vital Airpower — Gama completa de compresores industriales"
+  description="Gama completa Kaeser disponible con Vital Airpower: tornillo 2,2–515 kW, portátiles MOBILAIR, pistón, sopladores y sistemas de tratamiento. Distribuidor oficial Región de Coquimbo."
 >
   <Header />
 
   <main class="pt-[96px] bg-[#f4f1eb]">
-    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_0.8fr] gap-12 items-center">
-        <div>
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Equipos</p>
-          <h1 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold tracking-tight text-[#1B1C1C] leading-[1.05] mb-6">
-            Familias Kaeser relevantes para la propuesta actual de Vital Airpower.
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="relative flex items-center min-h-[78vh] bg-[#070e1a] overflow-hidden">
+      <!-- Background slideshow -->
+      <div class="absolute inset-0 z-0" data-hero-carousel>
+        {[
+          { src: '/images/hero-compresores.jpg',                    alt: 'Compresores Kaeser industriales' },
+          { src: '/images/hero-compresores-grandes.jpg',            alt: 'Grandes compresores Kaeser' },
+          { src: '/images/hero-imagen-muchos-modelos-compresores.jpg', alt: 'Gama completa de modelos Kaeser' },
+          { src: '/images/hero-kaeser.webp',                        alt: 'Kaeser Kompressoren — Vital Airpower' },
+        ].map((img, i) => (
+          <div
+            data-hero-slide
+            class="absolute inset-0 transition-opacity duration-1000"
+            style={i === 0 ? 'opacity:1' : 'opacity:0'}
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="w-full h-full object-contain object-center"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              width="1920" height="1080"
+            />
+          </div>
+        ))}
+        <!-- Gradient overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#070e1a]/90 via-[#070e1a]/60 to-[#070e1a]/20"></div>
+        <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-[#070e1a]/80 to-transparent"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 py-20 w-full">
+        <div class="max-w-2xl">
+          <span class="inline-block px-3 py-1 bg-[#D7E2FF] text-[#003F87] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+            Distribuidor Oficial Kaeser Chile
+          </span>
+          <h1 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tighter mb-6">
+            Toda la gama Kaeser disponible en la Región de Coquimbo.
           </h1>
-          <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-3xl">
-            Seleccionamos las familias y rangos que ayudan a construir una oferta clara, corporativa y útil para clientes industriales.
+          <p class="text-white/75 text-xl leading-relaxed mb-10 max-w-xl">
+            Tornillo de 2,2 a 515 kW, portátiles MOBILAIR, pistón, sopladores y sistemas de tratamiento. Consulta disponibilidad y precios directamente con nosotros.
           </p>
-        </div>
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/images/kaeser-csd105.webp" alt="Compresor Kaeser" class="w-full h-full object-cover" width="900" height="700" />
+          <div class="flex flex-wrap gap-4">
+            <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+            <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#1ebe5d] transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1rem;">chat</span>
+              WhatsApp técnico
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 md:px-12 bg-white">
+    <!-- ═════════════════════════ COMPRESORES DE TORNILLO ═════════════════ -->
+    <section class="py-16 md:py-20 px-6 md:px-12 bg-[#f4f1eb]">
       <div class="max-w-[1440px] mx-auto">
-        <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-5 mb-12">
-          {families.map((item) => (
-            <article class="bg-[#F6F3F2] border border-[#C2C6D4]/20 overflow-hidden">
-              <div class="relative h-44 bg-[#e8e4dc] border-b border-[#C2C6D4]/20 flex items-center justify-center">
-                {item.image ? (
-                  <img src={item.image} alt={item.title} class="absolute inset-0 w-full h-full object-cover" />
-                ) : (
-                  <div class="flex flex-col items-center gap-2 text-[#9a9080]">
-                    <span class="material-symbols-outlined" style="font-size:2rem;">add_photo_alternate</span>
-                    <span class="text-[0.65rem] uppercase tracking-widest font-bold">Espacio por rellenar</span>
-                  </div>
-                )}
+        <div class="mb-10">
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de tornillo con inyección de aceite</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c]">
+            Tornillo — de 2,2 hasta 515 kW
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+          {tornilloFamilies.map((f) => (
+            <article class="bg-white border border-[#0f3d2f]/10 overflow-hidden hover:border-[#003F87]/25 hover:-translate-y-0.5 transition-all duration-200">
+              <div class="aspect-[4/3] overflow-hidden bg-[#17211c]">
+                <img src={f.image} alt={f.title} class="w-full h-full object-contain object-center p-2" loading="lazy" />
               </div>
               <div class="p-6">
-                <p class="text-xs uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">{item.range}</p>
-                <h3 class="font-[Space_Grotesk] text-lg font-bold text-[#1B1C1C] mb-2">{item.title}</h3>
-                <p class="text-[#5E5E5E] leading-relaxed text-sm">{item.text}</p>
+                <p class="text-[0.62rem] uppercase tracking-[0.18em] font-bold text-[#003F87] mb-1">{f.label}</p>
+                <h3 class="font-[Space_Grotesk] text-lg font-bold text-[#17211c] mb-1">{f.title}</h3>
+                <p class="text-xs text-[#7a6b57] font-medium mb-3">{f.specs}</p>
+                <p class="text-[#4f5a53] text-sm leading-relaxed">{f.desc}</p>
               </div>
             </article>
           ))}
         </div>
-
-        <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-8">
-          <div class="bg-[#17211c] text-white p-8">
-            <p class="text-[0.72rem] uppercase tracking-[0.18em] font-bold text-[#d5c6ac] mb-3">Rango general Kaeser</p>
-            <p class="text-3xl font-bold mb-3">0,25 a 87,3 m3/min</p>
-            <p class="text-white/72 leading-relaxed mb-6">
-              La gama Kaeser cubre un rango amplio de aire comprimido con presiones desde 5,5 a 15 bar y distintas escalas de potencia.
-            </p>
-            <img src="/images/logo-kaeser.webp" alt="Kaeser" width="150" height="40" class="h-9 w-auto object-contain" />
-          </div>
-          <div class="bg-[#F6F3F2] border border-[#C2C6D4]/20 p-8">
-            <p class="text-[0.72rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-4">Modelos y referencias seleccionadas</p>
-            <div class="grid md:grid-cols-2 gap-4">
-              {selectedModels.map((item) => (
-                <div class="bg-white border border-[#C2C6D4]/20 p-4">
-                  <div class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-[#003F87]" style="font-size: 1.15rem;">tune</span>
-                    <p class="text-[#1B1C1C] leading-relaxed text-sm">{item}</p>
-                  </div>
-                </div>
-              ))}
+        <!-- Tornillo libre de aceite + vacío -->
+        <div class="mt-5 grid md:grid-cols-2 gap-5">
+          <article class="bg-white border border-[#0f3d2f]/10 p-6 flex gap-6 items-start hover:border-[#003F87]/25 transition-colors">
+            <div class="w-24 h-24 flex-shrink-0 bg-[#17211c] overflow-hidden">
+              <img src="/images/compresores-tornillo-secos.webp" alt="Tornillo libre de aceite CSG-2/DSG-2" class="w-full h-full object-contain p-1" loading="lazy" />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1440px] mx-auto grid md:grid-cols-3 gap-6">
-        {[
-          {
-            title: 'PERFIL SIGMA',
-            text: 'Kaeser presenta el PERFIL SIGMA como parte central de su propuesta de eficiencia y rendimiento.',
-          },
-          {
-            title: 'Secadores y versiones T',
-            text: 'Los equipos con secador refrigerativo se usan aqui como soporte para hablar de calidad de aire y sistemas compactos.',
-          },
-          {
-            title: 'SFC y demanda variable',
-            text: 'Las versiones con velocidad variable sirven para procesos con carga parcial y variaciones de consumo.',
-          },
-        ].map((card) => (
-          <article class="bg-white border border-[#C2C6D4]/20 p-8">
-            <h3 class="font-[Space_Grotesk] text-2xl font-bold text-[#1B1C1C] mb-4">{card.title}</h3>
-            <p class="text-[#5E5E5E] leading-relaxed">{card.text}</p>
+            <div>
+              <p class="text-[0.62rem] uppercase tracking-widest font-bold text-[#003F87] mb-1">Libre de aceite</p>
+              <h3 class="font-[Space_Grotesk] font-bold text-[#17211c] mb-1">CSG-2 / DSG-2</h3>
+              <p class="text-[#4f5a53] text-sm leading-relaxed">Aire clase 0 ISO 8573-1 para farmacéutica, alimentos y electrónica. Sin aceite en el proceso. Con opción de secador i.HOC integrado.</p>
+            </div>
           </article>
-        ))}
+          <article class="bg-white border border-[#0f3d2f]/10 p-6 flex gap-6 items-start hover:border-[#003F87]/25 transition-colors">
+            <div class="w-24 h-24 flex-shrink-0 bg-[#17211c] overflow-hidden">
+              <img src="/images/bombas-vacio-tornillos.webp" alt="Bombas de vacío de tornillo Kaeser" class="w-full h-full object-contain p-1" loading="lazy" />
+            </div>
+            <div>
+              <p class="text-[0.62rem] uppercase tracking-widest font-bold text-[#003F87] mb-1">Vacío</p>
+              <h3 class="font-[Space_Grotesk] font-bold text-[#17211c] mb-1">Bombas de vacío de tornillo</h3>
+              <p class="text-[#4f5a53] text-sm leading-relaxed">4,75–15,70 m³/min. Vacío final 99%. Motores IE3. Fácil instalación sin equipos adicionales.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 md:px-12 bg-white">
+    <!-- ═══════════════════════ OTRAS FAMILIAS ═══════════════════════════ -->
+    <section class="py-16 md:py-20 px-6 md:px-12 bg-white border-t border-[#0f3d2f]/8">
       <div class="max-w-[1440px] mx-auto">
-        <div class="max-w-2xl mb-12">
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Modelos</p>
-          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#1B1C1C] mb-4">
-            Equipos por modelo — galería en construcción.
+        <div class="mb-10">
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-3">MOBILAIR · Pistón · Sopladores</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c]">
+            Equipos para cada aplicación y escala.
           </h2>
-          <p class="text-[#5E5E5E] leading-relaxed">
-            Cada espacio está reservado para la fotografía del equipo correspondiente.
-          </p>
         </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
-          {equipmentModels.map((item) => (
-            <article class="border border-[#C2C6D4]/20 overflow-hidden bg-[#F6F3F2]">
-              <div class="relative h-52 bg-[#e8e4dc] border-b border-[#C2C6D4]/20 flex items-center justify-center">
-                {item.image ? (
-                  <img src={item.image} alt={item.model} class="absolute inset-0 w-full h-full object-cover" />
-                ) : (
-                  <div class="flex flex-col items-center gap-2 text-[#9a9080]">
-                    <span class="material-symbols-outlined" style="font-size:2.5rem;">add_photo_alternate</span>
-                    <span class="text-[0.65rem] uppercase tracking-widest font-bold">Espacio por rellenar</span>
-                  </div>
-                )}
+        <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+          {otherFamilies.map((f) => (
+            <article class="border border-[#0f3d2f]/10 bg-[#f8f6f1] overflow-hidden hover:border-[#003F87]/25 hover:-translate-y-0.5 transition-all duration-200">
+              <div class="aspect-[4/3] overflow-hidden bg-[#17211c]">
+                <img src={f.image} alt={f.title} class="w-full h-full object-contain object-center p-2" loading="lazy" />
               </div>
               <div class="p-5">
-                <p class="text-[0.65rem] uppercase tracking-widest font-bold text-[#003F87] mb-1">{item.family}</p>
-                <h3 class="font-[Space_Grotesk] text-lg font-bold text-[#1B1C1C] mb-1">{item.model}</h3>
-                <p class="text-xs text-[#7a6b57] font-medium">{item.range}</p>
+                <p class="text-[0.62rem] uppercase tracking-[0.18em] font-bold text-[#003F87] mb-1">{f.category} · {f.label}</p>
+                <h3 class="font-[Space_Grotesk] text-base font-bold text-[#17211c] mb-1">{f.title}</h3>
+                <p class="text-[0.65rem] text-[#7a6b57] font-medium mb-2">{f.specs}</p>
+                <p class="text-[#4f5a53] text-sm leading-relaxed">{f.desc}</p>
               </div>
             </article>
           ))}
         </div>
       </div>
     </section>
+
+    <!-- ══════════════════════ KAESER SIGMA + STATS ═══════════════════════ -->
+    <section class="py-16 md:py-20 px-6 md:px-12 bg-[#17211c] text-white border-t border-white/8">
+      <div class="max-w-[1440px] mx-auto grid md:grid-cols-[1fr_1fr_1fr] gap-8 items-center">
+        <div class="md:col-span-2">
+          <p class="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-4">Por qué Kaeser</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold text-white mb-5 leading-[1.1]">
+            Perfil SIGMA. Hasta 15% menos energía frente a perfiles convencionales.
+          </h2>
+          <p class="text-white/65 text-base leading-relaxed max-w-2xl">
+            Todos los compresores Kaeser incorporan el Perfil SIGMA optimizado para cada categoría. Mayor caudal entregado por kW consumido, disponibilidad hasta 45°C de temperatura ambiente y acceso rápido a puntos de mantenimiento para reducir tiempos de parada.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { value: '2,2–515', unit: 'kW', label: 'Rango tornillo' },
+            { value: '0,26–87', unit: 'm³/min', label: 'Caudal disponible' },
+            { value: '22', unit: 'modelos', label: 'MOBILAIR' },
+            { value: '25', unit: 'años', label: 'Experiencia técnica' },
+          ].map((s) => (
+            <div class="border border-white/10 bg-white/5 px-4 py-4">
+              <p class="text-2xl font-bold text-white">{s.value}</p>
+              <p class="text-[0.62rem] text-[#D7E2FF]/60 uppercase tracking-widest">{s.unit}</p>
+              <p class="text-white/50 text-xs mt-1">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CTA ════════════════════════════════ -->
+    <section class="py-16 md:py-20 px-6 md:px-12 bg-[#f4f1eb]">
+      <div class="max-w-[900px] mx-auto text-center">
+        <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] mb-5">
+          ¿Tiene una aplicación específica en mente?
+        </h2>
+        <p class="text-[#4f5a53] text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+          Cuéntenos el caudal requerido, la presión de trabajo y las condiciones de su instalación. Le respondemos con la propuesta técnica correcta.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+            Solicitar propuesta técnica
+            <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#1ebe5d] transition-colors">
+            <span class="material-symbols-outlined" style="font-size:1rem;">chat</span>
+            WhatsApp directo
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <Footer />
+
+  <script>
+    const heroContainer = document.querySelector('[data-hero-carousel]');
+    if (heroContainer) {
+      const slides = Array.from(heroContainer.querySelectorAll('[data-hero-slide]')) as HTMLElement[];
+      if (slides.length > 1) {
+        let cur = 0;
+        setInterval(() => {
+          slides[cur].style.opacity = '0';
+          cur = (cur + 1) % slides.length;
+          slides[cur].style.opacity = '1';
+        }, 4000);
+      }
+    }
+  </script>
 </BaseLayout>
