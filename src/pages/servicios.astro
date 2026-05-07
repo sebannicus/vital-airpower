@@ -4,141 +4,119 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 
 const services = [
-  {
-    title: 'Servicio técnico de compresores',
-    text: 'Diagnóstico, mantención y soporte para compresores industriales con foco en continuidad y criterio de sistema.',
-  },
-  {
-    title: 'Secadores de aire',
-    text: 'Atención a secadores por refrigeración y por absorción según la calidad de aire requerida por el proceso.',
-  },
-  {
-    title: 'Filtros y tratamiento de aire',
-    text: 'Soporte sobre filtros de línea, protección del sistema y calidad de aire para procesos sensibles.',
-  },
-  {
-    title: 'Líneas de aire comprimido',
-    text: 'Creación, mantención y proyección de redes de aire para crecimiento ordenado de la operación.',
-  },
-  {
-    title: 'Auditorías de fugas',
-    text: 'Levantamiento por ultrasonido para detectar pérdidas y encontrar mejoras de eficiencia.',
-  },
-  {
-    title: 'Stock crítico',
-    text: 'Planificación y control de repuestos para clientes con contratos de servicio o mantenimiento.',
-  },
-];
-
-const supportSignals = [
-  'SIGMA CONTROL 2 coordina producción y consumo de aire comprimido para evitar derroches en carga parcial.',
-  'El controlador registra eventos de servicio, admite actualizaciones y permite visualizar datos operativos.',
-  'Vital Airpower toma ese soporte de control para acompañar decisiones de mantenimiento y administración del sistema.',
+  { icon: 'build',                   title: 'Mantención preventiva',              desc: 'Planes programados con inspecciones, cambio de filtros y lubricantes según horas de operación.' },
+  { icon: 'construction',            title: 'Mantención correctiva y reparación', desc: 'Diagnóstico en terreno y resolución de fallas en compresores industriales de cualquier marca.' },
+  { icon: 'settings',                title: 'Overhaul de unidades compresor',     desc: 'Reconstrucción completa del bloque compresor: rodamientos, sellos, válvulas y airend.' },
+  { icon: 'notification_important',  title: 'Contingencia 24/7',                  desc: 'Respuesta de emergencia para paradas no programadas. Disponibilidad real fuera de horario hábil.' },
+  { icon: 'local_shipping',          title: 'Rental de equipos portátiles',       desc: 'Compresores portátiles en arriendo para obras o paradas de planta. Entrega en la región.' },
+  { icon: 'storefront',              title: 'Venta de compresores Kaeser',        desc: 'Distribuidor oficial Kaeser Chile. Toda la gama disponible con soporte técnico de posventa.' },
+  { icon: 'water_drop',              title: 'Servicio en secadores de aire',      desc: 'Mantención de secadores por refrigeración y adsorción según calidad de aire requerida.' },
+  { icon: 'filter_alt',              title: 'Filtros y tratamiento de aire',      desc: 'Instalación y servicio de filtros de línea, separadores y equipos de tratamiento de condensados.' },
+  { icon: 'opacity',                 title: 'Drenaje de condensados',             desc: 'Instalación y servicio de drenajes ECO-DRAIN y separadores agua-aceite AQUAMAT.' },
+  { icon: 'device_hub',              title: 'Líneas SmartPipe+',                  desc: 'Diseño, instalación y proyección de redes de distribución de aire en aluminio modular.' },
+  { icon: 'hearing',                 title: 'Auditorías de fugas por ultrasonido','desc': 'Detección de pérdidas en la red para reducir consumo energético y mejorar la eficiencia.' },
+  { icon: 'query_stats',             title: 'Asesoría técnica industrial',        desc: 'Evaluación del sistema, auditorías energéticas y recomendaciones de mejora operativa.' },
+  { icon: 'inventory_2',             title: 'Stock crítico de repuestos',         desc: 'Planificación y control de repuestos para contratos de servicio. Disponibilidad garantizada.' },
+  { icon: 'air',                     title: 'Sopladores industriales',            desc: 'Servicio técnico, venta y arriendo de sopladores para transporte neumático y aguas residuales.' },
+  { icon: 'bolt',                    title: 'Grupos electrógenos',                desc: 'Mantención, reparación, venta y arriendo de generadores industriales.' },
 ];
 ---
 
 <BaseLayout
-  title="Servicios | Vital Airpower para compresores, tratamiento de aire y soporte técnico"
-  description="Servicios de Vital Airpower para compresores industriales, secadores, filtros, líneas de aire, auditorías de fuga, eficiencia energética y stock crítico."
+  title="Servicios | Vital Airpower — Compresores y sistemas de aire comprimido"
+  description="Servicios completos de Vital Airpower: mantención, reparación, rental, venta Kaeser, secadores, filtros, líneas SmartPipe+ y asesoría técnica industrial en la Región de Coquimbo."
 >
   <Header />
 
   <main class="pt-[96px] bg-[#f4f1eb]">
-    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_0.8fr] gap-12 items-center">
+
+    <!-- HERO -->
+    <section class="py-16 md:py-24 px-6 md:px-12 bg-[#f4f1eb] border-b border-[#0f3d2f]/10">
+      <div class="max-w-[1440px] mx-auto grid md:grid-cols-[1fr_auto] gap-8 items-end">
         <div>
           <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Servicios</p>
-          <h1 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold tracking-tight text-[#1B1C1C] leading-[1.05] mb-6">
-            Servicios para la operación diaria del sistema de aire comprimido.
+          <h1 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold tracking-tight text-[#17211c] leading-[1.02] mb-4 max-w-3xl">
+            Todo lo que necesita su sistema de aire comprimido.
           </h1>
-          <p class="text-[#5E5E5E] text-xl leading-relaxed max-w-3xl">
-            Servicio técnico, tratamiento de aire, líneas, eficiencia, soporte y administración para empresas que necesitan continuidad operacional y una respuesta clara.
+          <p class="text-[#4f5a53] text-xl max-w-xl">
+            Desde la emergencia de terreno hasta el contrato de mantención anual.
           </p>
         </div>
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/images/servicios-portada3.webp" alt="Servicio técnico Vital Airpower" class="w-full h-full object-cover" width="900" height="700" />
+        <div class="flex gap-3 flex-shrink-0">
+          <a href="/contacto" class="inline-flex items-center gap-2 bg-[#003F87] text-white px-6 py-3 font-bold text-xs tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+            Solicitar asistencia
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 md:px-12 bg-white">
+    <!-- SERVICES GRID -->
+    <section class="py-16 md:py-24 px-6 md:px-12 bg-white">
       <div class="max-w-[1440px] mx-auto">
-        <div class="max-w-3xl mb-12">
-          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#1B1C1C] mb-6">
-            Capacidades técnicas alineadas con la propuesta de Vital Airpower.
-          </h2>
-        </div>
-        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-          {services.map((service) => (
-            <article class="bg-[#F6F3F2] border border-[#C2C6D4]/20 p-7 min-h-[220px]">
-              <span class="material-symbols-outlined text-[#003F87] mb-5 block" style="font-size: 1.5rem;">handyman</span>
-              <h3 class="font-[Space_Grotesk] text-xl font-bold text-[#1B1C1C] mb-3">{service.title}</h3>
-              <p class="text-[#5E5E5E] leading-relaxed">{service.text}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {services.map((s) => (
+            <article class="border border-[#0f3d2f]/10 bg-[#f8f6f1] p-6 hover:-translate-y-0.5 hover:shadow-md hover:border-[#003F87]/20 transition-all duration-200">
+              <span class="material-symbols-outlined text-[#003F87] mb-4 block" style="font-size:1.5rem;">{s.icon}</span>
+              <h3 class="font-[Space_Grotesk] text-base font-bold text-[#17211c] mb-2">{s.title}</h3>
+              <p class="text-[#4f5a53] text-sm leading-relaxed">{s.desc}</p>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 md:px-12 bg-[#17211c] text-white">
-      <div class="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_0.75fr_1fr] gap-10 items-start">
-        <div>
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-4">Control y seguimiento</p>
-          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight mb-6">
-            SIGMA CONTROL 2 aporta contexto técnico; el servicio lo aterriza Vital Airpower.
-          </h2>
-          <p class="text-white/72 text-lg leading-relaxed">
-            El control, la lectura operativa y el ajuste inteligente se traducen en acompañamiento sobre paneles, seguimiento de variables y mejor capacidad para tomar decisiones de mantenimiento o administración.
-          </p>
+    <!-- IMÁGENES -->
+    <section class="px-6 md:px-12 bg-white pb-16 md:pb-24">
+      <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/images/cambio-de-rotores.webp" alt="Reparación de compresor industrial" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="600" height="450" />
         </div>
-
-        <!-- Imagen Sigma Control 2 — reemplazar src por foto real del panel -->
-        <div class="relative overflow-hidden min-h-[420px] border border-white/10 bg-[#0f1a15]">
-          <img
-            src="/images/kaeser-csd105.webp"
-            alt="SIGMA CONTROL 2 — panel de control Kaeser"
-            class="absolute inset-0 w-full h-full object-cover opacity-70"
-            width="900"
-            height="1100"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0f1a15]/70 via-transparent to-transparent"></div>
-          <div class="absolute bottom-5 left-5 right-5">
-            <p class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-white/50">SIGMA CONTROL 2</p>
-          </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/images/limpieza-mantencion.webp" alt="Mantención técnica en terreno" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="600" height="450" />
         </div>
-
-        <div class="space-y-4">
-          {supportSignals.map((item) => (
-            <div class="border border-white/10 bg-white/5 p-6">
-              <div class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[#e3d6be]" style="font-size: 1.15rem;">memory</span>
-                <p class="text-white/82 leading-relaxed">{item}</p>
-              </div>
-            </div>
-          ))}
-          <div class="border border-[#c79a3b]/35 bg-[#c79a3b]/10 p-6">
-            <p class="text-white/82 leading-relaxed">
-              Cuando aplica, Vital Airpower puede apoyar lectura de sistemas, paneles de administración y seguimiento operativo ligado a Sigma Control 2.
-            </p>
-          </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/images/planta-de-aire.webp" alt="Sala de compresores industrial" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="600" height="450" />
         </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 md:px-12 bg-[#F6F3F2]">
-      <div class="max-w-[1200px] mx-auto text-center">
-        <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#1B1C1C] mb-6">
-          Servicio pensado para clientes que no buscan sólo una marca, sino continuidad operacional.
+    <!-- MARCAS QUE ATENDEMOS -->
+    <section class="py-10 px-6 md:px-12 bg-[#17211c]">
+      <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-16">
+        <div class="flex-shrink-0">
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-1">Marcas que atendemos</p>
+          <p class="text-white/50 text-sm">Kaeser principalmente, y cualquier equipo que ya tenga en planta.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-3">
+          <img src="/images/logo-kaeser.webp" alt="Kaeser Kompressoren" class="h-6 w-auto brightness-0 invert opacity-70" width="80" height="24" />
+          <span class="text-white/30 font-bold text-sm uppercase tracking-widest">Ingersoll Rand</span>
+          <img src="/images/atlas-copco-logo.webp" alt="Atlas Copco" class="h-5 w-auto object-contain brightness-0 invert opacity-40" width="100" height="20" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-24 px-6 md:px-12 bg-[#f4f1eb]">
+      <div class="max-w-[900px] mx-auto text-center">
+        <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] mb-6">
+          ¿Necesita un servicio específico?
         </h2>
-        <p class="text-[#5E5E5E] text-lg max-w-3xl mx-auto mb-10">
-          El valor está en combinar equipo correcto, soporte técnico, calidad de aire, eficiencia y una relación comercial que anticipe necesidades de la operación.
+        <p class="text-[#4f5a53] text-lg mb-10 max-w-xl mx-auto">
+          Cuéntenos el equipo, la marca y la situación. Le respondemos directamente.
         </p>
-        <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase">
-          Hablar con un técnico
-          <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-        </a>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+            Solicitar asistencia técnica
+            <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#1ebe5d] transition-colors">
+            <span class="material-symbols-outlined" style="font-size:1rem;">chat</span>
+            WhatsApp directo
+          </a>
+        </div>
       </div>
     </section>
+
   </main>
 
   <Footer />

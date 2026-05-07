@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const WA_NUMBER = '56976400195';
+const WA_MSG = encodeURIComponent('Hola, quiero cotizar un compresor de tornillo 220V para mi negocio.');
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${WA_MSG}`;
+
+const specs = [
+  { label: 'Caudal real',     value: '300 – 400',  unit: 'L/min' },
+  { label: 'Presión máx.',    value: 'Hasta 9',    unit: 'bar' },
+  { label: 'Estanque',        value: '100',        unit: 'litros' },
+  { label: 'Alimentación',    value: 'Monofásico', unit: '220V' },
+  { label: 'Nivel de ruido',  value: '≈ 65',       unit: 'dB' },
+  { label: 'Trabajo',         value: 'Continuo',   unit: '100%' },
+];
+
+const benefits = [
+  { icon: 'volume_off',      title: 'Menos ruido',         text: '≈ 65 dB — trabaja sin interrumpir el entorno laboral.' },
+  { icon: 'speed',           title: 'Más producción',       text: 'Aire continuo y estable, sin pulsos ni caídas de presión.' },
+  { icon: 'bolt',            title: 'Ahorro energético',    text: 'Menor consumo por m³ producido frente al pistón convencional.' },
+  { icon: 'verified_user',   title: 'Mayor confiabilidad',  text: 'Menos partes móviles, menos fallas, menos tiempo muerto.' },
+];
+
+const vsRows = [
+  { feature: 'Tipo de aire',       piston: 'Pulsante e inestable',         tornillo: 'Continuo y estable' },
+  { feature: 'Nivel de ruido',      piston: 'Alto (80 – 95 dB)',            tornillo: 'Bajo (≈ 65 dB)' },
+  { feature: 'Ciclo de trabajo',    piston: 'Intermitente',                 tornillo: 'Continuo 100%' },
+  { feature: 'Caudal real',         piston: '150 – 250 L/min (variable)',    tornillo: '300 – 400 L/min' },
+  { feature: 'Consumo energético',  piston: 'Alto',                         tornillo: 'Eficiente' },
+  { feature: 'Mantenimiento',       piston: 'Frecuente',                    tornillo: 'Programado y mínimo' },
+  { feature: 'Vida útil',           piston: 'Menor',                        tornillo: 'Mayor' },
+];
+
+const targets = [
+  { icon: 'build',           label: 'Talleres mecánicos' },
+  { icon: 'directions_car',  label: 'Vulcanizaciones' },
+  { icon: 'factory',         label: 'PYMES industriales' },
+  { icon: 'carpenter',       label: 'Carpinterías y maestranzas' },
+  { icon: 'medical_services',label: 'Clínicas odontológicas' },
+  { icon: 'precision_manufacturing', label: 'Uso continuo en producción' },
+];
+---
+
+<BaseLayout
+  title="Compresor de Tornillo 220V — Vital Airpower | Kaeser Distribuidor Oficial"
+  description="Cambia tu compresor de pistón por un compresor de tornillo 220V. Más aire, menos ruido, trabajo continuo. Distribuidor oficial Kaeser Chile — Cotiza ahora por WhatsApp."
+  ogImage="/images/og-tornillo.webp"
+>
+  <!-- MINI HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1a]/95 backdrop-blur border-b border-white/8">
+    <div class="max-w-[1200px] mx-auto px-5 py-3 flex items-center justify-between gap-4">
+      <a href="/" aria-label="Vital Airpower">
+        <img src="/images/logo2.webp" alt="Vital Airpower" width="110" height="44" class="h-9 w-auto brightness-0 invert opacity-90" />
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="tel:+56976400195" class="hidden sm:flex items-center gap-2 text-white/70 hover:text-white text-sm font-bold transition-colors">
+          <span class="material-symbols-outlined" style="font-size:1rem;">call</span>
+          +56 9 7640 0195
+        </a>
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 text-xs font-bold uppercase tracking-widest hover:bg-[#1ebe5d] transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.526 5.847L.057 23.882l6.198-1.625A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.359-.213-3.68.965.981-3.588-.234-.369A9.818 9.818 0 1112 21.818z"/>
+          </svg>
+          Cotizar ahora
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-[60px] bg-[#0a0f1a] font-[Inter]">
+
+    <!-- HERO -->
+    <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-[#0a0f1a]">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#003F87_0%,_transparent_50%)] opacity-20 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_#EAB308_0%,_transparent_45%)] opacity-8 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,transparent_60%,#0a0f1a_100%)] pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-24 md:py-32">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3 mb-8">
+            <img src="/images/logo-kaeser.webp" alt="Kaeser" width="110" height="30" class="h-7 w-auto object-contain opacity-80" />
+            <span class="text-white/30 text-xs">|</span>
+            <span class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#EAB308]">Distribuidor Oficial Chile</span>
+          </div>
+
+          <h1 class="font-[Space_Grotesk] text-5xl md:text-7xl font-bold text-white leading-[1.02] tracking-tighter mb-6">
+            Deja el compresor<br />
+            <span class="text-[#EAB308]">de pistón.</span><br />
+            Sube al tornillo.
+          </h1>
+
+          <p class="text-white/65 text-xl md:text-2xl leading-relaxed mb-4 max-w-xl">
+            Más aire. Menos ruido. Trabajo continuo.
+          </p>
+          <p class="text-white/45 text-base leading-relaxed mb-10 max-w-lg">
+            Compresor de tornillo 220V monofásico — ideal para talleres, vulcanizaciones y PYMES. Con instalación y puesta en marcha incluidas.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-5 font-bold text-sm tracking-widest uppercase hover:bg-[#1ebe5d] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#25D366]/30 transition-all duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.526 5.847L.057 23.882l6.198-1.625A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.359-.213-3.68.965.981-3.588-.234-.369A9.818 9.818 0 1112 21.818z"/>
+              </svg>
+              Cotizar por WhatsApp
+            </a>
+            <a href="tel:+56976400195" class="inline-flex items-center justify-center gap-3 border border-white/20 text-white px-8 py-5 font-bold text-sm tracking-widest uppercase hover:bg-white/8 transition-all duration-200">
+              <span class="material-symbols-outlined" style="font-size:1.1rem;">call</span>
+              Llamar ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS BAR -->
+    <section class="bg-[#003F87] py-8 border-y border-[#0056B3]">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+          {specs.map((s) => (
+            <div>
+              <p class="text-[#D7E2FF] text-[0.62rem] font-bold uppercase tracking-[0.18em] mb-1">{s.label}</p>
+              <p class="text-white font-[Space_Grotesk] text-2xl font-bold leading-none">{s.value}</p>
+              <p class="text-white/55 text-xs mt-1">{s.unit}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="bg-[#0d1420] py-20 px-6">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-14">
+          <p class="text-[#EAB308] text-[0.65rem] font-bold uppercase tracking-[0.2em] mb-3">Por qué hacer el cambio</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold text-white tracking-tight">
+            El tornillo no es solo más silencioso.<br />Es una inversión que se paga sola.
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {benefits.map((b) => (
+            <div class="bg-white/4 border border-white/8 p-7 hover:bg-white/7 hover:border-[#003F87]/40 transition-all duration-300">
+              <span class="material-symbols-outlined text-[#EAB308] mb-5 block" style="font-size:2rem;">{b.icon}</span>
+              <h3 class="font-[Space_Grotesk] text-lg font-bold text-white mb-3">{b.title}</h3>
+              <p class="text-white/55 text-sm leading-relaxed">{b.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- PISTÓN VS TORNILLO -->
+    <section class="bg-[#0a0f1a] py-20 px-6 border-t border-white/6">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-14">
+          <p class="text-[#EAB308] text-[0.65rem] font-bold uppercase tracking-[0.2em] mb-3">Comparativa técnica</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold text-white tracking-tight">
+            La diferencia es real, no solo en papel
+          </h2>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr>
+                <th class="text-left py-4 px-5 text-white/40 text-[0.65rem] uppercase tracking-widest font-bold w-[35%]">Característica</th>
+                <th class="py-4 px-5 text-center">
+                  <span class="inline-block bg-white/8 text-white/50 text-[0.65rem] font-bold uppercase tracking-widest px-4 py-2">
+                    Pistón convencional
+                  </span>
+                </th>
+                <th class="py-4 px-5 text-center">
+                  <span class="inline-block bg-[#003F87] text-white text-[0.65rem] font-bold uppercase tracking-widest px-4 py-2">
+                    Tornillo Kaeser
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {vsRows.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white/2' : ''}>
+                  <td class="py-4 px-5 text-white/60 font-medium">{row.feature}</td>
+                  <td class="py-4 px-5 text-center">
+                    <span class="inline-flex items-center gap-2 text-red-400/80">
+                      <span class="material-symbols-outlined" style="font-size:0.9rem;">close</span>
+                      {row.piston}
+                    </span>
+                  </td>
+                  <td class="py-4 px-5 text-center">
+                    <span class="inline-flex items-center gap-2 text-emerald-400">
+                      <span class="material-symbols-outlined" style="font-size:0.9rem;">check</span>
+                      {row.tornillo}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-8 bg-[#EAB308]/8 border border-[#EAB308]/20 p-6 text-center">
+          <p class="text-[#EAB308] font-bold text-lg">
+            Hasta 2–3 veces más rendimiento real frente a un pistón equivalente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDEAL PARA -->
+    <section class="bg-[#0d1420] py-20 px-6 border-t border-white/6">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-14">
+          <p class="text-[#EAB308] text-[0.65rem] font-bold uppercase tracking-[0.2em] mb-3">Ideal para</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold text-white tracking-tight">
+            Diseñado para negocios que usan aire comprimido todos los días
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {targets.map((t) => (
+            <div class="flex items-center gap-4 bg-white/4 border border-white/8 p-5">
+              <span class="material-symbols-outlined text-[#003F87]" style="font-size:1.5rem;">{t.icon}</span>
+              <span class="text-white font-medium">{t.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- RESPALDO -->
+    <section class="bg-[#0a0f1a] py-20 px-6 border-t border-white/6">
+      <div class="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-6">
+        <div class="bg-white/4 border border-white/8 p-8 text-center">
+          <span class="material-symbols-outlined text-[#003F87] mb-4 block" style="font-size:2.5rem;">support_agent</span>
+          <h3 class="font-[Space_Grotesk] text-xl font-bold text-white mb-3">Servicio técnico 24/7</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Respuesta ante fallas para que su negocio no se detenga.</p>
+        </div>
+        <div class="bg-white/4 border border-white/8 p-8 text-center">
+          <span class="material-symbols-outlined text-[#003F87] mb-4 block" style="font-size:2.5rem;">inventory_2</span>
+          <h3 class="font-[Space_Grotesk] text-xl font-bold text-white mb-3">Repuestos en stock</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Partes y filtros originales Kaeser disponibles en taller.</p>
+        </div>
+        <div class="bg-white/4 border border-white/8 p-8 text-center">
+          <span class="material-symbols-outlined text-[#003F87] mb-4 block" style="font-size:2.5rem;">workspace_premium</span>
+          <h3 class="font-[Space_Grotesk] text-xl font-bold text-white mb-3">25+ años de experiencia</h3>
+          <p class="text-white/50 text-sm leading-relaxed">Instalación y puesta en marcha por técnicos certificados.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="bg-[#003F87] py-24 px-6">
+      <div class="max-w-[900px] mx-auto text-center">
+        <p class="text-[#D7E2FF] text-[0.65rem] font-bold uppercase tracking-[0.2em] mb-5">Cuarta Región — Respuesta en terreno</p>
+        <h2 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold text-white tracking-tight mb-6">
+          ¿Listo para hacer el cambio?
+        </h2>
+        <p class="text-white/70 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+          Cuéntenos su caso por WhatsApp y le respondemos con disponibilidad y precio en minutos.
+        </p>
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-[#25D366] text-white px-10 py-6 font-bold text-base tracking-widest uppercase hover:bg-[#1ebe5d] hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#25D366]/30 transition-all duration-200"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.526 5.847L.057 23.882l6.198-1.625A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.359-.213-3.68.965.981-3.588-.234-.369A9.818 9.818 0 1112 21.818z"/>
+          </svg>
+          Cotizar por WhatsApp ahora
+        </a>
+        <p class="text-white/35 text-xs mt-6 uppercase tracking-widest">
+          Vital Airpower · Cuarta Región de Coquimbo · Distribuidor oficial Kaeser Chile
+        </p>
+      </div>
+    </section>
+
+    <!-- MINI FOOTER -->
+    <footer class="bg-[#070b13] py-8 px-6 border-t border-white/5">
+      <div class="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="/" aria-label="Vital Airpower">
+          <img src="/images/logo2.webp" alt="Vital Airpower" width="100" height="40" class="h-8 w-auto brightness-0 invert opacity-50 hover:opacity-80 transition-opacity" />
+        </a>
+        <p class="text-white/25 text-xs uppercase tracking-widest">© 2026 Vital Airpower. Cuarta Región, Chile.</p>
+        <a
+          href="https://gautamadigital.cl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white/20 text-xs hover:text-white/40 transition-colors"
+        >
+          Sitio por gautamadigital.cl
+        </a>
+      </div>
+    </footer>
+
+  </main>
+</BaseLayout>

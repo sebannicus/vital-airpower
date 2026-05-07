@@ -3,97 +3,62 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 
-const highlights = [
-  'Distribuidor oficial Kaeser Chile con foco en clientes industriales.',
-  'Cobertura desde Copiapó hasta Rancagua.',
-  'Servicios de compresor industrial, tratamiento de aire y líneas de aire.',
-];
-
-const keyServices = [
-  {
-    title: 'Servicios técnicos',
-    text: 'Mantenimiento, diagnóstico y soporte para compresores, secadores y filtros con criterio industrial.',
-    href: '/servicios',
-  },
-  {
-    title: 'Soluciones de sistema',
-    text: 'Eficiencia energética, tratamiento de aire, control y proyección de líneas de aire comprimido.',
-    href: '/soluciones',
-  },
-  {
-    title: 'Equipos Kaeser',
-    text: 'Familias de equipos, rangos de trabajo y configuraciones relevantes para distintas escalas de operación.',
-    href: '/equipos',
-  },
-];
-
-const gallerySlots = [
-  { title: 'Sala de compresores', src: '/images/planta-de-aire.webp' },
-  { title: 'Equipo Kaeser en planta', src: '/images/kaeser-csd105.webp' },
-  { title: 'Mantención técnica', src: '/images/cambio-de-filtro.webp' },
-  { title: 'Tratamiento de aire', src: '/images/filtro-compresor.webp' },
-  { title: 'Líneas de aire', src: '/images/manguera-compresor.webp' },
-  { title: 'Operación industrial', src: '/images/compresor-planta.webp' },
-];
-
 const faqs = [
   {
     question: '¿Son distribuidores oficiales de Kaeser en Chile?',
-    answer: 'Sí. Vital Airpower opera como distribuidor oficial Kaeser Chile con una propuesta orientada a empresas y continuidad operacional.',
+    answer: 'Sí. Vital Airpower opera como distribuidor oficial Kaeser Chile para la Región de Coquimbo, con acceso directo al catálogo completo y soporte técnico de la marca.',
   },
   {
-    question: '¿Qué cobertura tienen?',
-    answer: 'Atendemos clientes desde Copiapó hasta Rancagua, con foco en soporte técnico, proyectos y acompañamiento comercial.',
+    question: '¿Atienden compresores de otras marcas además de Kaeser?',
+    answer: 'Sí. Gracias a la experiencia previa de Roberto López en Atlas Copco (7 años) e Ingersoll Rand (12 años), damos servicio técnico a equipos de esas marcas y otras que ya operan en planta.',
   },
   {
-    question: '¿Qué tipo de servicio ofrece Vital Airpower?',
-    answer: 'Servicio técnico para compresores industriales, tratamiento de aire, líneas de aire, eficiencia energética y soporte operacional.',
+    question: '¿Qué cobertura geográfica tienen?',
+    answer: 'La Serena, Coquimbo y faenas mineras del norte chico, con base técnica propia en Quilacán, Región de Coquimbo.',
   },
   {
-    question: '¿Atienden compresores de tornillo eléctricos estacionarios?',
-    answer: 'Sí. La propuesta técnica considera compresores de tornillo eléctricos estacionarios y sistemas asociados al aire comprimido industrial.',
+    question: '¿Qué tipo de compresores venden?',
+    answer: 'Toda la gama Kaeser: tornillo con inyección de aceite, tornillo seco, pistón, portátiles MOBILAIR y sopladores. Desde 2,2 hasta 515 kW en compresores de tornillo.',
   },
   {
     question: '¿Trabajan secadores y filtros de línea?',
-    answer: 'Sí. Vital Airpower considera tratamiento de aire mediante secadores por refrigeración o absorción, filtros de línea y componentes de protección del sistema.',
+    answer: 'Sí. Consideramos tratamiento de aire completo: secadores por refrigeración y adsorción, filtros de línea, drenajes de condensado y separadores agua-aceite AQUAMAT.',
   },
   {
-    question: '¿Realizan auditorías de fuga?',
-    answer: 'Sí. Se contemplan auditorías de fugas por ultrasonido para detectar pérdidas y apoyar decisiones de eficiencia energética.',
+    question: '¿Realizan auditorías de fuga por ultrasonido?',
+    answer: 'Sí. El levantamiento por ultrasonido detecta pérdidas en la red para apoyar decisiones de eficiencia energética y reducción de costos operativos.',
   },
   {
     question: '¿Pueden proyectar líneas de aire comprimido?',
-    answer: 'Sí. Se puede apoyar la creación, mantención y proyección de líneas de aire para ordenar el crecimiento del sistema.',
+    answer: 'Sí. Instalamos y proyectamos redes SmartPipe+ de aluminio modular, desde pequeños locales hasta instalaciones industriales de gran escala.',
   },
   {
-    question: '¿Manejan stock crítico para contratos?',
-    answer: 'Sí. Para clientes con contratos de servicio, repuestos o mantenimiento se puede coordinar stock crítico para reducir riesgos de detención.',
+    question: '¿Tienen contingencia fuera de horario hábil?',
+    answer: 'Sí. La contingencia 24/7 está disponible para emergencias de parada en planta. El canal directo es WhatsApp para respuesta inmediata.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Vital Airpower | Distribuidor oficial Kaeser Chile y servicios de compresor industrial"
-  description="Vital Airpower es distribuidor oficial Kaeser Chile. Servicios corporativos para compresores industriales, tratamiento de aire, líneas de aire y soporte técnico con cobertura desde Copiapó hasta Rancagua."
+  title="Vital Airpower | Distribuidor oficial Kaeser Chile — Compresores y servicio técnico industrial"
+  description="Vital Airpower: distribuidor oficial Kaeser Chile. Compresores de tornillo, pistón, sopladores, tratamiento de aire y servicio técnico 24/7 en La Serena, Coquimbo y norte chico."
 >
   <Header />
 
   <main class="pt-[96px] bg-[#f4f1eb]">
-    <!-- Hero -->
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
     <section class="relative min-h-[92vh] flex items-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-gradient-to-r from-[#070e1a]/92 via-[#070e1a]/68 to-[#070e1a]/25 z-10"></div>
         <div class="absolute inset-0 bg-grid-hero z-20 pointer-events-none"></div>
         <img
           src="/images/CES_Banner_47-52450.webp"
-          alt="Vital Airpower — Continuidad operacional industrial"
+          alt="Vital Airpower — Sistemas de aire comprimido industrial"
           class="absolute inset-0 w-full h-full object-cover ken-burns"
-          width="1920"
-          height="1080"
-          loading="eager"
+          width="1920" height="1080" loading="eager"
         />
       </div>
-
       <div class="relative z-30 max-w-[1440px] mx-auto px-6 md:px-12 py-24 grid md:grid-cols-12 gap-12">
         <div class="md:col-span-8 lg:col-span-7">
           <span class="animate-hero inline-block px-3 py-1 bg-[#D7E2FF] text-[#003F87] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
@@ -103,178 +68,733 @@ const faqs = [
             Soluciones técnicas para que su operación no se detenga
           </h1>
           <p class="animate-hero-delay-2 text-white/80 text-xl max-w-xl mb-10 font-light leading-relaxed">
-            Soporte técnico, proyectos y equipos Kaeser para empresas industriales. Cobertura desde Copiapó hasta Rancagua.
+            Compresores Kaeser, servicio técnico 24/7 y toda la gama de aire comprimido industrial. Cobertura en La Serena, Coquimbo y norte chico.
           </p>
           <div class="animate-hero-delay-3 flex flex-wrap gap-4">
             <a href="/contacto" class="flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] hover:shadow-lg hover:shadow-[#003F87]/30 hover:-translate-y-0.5 transition-all duration-200">
               Solicitar asesoría técnica
-              <span class="material-symbols-outlined" style="font-size: 1.1rem;">arrow_forward</span>
+              <span class="material-symbols-outlined" style="font-size:1.1rem;">arrow_forward</span>
             </a>
             <a href="/equipos" class="border border-white/30 text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200">
               Ver equipos
             </a>
           </div>
+          <!-- Kaeser quality badges -->
+          <div class="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-5">
+            {[
+              { icon: 'energy_savings_leaf', text: 'Más aire por menos energía' },
+              { icon: 'build_circle',        text: 'Mantenimiento simple y rápido' },
+              { icon: 'workspace_premium',   text: 'Made in Germany' },
+              { icon: 'public',              text: 'Red de asistencia mundial' },
+            ].map((b) => (
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[#D7E2FF] flex-shrink-0" style="font-size:1.25rem;">{b.icon}</span>
+                <span class="text-white/65 text-xs font-bold leading-tight">{b.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre Nosotros -->
-    <section id="sobre-nosotros" class="border-b border-[#0f3d2f]/10 bg-[#f4f1eb]">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+    <!-- ═══════════════════════════ ROBERTO STRIP ══════════════════════════ -->
+    <section class="bg-[#17211c] border-b border-white/8">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-10 grid md:grid-cols-[1fr_auto] gap-8 items-center">
+        <div class="grid sm:grid-cols-[1fr_auto] gap-6 items-center">
           <div>
-            <p data-animate="fade-up" class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-4">Sobre Nosotros</p>
-            <h2 data-animate="fade-up" style="transition-delay:0.1s" class="max-w-2xl text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] leading-[1.05] mb-6">
-              Vital Airpower articula soluciones industriales con Kaeser como eje principal.
-            </h2>
-            <p data-animate="fade-up" style="transition-delay:0.2s" class="max-w-2xl text-lg leading-relaxed text-[#3f4a43] mb-8">
-              Somos distribuidores oficiales Kaeser Chile y trabajamos para empresas que necesitan soporte técnico, información clara y una operación de aire comprimido más ordenada. Acompañamos proyectos, mantenciones y decisiones de eficiencia con una mirada corporativa y técnica.
-            </p>
-            <div data-animate="fade-up" style="transition-delay:0.3s" class="flex flex-wrap gap-4">
-              <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] hover:bg-[#0056B3] transition-colors">
-                Solicitar asesoría técnica
-                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-              </a>
-              <a href="/empresa" class="inline-flex items-center gap-3 border border-[#003F87]/20 text-[#003F87] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] bg-white hover:bg-[#D7E2FF]/40 transition-colors">
-                Conocer la empresa
-              </a>
+            <p class="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-1">Roberto López — Gerente Técnico</p>
+            <p class="text-white text-lg font-bold">25 años en terreno: Atlas Copco · Ingersoll Rand · Kaeser Kompressoren</p>
+          </div>
+          <div class="hidden sm:flex items-center gap-6 flex-shrink-0">
+            <div class="text-center">
+              <p class="text-2xl font-bold text-white">7 años</p>
+              <p class="text-[0.62rem] text-white/40 uppercase tracking-widest">Atlas Copco</p>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div class="text-center">
+              <p class="text-2xl font-bold text-white">12 años</p>
+              <p class="text-[0.62rem] text-white/40 uppercase tracking-widest">Ingersoll Rand</p>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div class="text-center">
+              <p class="text-2xl font-bold text-[#D7E2FF]">Hoy</p>
+              <p class="text-[0.62rem] text-[#D7E2FF]/60 uppercase tracking-widest">Kaeser</p>
             </div>
           </div>
+        </div>
+        <a href="/empresa" class="flex-shrink-0 inline-flex items-center gap-2 border border-white/15 text-white/70 hover:text-white hover:border-white/30 px-5 py-3 text-xs font-bold uppercase tracking-widest transition-colors">
+          Conocer más
+          <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+        </a>
+      </div>
+    </section>
 
-          <div class="grid gap-4">
-            <div data-animate-stagger class="grid grid-cols-3 gap-4">
-              <div class="border border-[#003F87]/12 bg-white p-5">
-                <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Cobertura</p>
-                <p class="text-2xl font-bold text-[#17211c]">Copiapó</p>
-                <p class="text-sm text-[#546056]">hasta Rancagua</p>
+    <!-- ═══════════════════════════ PRODUCTOS KAESER HEADER ════════════════ -->
+    <section class="py-16 md:py-20 px-6 md:px-12 bg-[#f4f1eb] border-b border-[#0f3d2f]/10">
+      <div class="max-w-[1440px] mx-auto grid md:grid-cols-[1fr_0.5fr] gap-8 items-end">
+        <div>
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Productos KAESER — Distribuidor Oficial Chile</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] leading-[1.05]">
+            La innovación y la eficiencia de Kaeser, disponibles desde la Región de Coquimbo.
+          </h2>
+        </div>
+        <p class="text-[#4f5a53] text-base leading-relaxed">
+          Da igual si se trata de un taller o de la gran industria, de una minería o una refinería: KAESER ofrece la solución de aire comprimido que su operación necesita.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════ CATEGORÍA 1: COMPRESORES DE TORNILLO ═══════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de tornillo</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Presión constante.<br />Eficiencia energética real.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              El <strong>Perfil SIGMA</strong> de KAESER permite ahorrar hasta un 15% de energía frente a perfiles de tornillo convencionales. Desde 2,2 hasta 515 kW para talleres, industria, minería y refinería. Alta disponibilidad del aire y bajos costos cíclicos a lo largo de toda la vida útil.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Con inyección de aceite</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Desde 2,2 hasta 515 kW. Servicio confiable hasta 45°C de temperatura ambiente. Acceso rápido a puntos de mantenimiento. La opción más utilizada en industria y minería.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Libres de aceite CSG-2 / DSG-2</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Aire limpio para procesos críticos. Sin aceite en el proceso. Opcionalmente con secador i.HOC integrado o secador refrigerativo eficiente.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Bombas de vacío de tornillo</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Caudal de 4,75 hasta 15,70 m³/min. Vacío final: 99%. Equipados con motores de alta eficiencia IE3. Fácil instalación.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Recuperación del calor</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Un compresor de tornillo convierte en calor el 100% de la energía suministrada. Hasta un 96% puede recuperarse para aplicaciones termotécnicas, reduciendo significativamente los costos totales.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              {[
+                { src: '/images/kaeser-csd105.webp',   alt: 'Kaeser CSD 105' },
+                { src: '/images/kaeser-ask32t.webp',   alt: 'Kaeser ASK 32 T' },
+                { src: '/images/kaeser-sk25t.webp',    alt: 'Kaeser SK 25 T' },
+                { src: '/images/kaeser-sm12.webp',     alt: 'Kaeser SM 12' },
+                { src: '/images/kaeser-csd-series.webp', alt: 'Kaeser CSD Series' },
+              ].map((img, i) => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading={i === 0 ? 'eager' : 'lazy'} />
+                </div>
+              ))}
+            </div>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ CATEGORÍA 2: COMPRESORES DE PISTÓN ══════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de pistón</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Los especialistas cuando la demanda es variable.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              Ciclo ideal de conexión entre 60 y 70%. La mejor elección para funcionamiento fluctuante con puntas de carga, industrias artesanales, talleres y pequeñas empresas. Los Boosters pueden comprimir el aire hasta 45 bar en puntos determinados de la red.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Portátiles i.Comp</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Presión constante hasta 11 bar. Versiones PREMIUM y CLASSIC. Caudal desde 130 hasta 660 l/min. Para obras y pequeñas empresas.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Estacionarios</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Con lubricación por aceite o sin aceite (OIL.FREE). Caudal 59–1.400 l/min. Presiones 7, 10, 15 o 35 bar. Numerosas variantes y potencias.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Equipos completos — i.Comp Tower / AIRBOX</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Libres de aceite. Listos para la puesta en marcha. Para laboratorios, farmacéutica, bebidas y alimentación. Caudal 0,25–0,90 m³/min.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Boosters</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Elevan la presión de la red existente para una parte del caudal. Como componentes separados o sistemas completos. Para presiones altas y constantes hasta 45 bar.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
+                <img src="/images/servicios-portada.webp" alt="Compresor de pistón Kaeser" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
-              <div class="border border-[#003F87]/12 bg-white p-5">
-                <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Enfoque</p>
-                <p class="text-2xl font-bold text-[#17211c]">Kaeser</p>
-                <p class="text-sm text-[#546056]">distribución oficial</p>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <img src="/images/servicios-portada2.webp" alt="Equipo Kaeser en taller" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
-              <div class="border border-[#003F87]/12 bg-white p-5">
-                <p class="text-[0.7rem] uppercase tracking-[0.18em] font-bold text-[#7a6b57] mb-2">Perfil</p>
-                <p class="text-2xl font-bold text-[#17211c]">B2B</p>
-                <p class="text-sm text-[#546056]">corporativo y técnico</p>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
+                  <div class="text-center opacity-20">
+                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
+                    <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
+                  </div>
+                </div>
+              </div>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
+                  <div class="text-center opacity-20">
+                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
+                    <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div data-animate-stagger class="grid gap-3">
-              {highlights.map((item) => (
-                <div class="border border-[#003F87]/10 bg-white p-5">
-                  <div class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-[#003F87]" style="font-size: 1.15rem;">verified</span>
-                    <p class="text-sm leading-relaxed text-[#2f3a34]">{item}</p>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CATEGORÍA 3: SOPLADORES ══════════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Sopladores</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Potencia silenciosa. Desde vacío hasta baja presión.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              Los sopladores KAESER suministran aire de aspiración, soplado o transporte para todas las aplicaciones: transporte neumático de graneles, plantas de tratamiento de aguas, uso industrial y móvil. Eficientes, confiables y con bajas emisiones sonoras.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Sopladores de lóbulo rotativo OMEGA</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Rotores trilobulares OMEGA de bajas pulsaciones. Capacidad 5–160 m³/min. Uso móvil: camiones de concreto, camiones silo y vehículos aspiradora.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Sopladores de tornillo (Perfil SIGMA)</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Hasta 160 m³/min. Perfil SIGMA de gran eficiencia, optimizado para sopladores. Solución completa lista para puesta en marcha con sistema eléctrico y control moderno.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Turbosopladores</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Motor magnético de imanes permanentes de alta velocidad. Sin desgaste. Hasta 267 m³/min. Frecuencia de arranque ilimitada y amplia gama de control.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Post-enfriadores / intercambiadores</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Para el enfriamiento eficaz del aire de procesos o recuperación del calor. Con aire o agua como medio refrigerante. Permite transporte de materiales sensibles al calor.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
+                <img src="/images/generador-kaeser.webp" alt="Soplador industrial Kaeser" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              {[1, 2, 3].map(() => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                  <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
+                    <div class="text-center opacity-20">
+                      <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
+                      <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="relative bg-white border-b border-[#0f3d2f]/8 overflow-hidden">
-      <div class="absolute inset-0 bg-grid-section pointer-events-none opacity-60"></div>
-      <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div data-animate="fade-up" class="max-w-3xl mb-12">
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Servicios principales</p>
-          <h2 class="text-3xl md:text-5xl font-bold text-[#17211c] tracking-tight mb-6">
-            Una estructura simple para encontrar rápido la información que necesita su operación.
-          </h2>
-          <p class="text-[#4f5a53] text-lg leading-relaxed">
-            Desde la evaluación técnica hasta la selección de equipos, Vital Airpower ordena la conversación según el escenario real del cliente: servicio, solución de sistema o equipamiento Kaeser.
-          </p>
-        </div>
-        <div data-animate-stagger class="grid md:grid-cols-3 gap-5">
-          {keyServices.map((item) => (
-            <article class="border border-[#0f3d2f]/10 bg-[#f8f6f1] p-7 min-h-[230px] flex flex-col justify-between hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 transition-all duration-300">
-              <div>
-                <span class="material-symbols-outlined text-[#0f3d2f] mb-5 block" style="font-size: 1.5rem;">overview</span>
-                <h3 class="text-xl font-bold text-[#17211c] mb-3">{item.title}</h3>
-                <p class="text-[#4f5a53] leading-relaxed">{item.text}</p>
+    <!-- ═══════════════════════════ CATEGORÍA 4: CONTROLADORES ══════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Controladores SIGMA</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              La inteligencia que reduce costos en cada m³ producido.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              SIGMA CONTROL 2 y SIGMA AIR MANAGER 4.0 son el cerebro del sistema: coordinan todos los componentes, optimizan el rendimiento en tiempo real y permiten la gestión centralizada del aire comprimido. Reducción permanente de consumo energético durante todo el ciclo de vida.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">SIGMA CONTROL 2 — Inteligencia descentralizada</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Controlador interno de cada compresor. Ajuste exacto del rendimiento al consumo real de aire comprimido en cada momento. Distintos sistemas de control preprogramados para ahorrar energía. Registro de eventos y datos operativos.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">SIGMA AIR MANAGER 4.0 — Gestión central del sistema</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Controla todos los componentes de la estación para ahorro de costos máximo. Comunicación e intercambio de datos en tiempo real. Compatible con Industrie 4.0 y KAESER CONNECT. Mejor visión de conjunto, más control, menos paradas.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
+                <img src="/images/kaeser-csd-series.webp" alt="Kaeser SIGMA CONTROL sistema" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
-              <a href={item.href} class="inline-flex items-center gap-2 text-[#0f3d2f] font-bold uppercase text-xs tracking-[0.16em] mt-8">
-                Ver mas
-                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-              </a>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="relative border-b border-[#0f3d2f]/8 bg-[#17211c] text-white overflow-hidden has-scanline">
-      <!-- orbs de fondo -->
-      <div class="orb-a absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#003F87]/20 blur-3xl pointer-events-none"></div>
-      <div class="orb-b absolute -bottom-16 right-8 w-72 h-72 rounded-full bg-[#0056B3]/15 blur-3xl pointer-events-none"></div>
-      <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24 grid lg:grid-cols-[1fr_1fr] gap-12 items-start">
-        <div data-animate="fade-left">
-          <p class="font-[Space_Grotesk] text-[0.7rem] uppercase tracking-[0.2em] font-bold text-[#d5c6ac] mb-4">Capacidad de soporte</p>
-          <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Vital Airpower conecta servicio, equipos y criterio técnico.</h2>
-          <p class="text-white/72 text-lg leading-relaxed mb-8">
-            Trabajamos compresores de tornillo eléctricos estacionarios, secadores de aire, filtros de línea, líneas de aire comprimido, auditorías de fuga y soporte operacional para clientes con necesidades de continuidad y eficiencia.
-          </p>
-        </div>
-        <div data-animate-stagger class="grid sm:grid-cols-2 gap-4">
-          {[
-            'Compresores de tornillo eléctricos estacionarios.',
-            'Secadores de aire por refrigeración y absorción.',
-            'Tratamiento de aire con filtros de línea.',
-            'Creación, mantención y proyección de líneas de aire.',
-            'Auditorías de fugas por ultrasonido.',
-            'Control de stock crítico para contratos de servicio.',
-          ].map((item) => (
-            <div class="border border-white/10 bg-white/5 p-6 hover:bg-white/8 hover:border-white/20 transition-colors duration-300">
-              <div class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-[#e3d6be]" style="font-size: 1.15rem;">manufacturing</span>
-                <p class="text-white/82 leading-relaxed">{item}</p>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <img src="/images/kaeser-sm12.webp" alt="Kaeser SM 12 panel de control" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
+                  <div class="text-center opacity-20">
+                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
+                    <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="galeria" class="bg-white border-b border-[#0f3d2f]/8">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div data-animate="fade-up" class="max-w-3xl mb-12">
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Galeria</p>
-          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] mb-6">
-            Espacios preparados para imágenes de proyectos, equipos e instalaciones.
-          </h2>
-          <p class="text-[#4f5a53] text-lg leading-relaxed">
-            Esta seccion queda lista para reemplazar las imagenes actuales por registros propios de Vital Airpower. Cada espacio conserva proporcion, lectura y jerarquia visual.
-          </p>
-        </div>
-        <div data-animate-stagger class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {gallerySlots.map((item, index) => (
-            <figure class="group relative overflow-hidden border border-[#0f3d2f]/10 bg-[#ebe7df] min-h-[260px]">
-              <img src={item.src} alt={item.title} width="720" height="540" class="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,33,28,0.08)_0%,rgba(23,33,28,0.82)_100%)] transition-opacity duration-500 group-hover:opacity-80"></div>
-              <figcaption class="relative z-10 flex h-full min-h-[260px] flex-col justify-end p-6 text-white">
-                <span class="mb-3 inline-flex w-fit bg-white/14 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/80">Espacio sin rellenar {index + 1}</span>
-                <p class="font-[Space_Grotesk] text-xl font-bold translate-y-1 group-hover:translate-y-0 transition-transform duration-300">{item.title}</p>
-                <p class="mt-2 text-sm text-white/68">{item.title}</p>
-              </figcaption>
-            </figure>
-          ))}
+    <!-- ═══════════════════════ CATEGORÍA 5: TRATAMIENTO DE AIRE ════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Tratamiento de aire comprimido</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Sin oportunidad para agua, aceite ni polvo.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              Gama completa para combatir cada contaminante y obtener el grado de pureza exigido por el proceso. Desde el uso simple en taller hasta la fabricación de productos electrónicos o farmacéuticos. Cumplimiento de ISO 8573-1 en todos los niveles.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Secadores (refrigerativos / adsorción / membrana)</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Refrigerativos (PRP ≥ +3°C) para secado de base eficiente. Combinados y adsorción (PRP hasta −70°C) para protección contra congelación. Membranas para puntos de consumo compactos sin conexión eléctrica.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Filtros y adsorbedores de carbón activo</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Eliminan partículas, aerosoles y vapores de aceite. Hasta clase 1 ISO 8573-1 (0–0,01 mg/m³). Presiones hasta 16 bar en rosca y 45 bar en filtros para Boosters.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Drenajes ECO-DRAIN</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Regulación por nivel. Sin pérdidas de aire comprimido. Auto-supervisión con contacto sin potencial para alarmas. Fácil conexión a sistemas superiores de mando.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Separador agua-aceite AQUAMAT</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  El condensado se convierte en agua residual normal y puede eliminarse por el alcantarillado general. Homologación DIBt. Sin necesidad de tercerizar el tratamiento.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              {[
+                { src: '/images/cambio-de-filtro.webp',   alt: 'Cambio de filtro en compresor' },
+                { src: '/images/filtro-compresor.webp',   alt: 'Filtro de línea de aire comprimido' },
+                { src: '/images/manguera-compresor.webp', alt: 'Líneas de aire comprimido industrial' },
+              ].map((img, i) => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                </div>
+              ))}
+            </div>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="bg-[#f4f1eb]">
-      <div class="max-w-[1100px] mx-auto px-6 md:px-12 py-18 md:py-24">
-        <div data-animate="fade-up" class="max-w-2xl mb-12">
+    <!-- ════════════════════ CATEGORÍA 6: ALMACENAMIENTO Y DISTRIBUCIÓN ═════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Almacenamiento y distribución</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Presión estable. Distribución eficiente.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              Tanques, sistemas de mantenimiento de presión y tuberías de distribución son los componentes que cierran el sistema de aire comprimido. Solo con presión estable y calidad de red alta queda asegurado un funcionamiento eficiente en toda la instalación.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Tanques de almacenamiento</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  90 a 10.000 litros. Larga vida útil con intervalos de control hasta 5 años. Para almacenamiento y amortiguamiento ante fluctuaciones de demanda. Griferías y accesorios para cada aplicación.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Sistemas DHS de mantenimiento de presión</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Permiten contar siempre con la presión de red prevista. Protegen los sistemas de tratamiento de sobrecargas al llenarse la red. Conexiones G½ hasta DN 400 para integración en cualquier sistema.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">SmartPipe+ — Tubería de aluminio modular</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Aluminio calibrado liso. Flujo laminar óptimo. Sin oxidación ni depósitos de contaminantes. Conectores a prueba de fugas. Disponible hasta 8" de diámetro. Desde pequeños locales hasta grandes instalaciones industriales.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
+                <img src="/images/planta-de-aire.webp" alt="Sala de compresores industrial" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <img src="/images/compresor-planta.webp" alt="Compresor en planta" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
+                  <div class="text-center opacity-20">
+                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
+                    <p class="text-white text-xs tracking-widest uppercase">SmartPipe+ — próximamente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CATEGORÍA 7: MOBILAIR ════════════════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores portátiles MOBILAIR</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Para obras en las condiciones más duras.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              Potentes, resistentes y fáciles de manejar. Caudales desde 1 hasta 45 m³/min sin aceite. Versiones portátiles y estacionarias, con motor de combustión o eléctrico. Preparados para altitudes hasta 3.000 m sobre el nivel del mar.
+            </p>
+            <div class="space-y-2">
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">e-power — Accionamiento eléctrico</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Sin gases ni ruido. Hasta 15 bar. Operación posible en zonas protegidas contra emisiones. Ideal para interiores, excavaciones y túneles.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Compactos hasta 3 m³/min</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Ágiles en transporte por vías públicas y a pie de obra. Preparados para invierno. Para martillos neumáticos, perforadoras y herramientas de obra. Hasta 14 bar.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">Para obras hasta 48 m³/min (motor diésel)</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Centrales de energía con accionamiento diésel. Con generador opcional. Regulación presión-volumen. Hasta 14 bar. Amplia gama para cualquier tipo de obra.
+                </div>
+              </details>
+              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                  <span class="text-sm font-bold text-[#17211c]">M500-2 — El gigante (45,8 m³/min, libre de aceite)</span>
+                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                </summary>
+                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
+                  Para refinerías y la gran industria. Con SIGMA CONTROL MOBIL. Opera solo o dentro de un sistema. Máxima eficiencia energética incluso tras largos años de funcionamiento.
+                </div>
+              </details>
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
+                <img src="/images/hero-kaeser.webp" alt="Compresor Kaeser para obras" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              {[1, 2].map(() => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
+                  <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
+                    <div class="text-center opacity-20">
+                      <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
+                      <p class="text-white text-xs tracking-widest uppercase">MOBILAIR — próximamente</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CATEGORÍA 8: TÉCNICA DE MEDICIÓN ═══════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-[#17211c] text-white overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-[1fr_1fr] gap-10 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-3">Kaeser / Técnica de medición</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+              Lo invisible se hace visible.
+            </h2>
+            <p class="text-white/70 leading-relaxed mb-6">
+              Sensores inteligentes y registro de datos de proceso para monitorizar en tiempo real el estado de su sistema: presión, temperatura, punto de rocío, consumo de energía, fugas y calidad del aire. La clave para reducir costos y mejorar la productividad.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-3 mb-6">
+              {[
+                { code: 'KM AA/A', label: 'Condiciones de aspiración y ambiente' },
+                { code: 'KM EA/A', label: 'Monitorización de energía' },
+                { code: 'KM FA/P', label: 'Flujo volumétrico generado' },
+                { code: 'KM FA/T', label: 'Medición consumo de aire' },
+                { code: 'KM PA/A', label: 'Punto de rocío y calidad' },
+                { code: 'KM PA/B', label: 'Monitorización aire de procesos' },
+              ].map((item) => (
+                <div class="border border-white/10 bg-white/5 px-4 py-3">
+                  <p class="text-[0.65rem] font-bold uppercase tracking-widest text-[#D7E2FF] mb-0.5">{item.code}</p>
+                  <p class="text-white/60 text-xs">{item.label}</p>
+                </div>
+              ))}
+            </div>
+            <div class="space-y-3">
+              {[
+                'Monitorización en tiempo real de todos los valores relevantes del sistema.',
+                'Sensores inteligentes de fácil integración vía SIGMA NETWORK.',
+                'Visualización de KPIs: presión, temperatura, punto de rocío y fugas.',
+                'Base para la digitalización y conexión a SIGMA AIR MANAGER 4.0.',
+              ].map((item) => (
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#D7E2FF] flex-shrink-0" style="font-size:1rem;">radio_button_checked</span>
+                  <p class="text-white/70 text-sm leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="relative overflow-hidden border border-white/10 bg-[#0f1a15]" style="aspect-ratio:3/4;">
+            <img
+              src="/images/kaeser-sigma-network.webp"
+              alt="KAESER SIGMA Network — control centralizado del sistema de aire comprimido"
+              class="absolute inset-0 w-full h-full object-contain p-4"
+              loading="lazy"
+              width="900" height="1200"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CTA ════════════════════════════════ -->
+    <section class="py-20 md:py-28 px-6 md:px-12 bg-[#003F87] text-white">
+      <div class="max-w-[1100px] mx-auto text-center">
+        <p class="text-[#D7E2FF]/70 text-[0.68rem] font-bold uppercase tracking-[0.2em] mb-5">La Serena · Coquimbo · Norte chico</p>
+        <h2 class="font-[Space_Grotesk] text-4xl md:text-6xl font-bold tracking-tight mb-6">
+          ¿Qué necesita su operación?
+        </h2>
+        <p class="text-white/75 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+          Cuéntenos el equipo, la situación o el proyecto. Vital Airpower le responde con criterio técnico, no con un catálogo.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/contacto" class="inline-flex items-center gap-3 bg-white text-[#003F87] px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#D7E2FF] transition-colors">
+            Solicitar asesoría técnica
+            <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/56976400195" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#1ebe5d] transition-colors">
+            <span class="material-symbols-outlined" style="font-size:1rem;">chat</span>
+            WhatsApp directo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FAQ ════════════════════════════════ -->
+    <section id="faq" class="bg-[#f4f1eb] py-20 md:py-28 px-6 md:px-12">
+      <div class="max-w-[1100px] mx-auto">
+        <div class="max-w-2xl mb-12">
           <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Preguntas y respuestas</p>
-          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] mb-6">Respuestas rápidas para clientes que buscan compresores Kaeser y soporte industrial.</h2>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#17211c]">
+            Respuestas directas para clientes que necesitan decisiones rápidas.
+          </h2>
         </div>
-        <div data-animate-stagger class="space-y-4">
+        <div class="space-y-3">
           {faqs.map((faq) => (
             <details class="group border border-[#0f3d2f]/12 bg-white px-6 py-5 hover:border-[#003F87]/20 transition-colors duration-200">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-bold text-[#17211c]">
                 <span>{faq.question}</span>
-                <span class="material-symbols-outlined text-[#0f3d2f] transition-transform duration-200 group-open:rotate-45">add</span>
+                <span class="material-symbols-outlined text-[#003F87] transition-transform duration-200 group-open:rotate-45 flex-shrink-0">add</span>
               </summary>
               <p class="pt-4 pr-8 leading-relaxed text-[#4f5a53]">{faq.answer}</p>
             </details>
@@ -282,7 +802,48 @@ const faqs = [
         </div>
       </div>
     </section>
+
   </main>
 
   <Footer />
+
+  <script>
+    document.querySelectorAll('[data-carousel]').forEach((container) => {
+      const slides = Array.from(container.querySelectorAll('[data-slide]')) as HTMLElement[];
+      if (slides.length < 2) return;
+      const dotsEl = container.querySelector('[data-dots]');
+      let cur = 0;
+      let timer: ReturnType<typeof setInterval>;
+      const dots: HTMLElement[] = [];
+
+      if (dotsEl) {
+        slides.forEach((_, i) => {
+          const d = document.createElement('button');
+          d.className = `h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-5 bg-white' : 'w-1.5 bg-white/40'}`;
+          d.setAttribute('aria-label', `Slide ${i + 1}`);
+          d.addEventListener('click', () => { go(i); reset(); });
+          dotsEl.appendChild(d);
+          dots.push(d);
+        });
+      }
+
+      function go(n: number) {
+        slides[cur].style.opacity = '0'; slides[cur].style.zIndex = '0';
+        cur = ((n % slides.length) + slides.length) % slides.length;
+        slides[cur].style.opacity = '1'; slides[cur].style.zIndex = '1';
+        dots.forEach((d, i) => {
+          d.className = `h-1.5 rounded-full transition-all duration-300 ${i === cur ? 'w-5 bg-white' : 'w-1.5 bg-white/40'}`;
+        });
+      }
+
+      function start() { timer = setInterval(() => go(cur + 1), 3000); }
+      function reset() { clearInterval(timer); start(); }
+
+      container.querySelector('[data-prev]')?.addEventListener('click', () => { go(cur - 1); reset(); });
+      container.querySelector('[data-next]')?.addEventListener('click', () => { go(cur + 1); reset(); });
+      container.addEventListener('mouseenter', () => clearInterval(timer));
+      container.addEventListener('mouseleave', start);
+      start();
+    });
+  </script>
 </BaseLayout>
