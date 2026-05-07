@@ -57,7 +57,7 @@ const faqs = [
           { src: '/images/CES_Banner_47-52450.webp',                   alt: 'Vital Airpower — sistemas de aire comprimido' },
         ].map((img, i) => (
           <div data-hero-slide class="absolute inset-0 transition-opacity duration-1000" style={i === 0 ? 'opacity:1' : 'opacity:0'}>
-            <img src={img.src} alt={img.alt} class="w-full h-full object-contain object-center" loading={i === 0 ? 'eager' : 'lazy'} width="1920" height="1080" />
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover opacity-40" loading={i === 0 ? 'eager' : 'lazy'} width="1920" height="1080" />
           </div>
         ))}
         <div class="absolute inset-0 bg-gradient-to-r from-[#070e1a]/92 via-[#070e1a]/68 to-[#070e1a]/25 z-10"></div>
@@ -86,9 +86,9 @@ const faqs = [
           <div class="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-5">
             {[
               { icon: 'energy_savings_leaf', text: 'Más aire por menos energía' },
-              { icon: 'build_circle',        text: 'Mantenimiento simple y rápido' },
+              { icon: 'schedule',            text: 'Servicio técnico 24/7' },
               { icon: 'workspace_premium',   text: 'Made in Germany' },
-              { icon: 'public',              text: 'Red de asistencia mundial' },
+              { icon: 'build_circle',        text: 'Respuesta inmediata en planta' },
             ].map((b) => (
               <div class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[#D7E2FF] flex-shrink-0" style="font-size:1.25rem;">{b.icon}</span>
@@ -122,6 +122,11 @@ const faqs = [
             <div class="text-center">
               <p class="text-2xl font-bold text-[#D7E2FF]">Hoy</p>
               <p class="text-[0.62rem] text-[#D7E2FF]/60 uppercase tracking-widest">Kaeser</p>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div class="text-center border border-[#25D366]/40 bg-[#25D366]/10 px-4 py-2">
+              <p class="text-xl font-bold text-[#25D366]">24/7</p>
+              <p class="text-[0.62rem] text-white/40 uppercase tracking-widest">Contingencia</p>
             </div>
           </div>
         </div>
@@ -192,9 +197,6 @@ const faqs = [
             Equipos nuevos para quien los necesita. Mantención para quien ya los tiene.
           </h2>
         </div>
-        <p class="text-[#4f5a53] text-base leading-relaxed">
-          Toda la gama Kaeser disponible: tornillo, pistón, portátiles MOBILAIR, sopladores y sistemas de tratamiento. Y servicio técnico multi-marca para los equipos que ya operan en su planta.
-        </p>
       </div>
     </section>
 
