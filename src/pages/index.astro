@@ -79,7 +79,6 @@ const faqs = [
               Ver equipos
             </a>
           </div>
-          <!-- Kaeser quality badges -->
           <div class="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-5">
             {[
               { icon: 'energy_savings_leaf', text: 'Más aire por menos energía' },
@@ -129,70 +128,99 @@ const faqs = [
       </div>
     </section>
 
+    <!-- ═══════════════════════════════ MINERÍA ════════════════════════════ -->
+    <section class="relative overflow-hidden flex items-center min-h-[560px] bg-[#060c15]">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/images/hero-mineria.webp"
+          alt="Compresores Kaeser para minería — norte chico"
+          class="absolute inset-0 w-full h-full object-cover opacity-35"
+          loading="lazy" width="1920" height="1080"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#060c15]/92 via-[#060c15]/65 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 py-20 md:py-24 grid lg:grid-cols-[1fr_0.75fr] gap-12 items-center">
+        <div>
+          <span class="inline-block px-3 py-1 bg-[#D7E2FF]/10 border border-[#D7E2FF]/20 text-[#D7E2FF] text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+            Minería · Norte Chico
+          </span>
+          <h2 class="font-[Space_Grotesk] text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tighter mb-5">
+            Aire comprimido donde otros no llegan.
+          </h2>
+          <p class="text-white/70 text-lg max-w-lg mb-8 leading-relaxed">
+            Equipos Kaeser certificados para alta exigencia: altitud hasta 3.000 m.s.n.m., temperatura ambiente hasta 45°C y entornos de polvo mineral. Soporte técnico con respuesta 24/7 para faenas del norte chico.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-8 max-w-sm">
+            {[
+              { icon: 'altitude',  text: 'Hasta 3.000 m.s.n.m.' },
+              { icon: 'thermostat', text: 'Op. hasta 45°C ambiente' },
+              { icon: 'schedule',  text: 'Contingencia 24/7' },
+              { icon: 'build',     text: 'Servicio en faena' },
+            ].map((b) => (
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-[#D7E2FF] flex-shrink-0" style="font-size:1.1rem;">{b.icon}</span>
+                <span class="text-white/65 text-sm">{b.text}</span>
+              </div>
+            ))}
+          </div>
+          <a href="/contacto" class="inline-flex items-center gap-3 bg-[#003F87] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#0056B3] transition-colors">
+            Consultar para mi faena
+            <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+          </a>
+        </div>
+        <div class="hidden lg:flex items-center justify-center">
+          <img
+            src="/images/kaeser-mining-application-compressor.webp"
+            alt="Kaeser compresor aplicación minera"
+            class="w-full max-w-[440px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- ═══════════════════════════ PRODUCTOS KAESER HEADER ════════════════ -->
-    <section class="py-16 md:py-20 px-6 md:px-12 bg-[#f4f1eb] border-b border-[#0f3d2f]/10">
+    <section class="py-14 md:py-20 px-6 md:px-12 bg-[#f4f1eb] border-b border-[#0f3d2f]/10">
       <div class="max-w-[1440px] mx-auto grid md:grid-cols-[1fr_0.5fr] gap-8 items-end">
         <div>
-          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Productos KAESER — Distribuidor Oficial Chile</p>
+          <p class="font-[Space_Grotesk] text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#7a6b57] mb-4">Líneas de producto KAESER — Distribuidor Oficial Chile</p>
           <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-[#17211c] leading-[1.05]">
-            Equipos Kaeser para los que necesitan uno nuevo. Mantención para los que ya tienen uno.
+            Equipos nuevos para quien los necesita. Mantención para quien ya los tiene.
           </h2>
         </div>
         <p class="text-[#4f5a53] text-base leading-relaxed">
-          Da igual si se trata de un Kaeser, un Atlas Copco o un Ingersoll Rand: Vital Airpower lo mantiene, lo repara y lo respalda. Y si necesita un equipo nuevo, somos distribuidores oficiales Kaeser Chile.
+          Toda la gama Kaeser disponible: tornillo, pistón, portátiles MOBILAIR, sopladores y sistemas de tratamiento. Y servicio técnico multi-marca para los equipos que ya operan en su planta.
         </p>
       </div>
     </section>
 
-    <!-- ══════════════════ CATEGORÍA 1: COMPRESORES DE TORNILLO ═══════════ -->
+    <!-- ══════════════════ MOBILAIR — PORTÁTILES PARA OBRAS Y FAENAS ═══════ -->
     <section class="border-b border-[#0f3d2f]/8 bg-white">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de tornillo</p>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores portátiles MOBILAIR</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
-              Presión constante.<br />Eficiencia energética real.
+              Para obras y faenas en las condiciones más duras.
             </h2>
             <p class="text-[#4f5a53] leading-relaxed mb-6">
-              El <strong>Perfil SIGMA</strong> de KAESER permite ahorrar hasta un 15% de energía frente a perfiles de tornillo convencionales. Desde 2,2 hasta 515 kW para talleres, industria, minería y refinería. Alta disponibilidad del aire y bajos costos cíclicos a lo largo de toda la vida útil.
+              22 modelos desde 1 hasta 45,8 m³/min. Motor diésel o eléctrico. Preparados para altitud y trabajo continuo. Desde compactos de gasolina para herramientas de obra hasta el M 500-2 libre de aceite para refinerías y minería. Perfil SIGMA con regulación presión-volumen integrada.
             </p>
             <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Con inyección de aceite</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Desde 2,2 hasta 515 kW. Servicio confiable hasta 45°C de temperatura ambiente. Acceso rápido a puntos de mantenimiento. La opción más utilizada en industria y minería.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Libres de aceite CSG-2 / DSG-2</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Aire limpio para procesos críticos. Sin aceite en el proceso. Opcionalmente con secador i.HOC integrado o secador refrigerativo eficiente.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Bombas de vacío de tornillo</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Caudal de 4,75 hasta 15,70 m³/min. Vacío final: 99%. Equipados con motores de alta eficiencia IE3. Fácil instalación.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Recuperación del calor</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Un compresor de tornillo convierte en calor el 100% de la energía suministrada. Hasta un 96% puede recuperarse para aplicaciones termotécnicas, reduciendo significativamente los costos totales.
-                </div>
-              </details>
+              {[
+                { title: 'e-power — Motor eléctrico', desc: 'Sin emisiones, sin ruido. Hasta 15 bar. Ideal para zonas protegidas, túneles y obras en áreas urbanas o con restricciones de emisión.' },
+                { title: 'Diésel compactos — 1 a 3 m³/min', desc: 'Ágiles en transporte por vías públicas y a pie de obra. Para martillos neumáticos, perforadoras y herramientas. Preparados para invierno. Hasta 14 bar.' },
+                { title: 'Diésel grandes — hasta 48 m³/min', desc: 'Centrales de energía móviles con generador opcional. Regulación presión-volumen integrada. Para cualquier tipo de faena y proyecto.' },
+                { title: 'M 500-2 — 45,8 m³/min libre de aceite', desc: 'Para refinerías y gran minería. SIGMA CONTROL MOBIL. Opera solo o integrado en sistema. Máxima eficiencia energética a largo plazo.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
             </div>
             <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
               Consultar disponibilidad
@@ -202,14 +230,15 @@ const faqs = [
           <div data-carousel class="relative overflow-hidden bg-[#17211c]">
             <div class="relative" style="aspect-ratio:4/3;">
               {[
-                { src: '/images/kaeser-csd105.webp',   alt: 'Kaeser CSD 105' },
-                { src: '/images/kaeser-ask32t.webp',   alt: 'Kaeser ASK 32 T' },
-                { src: '/images/kaeser-sk25t.webp',    alt: 'Kaeser SK 25 T' },
-                { src: '/images/kaeser-sm12.webp',     alt: 'Kaeser SM 12' },
-                { src: '/images/kaeser-csd-series.webp', alt: 'Kaeser CSD Series' },
+                { src: '/images/compresores-portatiles-para-obras-motor-electrico-m-13e.webp',       alt: 'MOBILAIR M 13 E — motor eléctrico',        label: 'M 13 E · Eléctrico' },
+                { src: '/images/compresores-portatiles-para-obras-con-motor-diesel-m-100.webp',       alt: 'MOBILAIR M 100 — motor diésel',             label: 'M 100 · Diésel' },
+                { src: '/images/compresores-portatiles-para-obras-compresor-altas-dimensiones-tornillo-portatil-libre-de-aceite-m-500-2-mobilair.webp', alt: 'MOBILAIR M 500-2 — libre de aceite', label: 'M 500-2 · Libre de aceite' },
               ].map((img, i) => (
                 <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
                   <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading={i === 0 ? 'eager' : 'lazy'} />
+                  <div class="absolute bottom-3 left-3 z-10 bg-black/55 px-2.5 py-1">
+                    <p class="text-white text-[0.62rem] font-bold uppercase tracking-widest">{img.label}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -225,55 +254,94 @@ const faqs = [
       </div>
     </section>
 
-    <!-- ══════════════════ CATEGORÍA 2: COMPRESORES DE PISTÓN ══════════════ -->
+    <!-- ══════════════════════ COMPRESORES DE TORNILLO ═══════════════════ -->
     <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de tornillo</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Presión constante. Eficiencia real. De 2,2 hasta 515 kW.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              El Perfil SIGMA de Kaeser permite ahorrar hasta un 15% de energía frente a perfiles convencionales. Alta disponibilidad de aire, bajo costo de mantenimiento y servicio confiable hasta 45°C de temperatura ambiente. La solución más utilizada en talleres, industria y minería.
+            </p>
+            <div class="space-y-2">
+              {[
+                { title: 'Pequeños — hasta 22 kW (SX, SK, SM, ASD)', desc: 'Compactos, silenciosos y de bajo mantenimiento. Perfil SIGMA de alta eficiencia. Accionamiento por correa o directo. Para talleres, PYMES y puntos de consumo pequeños.' },
+                { title: 'Medianos — 18,5 a 110 kW (BSD, CSD, ASD)', desc: 'Gama más versátil del catálogo. Opción T con secador refrigerativo integrado. Variante SFC de caudal variable (22–90 kW). Motores IE3 de alta eficiencia.' },
+                { title: 'Grandes — 75 a 515 kW (DSD, ESD, FSD, HSD)', desc: 'Para industria pesada y minería. Alta potencia con bajo consumo específico. Caudales de hasta 87 m³/min. Opción SFC para regulación de velocidad sin pérdidas.' },
+                { title: 'Libres de aceite CSG-2 / DSG-2', desc: 'Aire 100% libre de aceite para procesos críticos: farmacéutica, alimentos, electrónica. Certificación ISO 8573-1 Clase 0. Opción con secador i.HOC integrado.' },
+                { title: 'Bombas de vacío de tornillo', desc: 'Caudal de 4,75 hasta 15,70 m³/min. Vacío final: 99%. Motores IE3. Fácil instalación sin necesidad de instalación adicional.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
+            <div class="relative" style="aspect-ratio:4/3;">
+              {[
+                { src: '/images/compresor-de-tornillo-pequeño-hasta-22-kw-sxc-4.webp',    alt: 'Kaeser SXC 4 — compresor de tornillo pequeño',        label: 'SXC 4 · hasta 22 kW' },
+                { src: '/images/compresor-de-tornillo-csd-csdx-105.webp',                  alt: 'Kaeser CSD/CSDX 105 — compresor de tornillo mediano',   label: 'CSD 105 · 18,5–110 kW' },
+                { src: '/images/gran-compresor-de-tornillo-hsd-782.webp',                  alt: 'Kaeser HSD 782 — gran compresor de tornillo industrial', label: 'HSD 782 · hasta 515 kW' },
+              ].map((img, i) => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading={i === 0 ? 'eager' : 'lazy'} />
+                  <div class="absolute bottom-3 left-3 z-10 bg-black/55 px-2.5 py-1">
+                    <p class="text-white text-[0.62rem] font-bold uppercase tracking-widest">{img.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
+            </button>
+            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
+              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
+            </button>
+            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ COMPRESORES DE PISTÓN ══════════════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
             <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de pistón</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
-              Los especialistas cuando la demanda es variable.
+              El especialista para demanda variable y uso intermitente.
             </h2>
             <p class="text-[#4f5a53] leading-relaxed mb-6">
-              Ciclo ideal de conexión entre 60 y 70%. La mejor elección para funcionamiento fluctuante con puntas de carga, industrias artesanales, talleres y pequeñas empresas. Los Boosters pueden comprimir el aire hasta 45 bar en puntos determinados de la red.
+              Ciclo ideal de conexión entre 60 y 70%. La mejor elección para funcionamiento fluctuante con puntas de carga: industrias artesanales, talleres, laboratorios y pequeñas empresas. Versiones con aceite o libres de aceite (OIL.FREE). Boosters hasta 45 bar.
             </p>
             <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Portátiles i.Comp</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Presión constante hasta 11 bar. Versiones PREMIUM y CLASSIC. Caudal desde 130 hasta 660 l/min. Para obras y pequeñas empresas.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Estacionarios</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Con lubricación por aceite o sin aceite (OIL.FREE). Caudal 59–1.400 l/min. Presiones 7, 10, 15 o 35 bar. Numerosas variantes y potencias.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Equipos completos — i.Comp Tower / AIRBOX</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Libres de aceite. Listos para la puesta en marcha. Para laboratorios, farmacéutica, bebidas y alimentación. Caudal 0,25–0,90 m³/min.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Boosters</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Elevan la presión de la red existente para una parte del caudal. Como componentes separados o sistemas completos. Para presiones altas y constantes hasta 45 bar.
-                </div>
-              </details>
+              {[
+                { title: 'Classic y Premium — para talleres', desc: 'Presión constante hasta 11 bar. Caudal desde 130 hasta 660 l/min. Versiones vertical y horizontal, con o sin depósito. Robustos y de bajo mantenimiento.' },
+                { title: 'Industriales KCD/KCCD — lubricados con aceite', desc: 'Para ciclos de trabajo más intensos. Construcción de fundición. Caudal 59–1.400 l/min. Presiones de 7, 10, 15 o 35 bar en múltiples etapas.' },
+                { title: 'i.Comp — libres de aceite', desc: 'Aire puro sin contaminación de aceite. Para laboratorios, farmacéutica, alimentación y óptica. Listos para instalación, silenciosos y compactos.' },
+                { title: 'Boosters — hasta 45 bar', desc: 'Elevan la presión de la red existente para una parte del caudal. Como componentes separados o sistemas completos. Para industria de botellas PET y aplicaciones de alta presión.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
             </div>
             <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
               Consultar disponibilidad
@@ -282,108 +350,15 @@ const faqs = [
           </div>
           <div data-carousel class="relative overflow-hidden bg-[#17211c]">
             <div class="relative" style="aspect-ratio:4/3;">
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
-                <img src="/images/servicios-portada.webp" alt="Compresor de pistón Kaeser" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <img src="/images/servicios-portada2.webp" alt="Equipo Kaeser en taller" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
-                  <div class="text-center opacity-20">
-                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
-                    <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
-                  </div>
-                </div>
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
-                  <div class="text-center opacity-20">
-                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
-                    <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
-              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
-            </button>
-            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
-              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
-            </button>
-            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ CATEGORÍA 3: SOPLADORES ══════════════════ -->
-    <section class="border-b border-[#0f3d2f]/8 bg-white">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
-        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
-          <div>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Sopladores</p>
-            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
-              Potencia silenciosa. Desde vacío hasta baja presión.
-            </h2>
-            <p class="text-[#4f5a53] leading-relaxed mb-6">
-              Los sopladores KAESER suministran aire de aspiración, soplado o transporte para todas las aplicaciones: transporte neumático de graneles, plantas de tratamiento de aguas, uso industrial y móvil. Eficientes, confiables y con bajas emisiones sonoras.
-            </p>
-            <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Sopladores de lóbulo rotativo OMEGA</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Rotores trilobulares OMEGA de bajas pulsaciones. Capacidad 5–160 m³/min. Uso móvil: camiones de concreto, camiones silo y vehículos aspiradora.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Sopladores de tornillo (Perfil SIGMA)</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Hasta 160 m³/min. Perfil SIGMA de gran eficiencia, optimizado para sopladores. Solución completa lista para puesta en marcha con sistema eléctrico y control moderno.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Turbosopladores</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Motor magnético de imanes permanentes de alta velocidad. Sin desgaste. Hasta 267 m³/min. Frecuencia de arranque ilimitada y amplia gama de control.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Post-enfriadores / intercambiadores</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Para el enfriamiento eficaz del aire de procesos o recuperación del calor. Con aire o agua como medio refrigerante. Permite transporte de materiales sensibles al calor.
-                </div>
-              </details>
-            </div>
-            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
-              Consultar disponibilidad
-              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
-            </a>
-          </div>
-          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
-            <div class="relative" style="aspect-ratio:4/3;">
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
-                <img src="/images/generador-kaeser.webp" alt="Soplador industrial Kaeser" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              {[1, 2, 3].map(() => (
-                <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                  <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
-                    <div class="text-center opacity-20">
-                      <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
-                      <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
-                    </div>
+              {[
+                { src: '/images/compresores-de-piston-clasicos.webp',                        alt: 'Compresores de pistón Kaeser Classic — para talleres',         label: 'Classic · Talleres' },
+                { src: '/images/compresores-de-piston-industriales-kcd-kccd-lubricados-con-aceite.webp', alt: 'Compresores de pistón Kaeser KCD industriales', label: 'KCD · Industrial' },
+                { src: '/images/compresor-piston-i-comp-9g-para-talleres-sin-aceite.webp',   alt: 'Kaeser i.Comp — compresor de pistón libre de aceite',           label: 'i.Comp · Sin aceite' },
+              ].map((img, i) => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <div class="absolute bottom-3 left-3 z-10 bg-black/55 px-2.5 py-1">
+                    <p class="text-white text-[0.62rem] font-bold uppercase tracking-widest">{img.label}</p>
                   </div>
                 </div>
               ))}
@@ -400,37 +375,84 @@ const faqs = [
       </div>
     </section>
 
-    <!-- ═══════════════════════════ CATEGORÍA 4: CONTROLADORES ══════════════ -->
+    <!-- ═══════════════════════════ SOPLADORES ════════════════════════════ -->
     <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div>
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Sopladores industriales</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
+              Baja presión, alto caudal. Para transporte neumático y tratamiento de aguas.
+            </h2>
+            <p class="text-[#4f5a53] leading-relaxed mb-6">
+              Sopladores de tornillo Perfil SIGMA hasta 250 kW. 6 series CBS → HBS con caudales desde 6 hasta 136 m³/min. Solución completa lista para puesta en marcha: sistema eléctrico y control moderno incluidos. También disponibles turbosopladores hasta 267 m³/min.
+            </p>
+            <div class="space-y-2">
+              {[
+                { title: 'CBS / DBS — Pequeños (hasta 37 kW)', desc: 'Para caudales de 6 a 22 m³/min. Presión diferencial hasta 1.000 mbar. Compactos y silenciosos. Ideal para plantas de tratamiento de agua y procesos de baja escala.' },
+                { title: 'EBS / FBS — Medianos (22–90 kW)', desc: 'De 16 a 72 m³/min. Alta eficiencia energética con perfil SIGMA optimizado para sopladores. Bajo nivel sonoro, fácil acceso para mantenimiento.' },
+                { title: 'GBS / HBS — Grandes (hasta 250 kW)', desc: 'Hasta 136 m³/min. Para grandes plantas de PTAS, transporte neumático de graneles y procesos industriales de alta demanda. Sistema completo con cuadro eléctrico integrado.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
+            </div>
+            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
+              Consultar disponibilidad
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            {[
+              { src: '/images/sopladores-de-tornillo-hasta-250-kw-cbs-121-c.webp', alt: 'Soplador Kaeser CBS 121 C', label: 'CBS · hasta 37 kW' },
+              { src: '/images/sopladores-de-tornillo-hasta-250-kw-ebs-410-c.webp', alt: 'Soplador Kaeser EBS 410 C', label: 'EBS · hasta 90 kW' },
+              { src: '/images/sopladores-de-tornillo-hasta-250-kw-hbs-1600-c.webp', alt: 'Soplador Kaeser HBS 1600 C', label: 'HBS · hasta 250 kW' },
+            ].map((img) => (
+              <div class="group overflow-hidden bg-[#17211c] border border-[#0f3d2f]/20">
+                <div class="aspect-[3/4] overflow-hidden relative">
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                </div>
+                <div class="px-3 py-2 bg-[#17211c]">
+                  <p class="text-white text-[0.6rem] font-bold uppercase tracking-widest">{img.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ CONTROLADORES SIGMA ════════════════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
             <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Controladores SIGMA</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
-              La inteligencia que reduce costos en cada m³ producido.
+              La inteligencia que reduce el costo por m³ producido.
             </h2>
             <p class="text-[#4f5a53] leading-relaxed mb-6">
-              SIGMA CONTROL 2 y SIGMA AIR MANAGER 4.0 son el cerebro del sistema: coordinan todos los componentes, optimizan el rendimiento en tiempo real y permiten la gestión centralizada del aire comprimido. Reducción permanente de consumo energético durante todo el ciclo de vida.
+              SIGMA CONTROL 2 y SIGMA AIR MANAGER 4.0 coordinan todos los componentes del sistema, optimizan el rendimiento en tiempo real y permiten gestión centralizada vía red. Reducción permanente del consumo energético durante todo el ciclo de vida. Compatible con Industrie 4.0 y KAESER CONNECT.
             </p>
             <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">SIGMA CONTROL 2 — Inteligencia descentralizada</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Controlador interno de cada compresor. Ajuste exacto del rendimiento al consumo real de aire comprimido en cada momento. Distintos sistemas de control preprogramados para ahorrar energía. Registro de eventos y datos operativos.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">SIGMA AIR MANAGER 4.0 — Gestión central del sistema</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Controla todos los componentes de la estación para ahorro de costos máximo. Comunicación e intercambio de datos en tiempo real. Compatible con Industrie 4.0 y KAESER CONNECT. Mejor visión de conjunto, más control, menos paradas.
-                </div>
-              </details>
+              {[
+                { title: 'SIGMA CONTROL 2 — Inteligencia descentralizada', desc: 'Controlador interno de cada compresor. Ajuste exacto del rendimiento al consumo real. Distintos modos de control preprogramados para ahorro de energía. Registro de eventos y datos operativos. Tarjeta SD para actualizaciones y backup.' },
+                { title: 'SIGMA AIR MANAGER 4.0 — Gestión central del sistema', desc: 'Controla todos los componentes de la estación de compresores en conjunto. Comunicación e intercambio de datos en tiempo real. Minimiza la presión de red y coordina el arranque escalonado de equipos. Mejor visión de conjunto, menos paradas.' },
+                { title: 'SIGMA CONTROL MOBIL — Para MOBILAIR', desc: 'Versión portátil para compresores en obra y faena. Panel táctil intuitivo. Control de presión, temperatura y horas de operación. Alertas preventivas antes de falla.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
             </div>
             <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
               Consultar disponibilidad
@@ -439,20 +461,18 @@ const faqs = [
           </div>
           <div data-carousel class="relative overflow-hidden bg-[#17211c]">
             <div class="relative" style="aspect-ratio:4/3;">
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
-                <img src="/images/kaeser-csd-series.webp" alt="Kaeser SIGMA CONTROL sistema" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <img src="/images/kaeser-sm12.webp" alt="Kaeser SM 12 panel de control" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
-                  <div class="text-center opacity-20">
-                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
-                    <p class="text-white text-xs tracking-widest uppercase">Imagen próximamente</p>
+              {[
+                { src: '/images/controlador-de-compresor-sigma-control-2.webp', alt: 'Kaeser SIGMA CONTROL 2',        label: 'SIGMA CONTROL 2' },
+                { src: '/images/modelo-sigma-air-utility.webp',                 alt: 'Kaeser SIGMA AIR MANAGER 4.0',  label: 'SIGMA AIR MANAGER 4.0' },
+                { src: '/images/compresores-sala-de-monitores.webp',            alt: 'Sala de monitores — gestión centralizada de compresores', label: 'Gestión centralizada' },
+              ].map((img, i) => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <div class="absolute bottom-3 left-3 z-10 bg-black/55 px-2.5 py-1">
+                    <p class="text-white text-[0.62rem] font-bold uppercase tracking-widest">{img.label}</p>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
             <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
               <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
@@ -466,8 +486,8 @@ const faqs = [
       </div>
     </section>
 
-    <!-- ═══════════════════════ CATEGORÍA 5: TRATAMIENTO DE AIRE ════════════ -->
-    <section class="border-b border-[#0f3d2f]/8 bg-white">
+    <!-- ══════════════════════ TRATAMIENTO DE AIRE ═══════════════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
@@ -476,45 +496,23 @@ const faqs = [
               Sin oportunidad para agua, aceite ni polvo.
             </h2>
             <p class="text-[#4f5a53] leading-relaxed mb-6">
-              Gama completa para combatir cada contaminante y obtener el grado de pureza exigido por el proceso. Desde el uso simple en taller hasta la fabricación de productos electrónicos o farmacéuticos. Cumplimiento de ISO 8573-1 en todos los niveles.
+              Gama completa para el grado de pureza exigido por cada proceso. Desde uso simple en taller hasta fabricación farmacéutica o electrónica. Cumplimiento de ISO 8573-1 en todos los niveles. Secadores refrigerativos SECOTEC, adsorción DC/IDC, filtros de coalescencia, drenajes ECO-DRAIN y separadores AQUAMAT.
             </p>
             <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Secadores (refrigerativos / adsorción / membrana)</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Refrigerativos (PRP ≥ +3°C) para secado de base eficiente. Combinados y adsorción (PRP hasta −70°C) para protección contra congelación. Membranas para puntos de consumo compactos sin conexión eléctrica.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Filtros y adsorbedores de carbón activo</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Eliminan partículas, aerosoles y vapores de aceite. Hasta clase 1 ISO 8573-1 (0–0,01 mg/m³). Presiones hasta 16 bar en rosca y 45 bar en filtros para Boosters.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Drenajes ECO-DRAIN</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Regulación por nivel. Sin pérdidas de aire comprimido. Auto-supervisión con contacto sin potencial para alarmas. Fácil conexión a sistemas superiores de mando.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Separador agua-aceite AQUAMAT</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  El condensado se convierte en agua residual normal y puede eliminarse por el alcantarillado general. Homologación DIBt. Sin necesidad de tercerizar el tratamiento.
-                </div>
-              </details>
+              {[
+                { title: 'Secadores refrigerativos SECOTEC', desc: 'Series TA → TG2 para PRP ≥ +3°C. Alta eficiencia energética con tecnología de acumulación de energía. El TG780 es el secador refrigerativo compacto más grande del mercado. Disponibles hasta caudales de 100 m³/min.' },
+                { title: 'Secadores de adsorción DC / IDC / CALOSEC', desc: 'PRP hasta −70°C para protección contra congelación o procesos que exigen aire ultrasal. Regenerados en frío (sin calentamiento) o en caliente (mayor eficiencia energética). Para cualquier nivel de pureza ISO 8573-1.' },
+                { title: 'Secadores combinados HYBRITEC y de membrana KMM', desc: 'HYBRITEC DTE/DTL combina refrigeración y adsorción en una unidad compacta. Membrana KMM para puntos de consumo sin conexión eléctrica. PRP variable según temperatura de operación.' },
+                { title: 'Filtros, drenajes ECO-DRAIN y AQUAMAT', desc: 'Filtros de coalescencia (aerosoles de aceite < 0,01 mg/m³), filtros de polvo y adsorbedores de carbón activo. Drenajes ECO-DRAIN sin pérdida de aire. Separador AQUAMAT para descarga de condensados al alcantarillado general.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
             </div>
             <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
               Consultar disponibilidad
@@ -524,12 +522,15 @@ const faqs = [
           <div data-carousel class="relative overflow-hidden bg-[#17211c]">
             <div class="relative" style="aspect-ratio:4/3;">
               {[
-                { src: '/images/cambio-de-filtro.webp',   alt: 'Cambio de filtro en compresor' },
-                { src: '/images/filtro-compresor.webp',   alt: 'Filtro de línea de aire comprimido' },
-                { src: '/images/manguera-compresor.webp', alt: 'Líneas de aire comprimido industrial' },
+                { src: '/images/tratamiento-de-aire-comprimido-separadores-centrifugos-secador-refrigerativo-bajo-consumo-secotec-tg.webp', alt: 'Secador refrigerativo Kaeser SECOTEC TG', label: 'SECOTEC TG · Refrigerativo' },
+                { src: '/images/tratamiento-de-aire-comprimido-filtro-de-coalescencia-con-eco-drain-30.webp',                              alt: 'Filtro Kaeser con ECO-DRAIN 30',          label: 'Filtro + ECO-DRAIN 30' },
+                { src: '/images/tratamiento-de-aire-comprimido-separador-de-agua-aceite-aquamat.webp',                                     alt: 'Separador agua-aceite Kaeser AQUAMAT',   label: 'AQUAMAT · Separador' },
               ].map((img, i) => (
                 <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
                   <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <div class="absolute bottom-3 left-3 z-10 bg-black/55 px-2.5 py-1">
+                    <p class="text-white text-[0.62rem] font-bold uppercase tracking-widest">{img.label}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -545,46 +546,32 @@ const faqs = [
       </div>
     </section>
 
-    <!-- ════════════════════ CATEGORÍA 6: ALMACENAMIENTO Y DISTRIBUCIÓN ═════ -->
-    <section class="border-b border-[#0f3d2f]/8 bg-[#f4f1eb]">
+    <!-- ════════════════ ALMACENAMIENTO + SmartPipe+ ═══════════════════════ -->
+    <section class="border-b border-[#0f3d2f]/8 bg-white">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
             <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Almacenamiento y distribución</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
-              Presión estable. Distribución eficiente.
+              Presión estable en toda la red. Sin pérdidas ni contaminación.
             </h2>
             <p class="text-[#4f5a53] leading-relaxed mb-6">
-              Tanques, sistemas de mantenimiento de presión y tuberías de distribución son los componentes que cierran el sistema de aire comprimido. Solo con presión estable y calidad de red alta queda asegurado un funcionamiento eficiente en toda la instalación.
+              La última milla del sistema de aire comprimido: tanques de almacenamiento de 90 a 10.000 litros, sistemas DHS de mantenimiento de presión y tuberías SmartPipe+ de aluminio modular. Aluminio calibrado liso, flujo laminar óptimo, sin oxidación ni depósitos. Disponible hasta 8" de diámetro.
             </p>
             <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Tanques de almacenamiento</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  90 a 10.000 litros. Larga vida útil con intervalos de control hasta 5 años. Para almacenamiento y amortiguamiento ante fluctuaciones de demanda. Griferías y accesorios para cada aplicación.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Sistemas DHS de mantenimiento de presión</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Permiten contar siempre con la presión de red prevista. Protegen los sistemas de tratamiento de sobrecargas al llenarse la red. Conexiones G½ hasta DN 400 para integración en cualquier sistema.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-white hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">SmartPipe+ — Tubería de aluminio modular</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Aluminio calibrado liso. Flujo laminar óptimo. Sin oxidación ni depósitos de contaminantes. Conectores a prueba de fugas. Disponible hasta 8" de diámetro. Desde pequeños locales hasta grandes instalaciones industriales.
-                </div>
-              </details>
+              {[
+                { title: 'Tanques de almacenamiento — 90 a 10.000 L', desc: 'Larga vida útil con intervalos de control hasta 5 años. Para almacenamiento y amortiguamiento ante fluctuaciones de demanda. Certificación de recipientes a presión. Versiones hasta 50 bar.' },
+                { title: 'Sistemas DHS de mantenimiento de presión', desc: 'Permiten contar siempre con la presión de red prevista. Protegen los sistemas de tratamiento de sobrecargas al llenarse la red. Conexiones G½ hasta DN 400.' },
+                { title: 'SmartPipe+ — Aluminio modular hasta 8"', desc: 'Pared interior lisa. Sin óxido, sin depósitos. Conectores a prueba de fugas. Caída de presión mínima. Fácil instalación y ampliación modular. Desde talleres pequeños hasta plantas industriales de gran escala.' },
+              ].map((item) => (
+                <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
+                  <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+                    <span class="text-sm font-bold text-[#17211c]">{item.title}</span>
+                    <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
+                  </summary>
+                  <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">{item.desc}</div>
+                </details>
+              ))}
             </div>
             <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
               Consultar disponibilidad
@@ -593,20 +580,18 @@ const faqs = [
           </div>
           <div data-carousel class="relative overflow-hidden bg-[#17211c]">
             <div class="relative" style="aspect-ratio:4/3;">
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
-                <img src="/images/planta-de-aire.webp" alt="Sala de compresores industrial" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <img src="/images/compresor-planta.webp" alt="Compresor en planta" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
-                  <div class="text-center opacity-20">
-                    <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
-                    <p class="text-white text-xs tracking-widest uppercase">SmartPipe+ — próximamente</p>
+              {[
+                { src: '/images/smart-pipes-tuberias-de-aire.webp',                                                                                                alt: 'SmartPipe+ Kaeser — tuberías de aluminio para aire comprimido',   label: 'SmartPipe+ · Aluminio modular' },
+                { src: '/images/variedad-tamaños-smart-pipes.webp',                                                                                                alt: 'SmartPipe+ variedad de tamaños',                                  label: 'SmartPipe+ · Hasta 8"' },
+                { src: '/images/almacenamiento-de-aire-comprimido-y-mantenimiento-de-la-presion-tanques-de-aire-comprimido-hasta-50-bar.webp',                      alt: 'Tanques de almacenamiento Kaeser hasta 50 bar',                   label: 'Tanques · Hasta 50 bar' },
+              ].map((img, i) => (
+                <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
+                  <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <div class="absolute bottom-3 left-3 z-10 bg-black/55 px-2.5 py-1">
+                    <p class="text-white text-[0.62rem] font-bold uppercase tracking-widest">{img.label}</p>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
             <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
               <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
@@ -620,137 +605,55 @@ const faqs = [
       </div>
     </section>
 
-    <!-- ═══════════════════════ CATEGORÍA 7: MOBILAIR ════════════════════════ -->
-    <section class="border-b border-[#0f3d2f]/8 bg-white">
+    <!-- ═══════════════════════ TÉCNICA DE MEDICIÓN ════════════════════════ -->
+    <section class="border-b border-white/8 bg-[#17211c] text-white">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores portátiles MOBILAIR</p>
-            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-4">
-              Para obras en las condiciones más duras.
+            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-3">Kaeser / Técnica de medición</p>
+            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+              Lo que no se mide no se puede mejorar.
             </h2>
-            <p class="text-[#4f5a53] leading-relaxed mb-6">
-              Potentes, resistentes y fáciles de manejar. Caudales desde 1 hasta 45 m³/min sin aceite. Versiones portátiles y estacionarias, con motor de combustión o eléctrico. Preparados para altitudes hasta 3.000 m sobre el nivel del mar.
+            <p class="text-white/70 leading-relaxed mb-6">
+              Sensores inteligentes KM para monitorización en tiempo real de todos los valores relevantes del sistema: presión, temperatura, punto de rocío, consumo de energía, caudal y calidad del aire. Integración directa vía SIGMA NETWORK para visualización en SIGMA AIR MANAGER 4.0.
             </p>
-            <div class="space-y-2">
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">e-power — Accionamiento eléctrico</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Sin gases ni ruido. Hasta 15 bar. Operación posible en zonas protegidas contra emisiones. Ideal para interiores, excavaciones y túneles.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Compactos hasta 3 m³/min</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Ágiles en transporte por vías públicas y a pie de obra. Preparados para invierno. Para martillos neumáticos, perforadoras y herramientas de obra. Hasta 14 bar.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">Para obras hasta 48 m³/min (motor diésel)</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Centrales de energía con accionamiento diésel. Con generador opcional. Regulación presión-volumen. Hasta 14 bar. Amplia gama para cualquier tipo de obra.
-                </div>
-              </details>
-              <details class="group border border-[#0f3d2f]/10 bg-[#f8f6f1] hover:border-[#003F87]/20 transition-colors">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
-                  <span class="text-sm font-bold text-[#17211c]">M500-2 — El gigante (45,8 m³/min, libre de aceite)</span>
-                  <span class="material-symbols-outlined text-[#003F87] transition-transform duration-300 group-open:rotate-45 flex-shrink-0" style="font-size:1rem;">add</span>
-                </summary>
-                <div class="px-5 pb-4 pt-0 text-sm text-[#4f5a53] leading-relaxed">
-                  Para refinerías y la gran industria. Con SIGMA CONTROL MOBIL. Opera solo o dentro de un sistema. Máxima eficiencia energética incluso tras largos años de funcionamiento.
-                </div>
-              </details>
-            </div>
-            <a href="/contacto" class="inline-flex items-center gap-2 mt-6 text-[#003F87] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all duration-200">
-              Consultar disponibilidad
-              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
-            </a>
-          </div>
-          <div data-carousel class="relative overflow-hidden bg-[#17211c]">
-            <div class="relative" style="aspect-ratio:4/3;">
-              <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:1;z-index:1;">
-                <img src="/images/hero-kaeser.webp" alt="Compresor Kaeser para obras" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-              </div>
-              {[1, 2].map(() => (
-                <div data-slide class="absolute inset-0 transition-opacity duration-700" style="opacity:0;z-index:0;">
-                  <div class="w-full h-full bg-[#1a2228] flex items-center justify-center">
-                    <div class="text-center opacity-20">
-                      <span class="material-symbols-outlined text-white block mb-2" style="font-size:2.5rem;">image</span>
-                      <p class="text-white text-xs tracking-widest uppercase">MOBILAIR — próximamente</p>
-                    </div>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              {[
+                { src: '/images/tecnica-de-medicion-de-ambiente-km-aa-a.webp', alt: 'KM AA/A — Condiciones de aspiración',  code: 'KM AA/A', label: 'Aspiración y ambiente' },
+                { src: '/images/tecnica-de-medicion-de-ambiente-km-ea-a.webp', alt: 'KM EA/A — Monitorización de energía',  code: 'KM EA/A', label: 'Energía' },
+                { src: '/images/tecnica-de-medicion-de-ambiente-km-fa-p.webp', alt: 'KM FA/P — Flujo volumétrico',          code: 'KM FA/P', label: 'Flujo volumétrico' },
+                { src: '/images/tecnica-de-medicion-de-ambiente-km-pa-a.webp', alt: 'KM PA/A — Punto de rocío y calidad',   code: 'KM PA/A', label: 'Punto de rocío' },
+              ].map((s) => (
+                <div class="border border-white/10 bg-white/5 overflow-hidden">
+                  <div class="aspect-[4/3] overflow-hidden relative">
+                    <img src={s.src} alt={s.alt} class="absolute inset-0 w-full h-full object-contain p-2" loading="lazy" />
+                  </div>
+                  <div class="px-3 py-2 border-t border-white/8">
+                    <p class="text-[0.6rem] font-bold uppercase tracking-widest text-[#D7E2FF]">{s.code}</p>
+                    <p class="text-white/50 text-xs">{s.label}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <button data-prev aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
-              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_left</span>
-            </button>
-            <button data-next aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 bg-black/40 hover:bg-[#003F87] text-white flex items-center justify-center transition-colors">
-              <span class="material-symbols-outlined" style="font-size:1.2rem;">chevron_right</span>
-            </button>
-            <div data-dots class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ CATEGORÍA 8: TÉCNICA DE MEDICIÓN ═══════════ -->
-    <section class="border-b border-[#0f3d2f]/8 bg-[#17211c] text-white overflow-hidden">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
-        <div class="grid lg:grid-cols-[1fr_1fr] gap-10 items-start">
-          <div>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#d5c6ac] mb-3">Kaeser / Técnica de medición</p>
-            <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
-              Lo invisible se hace visible.
-            </h2>
-            <p class="text-white/70 leading-relaxed mb-6">
-              Sensores inteligentes y registro de datos de proceso para monitorizar en tiempo real el estado de su sistema: presión, temperatura, punto de rocío, consumo de energía, fugas y calidad del aire. La clave para reducir costos y mejorar la productividad.
-            </p>
-            <div class="grid sm:grid-cols-2 gap-3 mb-6">
-              {[
-                { code: 'KM AA/A', label: 'Condiciones de aspiración y ambiente' },
-                { code: 'KM EA/A', label: 'Monitorización de energía' },
-                { code: 'KM FA/P', label: 'Flujo volumétrico generado' },
-                { code: 'KM FA/T', label: 'Medición consumo de aire' },
-                { code: 'KM PA/A', label: 'Punto de rocío y calidad' },
-                { code: 'KM PA/B', label: 'Monitorización aire de procesos' },
-              ].map((item) => (
-                <div class="border border-white/10 bg-white/5 px-4 py-3">
-                  <p class="text-[0.65rem] font-bold uppercase tracking-widest text-[#D7E2FF] mb-0.5">{item.code}</p>
-                  <p class="text-white/60 text-xs">{item.label}</p>
-                </div>
-              ))}
-            </div>
-            <div class="space-y-3">
+            <div class="space-y-2.5">
               {[
                 'Monitorización en tiempo real de todos los valores relevantes del sistema.',
-                'Sensores inteligentes de fácil integración vía SIGMA NETWORK.',
-                'Visualización de KPIs: presión, temperatura, punto de rocío y fugas.',
-                'Base para la digitalización y conexión a SIGMA AIR MANAGER 4.0.',
+                'Integración directa con SIGMA NETWORK y SIGMA AIR MANAGER 4.0.',
+                'Base para auditorías de fugas, eficiencia energética y digitalización.',
               ].map((item) => (
                 <div class="flex items-start gap-3">
                   <span class="material-symbols-outlined text-[#D7E2FF] flex-shrink-0" style="font-size:1rem;">radio_button_checked</span>
-                  <p class="text-white/70 text-sm leading-relaxed">{item}</p>
+                  <p class="text-white/65 text-sm leading-relaxed">{item}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div class="relative overflow-hidden border border-white/10 bg-[#0f1a15]" style="aspect-ratio:3/4;">
+          <div class="relative overflow-hidden border border-white/10 bg-[#0f1a15]" style="aspect-ratio:4/3;">
             <img
               src="/images/kaeser-sigma-network.webp"
               alt="KAESER SIGMA Network — control centralizado del sistema de aire comprimido"
               class="absolute inset-0 w-full h-full object-contain p-4"
               loading="lazy"
-              width="900" height="1200"
             />
           </div>
         </div>
