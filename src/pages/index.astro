@@ -61,7 +61,6 @@ const faqs = [
           </div>
         ))}
         <div class="absolute inset-0 bg-gradient-to-r from-[#070e1a]/92 via-[#070e1a]/68 to-[#070e1a]/25 z-10"></div>
-        <div class="absolute inset-0 bg-grid-hero z-20 pointer-events-none"></div>
       </div>
       <div class="relative z-30 max-w-[1440px] mx-auto px-6 md:px-12 py-24 grid md:grid-cols-12 gap-12">
         <div class="md:col-span-8 lg:col-span-7">
@@ -69,7 +68,7 @@ const faqs = [
             Distribuidor Oficial Kaeser Chile
           </span>
           <h1 class="animate-hero-delay-1 font-[Space_Grotesk] text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tighter mb-8">
-            Soluciones técnicas para que su operación no se detenga
+            Soluciones técnicas para que su operación <em class="not-italic text-[#7EB3FF]">no se detenga</em>
           </h1>
           <p class="animate-hero-delay-2 text-white/80 text-xl max-w-xl mb-10 font-light leading-relaxed">
             Compresores Kaeser, servicio técnico 24/7 y toda la gama de aire comprimido industrial. Cobertura en La Serena, Coquimbo y norte chico.
@@ -110,12 +109,12 @@ const faqs = [
           </div>
           <div class="hidden sm:flex items-center gap-6 flex-shrink-0">
             <div class="text-center">
-              <p class="text-2xl font-bold text-white">7 años</p>
+              <p class="text-2xl font-bold text-white"><span data-count="7">0</span> años</p>
               <p class="text-[0.62rem] text-white/40 uppercase tracking-widest">Atlas Copco</p>
             </div>
             <div class="w-px h-8 bg-white/10"></div>
             <div class="text-center">
-              <p class="text-2xl font-bold text-white">12 años</p>
+              <p class="text-2xl font-bold text-white"><span data-count="12">0</span> años</p>
               <p class="text-[0.62rem] text-white/40 uppercase tracking-widest">Ingersoll Rand</p>
             </div>
             <div class="w-px h-8 bg-white/10"></div>
@@ -197,9 +196,9 @@ const faqs = [
         </div>
         <div class="hidden lg:flex items-center justify-center">
           <img
-            src="/images/logo2.webp"
-            alt="Vital Airpower"
-            class="w-full max-w-[340px] h-auto object-contain opacity-85"
+            src="/images/logo-vital.webp"
+            alt="Vital Airpower Compresores"
+            class="w-full max-w-[380px] h-auto object-contain opacity-90"
             loading="lazy"
           />
         </div>
@@ -223,7 +222,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores portátiles MOBILAIR</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores portátiles MOBILAIR</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               Para obras y faenas en las condiciones más duras.
             </h2>
@@ -259,7 +258,10 @@ const faqs = [
             <div class="relative" style="aspect-ratio:4/3;">
               {[
                 { src: '/images/compresores-portatiles-para-obras-motor-electrico-m-13e.webp',       alt: 'MOBILAIR M 13 E — motor eléctrico',        label: 'M 13 E · Eléctrico' },
+                { src: '/images/compresores-portatiles-para-obras-m-17.webp',                         alt: 'MOBILAIR M 17 — motor diésel compacto',     label: 'M 17 · Diésel compacto' },
+                { src: '/images/compresores-portatiles-para-obras-m-27.webp',                         alt: 'MOBILAIR M 27 — motor diésel',              label: 'M 27 · Diésel' },
                 { src: '/images/compresores-portatiles-para-obras-con-motor-diesel-m-100.webp',       alt: 'MOBILAIR M 100 — motor diésel',             label: 'M 100 · Diésel' },
+                { src: '/images/compresores-portatiles-para-obras-m-50.webp',                         alt: 'MOBILAIR M 50 — motor diésel mediano',      label: 'M 50 · Diésel mediano' },
                 { src: '/images/compresores-portatiles-para-obras-compresor-altas-dimensiones-tornillo-portatil-libre-de-aceite-m-500-2-mobilair.webp', alt: 'MOBILAIR M 500-2 — libre de aceite', label: 'M 500-2 · Libre de aceite' },
               ].map((img, i) => (
                 <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
@@ -287,7 +289,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de tornillo</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de tornillo</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               Presión constante. Eficiencia real. De 2,2 hasta 515 kW.
             </h2>
@@ -323,9 +325,12 @@ const faqs = [
           <div data-carousel class="relative overflow-hidden bg-[#17211c]">
             <div class="relative" style="aspect-ratio:4/3;">
               {[
-                { src: '/images/compresor-de-tornillo-pequeño-hasta-22-kw-sxc-4.webp',    alt: 'Kaeser SXC 4 — compresor de tornillo pequeño',        label: 'SXC 4 · hasta 22 kW' },
-                { src: '/images/compresor-de-tornillo-csd-csdx-105.webp',                  alt: 'Kaeser CSD/CSDX 105 — compresor de tornillo mediano',   label: 'CSD 105 · 18,5–110 kW' },
-                { src: '/images/gran-compresor-de-tornillo-hsd-782.webp',                  alt: 'Kaeser HSD 782 — gran compresor de tornillo industrial', label: 'HSD 782 · hasta 515 kW' },
+                { src: '/images/compresor-de-tornillo-pequeño-hasta-22-kw-sxc-4.webp',                     alt: 'Kaeser SXC 4 — compresor de tornillo pequeño',           label: 'SXC 4 · hasta 22 kW' },
+                { src: '/images/compresor-de-tornillo-asd-con-motor-sincrono-de-reluctancia-asd-60-t.webp', alt: 'Kaeser ASD 60 T — motor síncrono de reluctancia',         label: 'ASD 60 T · Motor SRM' },
+                { src: '/images/compresor-de-tornillo-bsd-83.webp',                                         alt: 'Kaeser BSD 83 — compresor de tornillo mediano',           label: 'BSD 83 · Mediano' },
+                { src: '/images/compresor-de-tornillo-csd-csdx-105.webp',                                   alt: 'Kaeser CSD/CSDX 105 — compresor de tornillo mediano',    label: 'CSD 105 · 18,5–110 kW' },
+                { src: '/images/gran-compresor-tornillo-esd-375.webp',                                       alt: 'Kaeser ESD 375 — gran compresor de tornillo industrial', label: 'ESD 375 · Grande' },
+                { src: '/images/gran-compresor-de-tornillo-hsd-782.webp',                                   alt: 'Kaeser HSD 782 — gran compresor de tornillo industrial', label: 'HSD 782 · hasta 515 kW' },
               ].map((img, i) => (
                 <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
                   <img src={img.src} alt={img.alt} class="absolute inset-0 w-full h-full object-contain" loading={i === 0 ? 'eager' : 'lazy'} />
@@ -352,7 +357,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de pistón</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Compresores de pistón</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               El especialista para demanda variable y uso intermitente.
             </h2>
@@ -388,7 +393,9 @@ const faqs = [
             <div class="relative" style="aspect-ratio:4/3;">
               {[
                 { src: '/images/compresores-de-piston-clasicos.webp',                        alt: 'Compresores de pistón Kaeser Classic — para talleres',         label: 'Classic · Talleres' },
+                { src: '/images/compresor-de-piston-serie-premium-450.webp',                 alt: 'Kaeser Premium 450 — compresor de pistón premium',             label: 'Premium 450 · Taller' },
                 { src: '/images/compresores-de-piston-industriales-kcd-kccd-lubricados-con-aceite.webp', alt: 'Compresores de pistón Kaeser KCD industriales', label: 'KCD · Industrial' },
+                { src: '/images/compresor-piston-airbox-center.webp',                        alt: 'Kaeser AIRBOX CENTER — pistón compacto con depósito',          label: 'AIRBOX · Compacto' },
                 { src: '/images/compresor-piston-i-comp-9g-para-talleres-sin-aceite.webp',   alt: 'Kaeser i.Comp — compresor de pistón libre de aceite',           label: 'i.Comp · Sin aceite' },
               ].map((img, i) => (
                 <div data-slide class="absolute inset-0 transition-opacity duration-700" style={i === 0 ? 'opacity:1;z-index:1' : 'opacity:0;z-index:0'}>
@@ -416,7 +423,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Sopladores industriales</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Sopladores industriales</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               Baja presión, alto caudal. Para transporte neumático y tratamiento de aguas.
             </h2>
@@ -472,7 +479,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Controladores SIGMA</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Controladores SIGMA</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               La inteligencia que reduce el costo por m³ producido.
             </h2>
@@ -535,7 +542,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Tratamiento de aire comprimido</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Tratamiento de aire comprimido</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               Sin oportunidad para agua, aceite ni polvo.
             </h2>
@@ -599,7 +606,7 @@ const faqs = [
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div data-animate-stagger>
-            <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Almacenamiento y distribución</p>
+            <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">Kaeser / Almacenamiento y distribución</p>
             <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] mb-2">
               Presión estable en toda la red. Sin pérdidas ni contaminación.
             </h2>
@@ -712,6 +719,48 @@ const faqs = [
               loading="lazy"
             />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ IMÁGENES EN TERRENO ═══════════════════════ -->
+    <section class="bg-[#0a1016] border-b border-white/8">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="mb-10" data-animate="fade-up">
+          <p class="font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#7EB3FF] mb-3">Vital Airpower · Trabajo real en terreno</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-5xl font-bold tracking-tight text-white leading-[1.05] mb-4">
+            Equipos instalados y trabajando en Chile.
+          </h2>
+          <p class="text-white/55 text-lg max-w-2xl leading-relaxed">
+            Instalaciones reales ejecutadas por nuestro equipo técnico. Desde talleres de la Región de Coquimbo hasta faenas del norte chico.
+          </p>
+        </div>
+        <div class="columns-2 sm:columns-3 lg:columns-4 gap-3 [column-gap:12px]" data-animate="fade-up">
+          {[
+            { name: 'terreno-01', alt: 'Líneas de aire comprimido instaladas por Vital Airpower' },
+            { name: 'terreno-02', alt: 'Trabajo en terreno Vital Airpower — compresor industrial' },
+            { name: 'terreno-03', alt: 'Instalación Kaeser por técnicos Vital Airpower' },
+            { name: 'terreno-04', alt: 'Servicio técnico en planta — Vital Airpower' },
+            { name: 'terreno-05', alt: 'Red de aire comprimido SmartPipe instalada' },
+            { name: 'terreno-06', alt: 'Compresor Kaeser en operación — servicio técnico Coquimbo' },
+            { name: 'terreno-07', alt: 'Vital Airpower — instalación industrial Kaeser' },
+            { name: 'terreno-08', alt: 'Técnicos Vital Airpower en terreno' },
+            { name: 'terreno-09', alt: 'Compresor Kaeser instalado en taller' },
+            { name: 'terreno-10', alt: 'Trabajo de instalación aire comprimido industrial' },
+            { name: 'terreno-11', alt: 'Vital Airpower en faena — equipos Kaeser' },
+            { name: 'terreno-12', alt: 'Instalación compresor industrial norte chico' },
+            { name: 'terreno-13', alt: 'Servicio técnico compresor Kaeser La Serena' },
+            { name: 'terreno-14', alt: 'Red de aire comprimido Vital Airpower' },
+          ].map((img) => (
+            <div class="break-inside-avoid mb-3 overflow-hidden group">
+              <img
+                src={`/images/terreno/${img.name}.webp`}
+                alt={img.alt}
+                class="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -234,3 +234,74 @@ h1, h2, h3, h4, h5, h6 {
 }
 .float-badge { animation: float-updown 4s ease-in-out infinite; }
 
+/* ============================================
+   TEXTO DINÁMICO — ANIMACIONES ADICIONALES
+   ============================================ */
+
+/* Gradient flow para texto destacado */
+@keyframes gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+.text-gradient-blue {
+  background: linear-gradient(90deg, #7EB3FF, #D7E2FF, #4a9eff, #D7E2FF);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 5s ease infinite;
+}
+
+/* Highlight stripe — detrás de texto clave */
+@keyframes stripe-grow {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+.highlight-stripe {
+  position: relative;
+  display: inline;
+}
+.highlight-stripe::before {
+  content: '';
+  position: absolute;
+  inset: 0 -2px;
+  background: rgba(0, 63, 135, 0.12);
+  z-index: -1;
+  animation: stripe-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* Fade-in con scale para cards/badges */
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.9) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+[data-animate="pop-in"] { animation: pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+[data-animate="pop-in"].is-visible { opacity: 1; transform: none; }
+
+/* Section label — underline reveal */
+@keyframes label-line {
+  from { width: 0; }
+  to   { width: 2rem; }
+}
+.label-reveal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.label-reveal::before {
+  content: '';
+  display: inline-block;
+  height: 1.5px;
+  width: 0;
+  background: currentColor;
+  animation: label-line 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* Stagger extendido — hasta 14 hijos */
+[data-animate-stagger].is-visible > *:nth-child(9)  { opacity: 1; transform: none; transition-delay: 0.72s; }
+[data-animate-stagger].is-visible > *:nth-child(10) { opacity: 1; transform: none; transition-delay: 0.78s; }
+[data-animate-stagger].is-visible > *:nth-child(11) { opacity: 1; transform: none; transition-delay: 0.82s; }
+[data-animate-stagger].is-visible > *:nth-child(12) { opacity: 1; transform: none; transition-delay: 0.86s; }
+[data-animate-stagger].is-visible > *:nth-child(13) { opacity: 1; transform: none; transition-delay: 0.90s; }
+[data-animate-stagger].is-visible > *:nth-child(14) { opacity: 1; transform: none; transition-delay: 0.94s; }
+
