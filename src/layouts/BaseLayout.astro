@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title,
-  description = 'Distribuidor oficial Kaeser Chile. Vital Airpower entrega servicios de compresor industrial, tratamiento de aire, líneas de aire y soporte técnico corporativo con cobertura desde Copiapó hasta Rancagua.',
+  description = 'Distribuidor oficial Kaeser Chile. Vital Airpower entrega servicios de compresor industrial, tratamiento de aire, líneas de aire y soporte técnico corporativo con cobertura desde Diego de Almagro hasta Los Vilos.',
   ogImage = '/images/og-image.webp',
 } = Astro.props;
 
@@ -36,10 +36,13 @@ const schemaLocalBusiness = {
     postalCode: '1710000',
   },
   areaServed: [
+    { '@type': 'City', name: 'Diego de Almagro' },
     { '@type': 'City', name: 'Copiapó' },
     { '@type': 'City', name: 'La Serena' },
-    { '@type': 'City', name: 'Rancagua' },
-    { '@type': 'Country', name: 'Chile' },
+    { '@type': 'City', name: 'Coquimbo' },
+    { '@type': 'City', name: 'Ovalle' },
+    { '@type': 'City', name: 'Illapel' },
+    { '@type': 'City', name: 'Los Vilos' },
   ],
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
@@ -62,7 +65,7 @@ const schemaFAQ = {
     {
       '@type': 'Question',
       name: '¿Qué cobertura tienen para servicios y soporte?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Tenemos cobertura desde Copiapó hasta Rancagua para soporte técnico, proyectos de aire comprimido y acompañamiento de clientes industriales.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Tenemos cobertura desde Diego de Almagro hasta Los Vilos para soporte técnico, proyectos de aire comprimido y acompañamiento de clientes industriales.' },
     },
     {
       '@type': 'Question',

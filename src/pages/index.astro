@@ -5,36 +5,48 @@ import Footer from '../components/layout/Footer.astro';
 
 const faqs = [
   {
+    question: '¿Hacen servicio técnico de compresores?',
+    answer: 'Sí. Realizamos servicio técnico de compresores de todas las marcas — Kaeser, Atlas Copco, Ingersoll Rand y otras — en la III y IV Región de Chile. Contamos con 25 años de experiencia en terreno con las marcas líderes del mercado. Cobertura desde Diego de Almagro hasta Los Vilos.',
+  },
+  {
+    question: '¿Tienen servicio técnico de compresores de tornillo?',
+    answer: 'Sí. Somos especialistas en compresores de tornillo. Realizamos mantención preventiva, reparación de unidades, cambio de rotores, overhaul completo y puesta en marcha. Atendemos compresores de tornillo Kaeser, Atlas Copco e Ingersoll Rand en la III y IV Región.',
+  },
+  {
+    question: '¿Tienen repuestos de compresores de tornillo?',
+    answer: 'Sí. Contamos con stock de repuestos originales Kaeser para compresores de tornillo: filtros de aceite, filtros de aire, separadores, correas, kit de servicio y piezas de desgaste. Para repuestos de otras marcas gestionamos el suministro directamente. Consulte disponibilidad por WhatsApp.',
+  },
+  {
     question: '¿Son distribuidores oficiales de Kaeser en Chile?',
-    answer: 'Sí. Vital Airpower opera como distribuidor oficial Kaeser Chile para la Región de Coquimbo, con acceso directo al catálogo completo y soporte técnico de la marca.',
+    answer: 'Sí. Vital Airpower es distribuidor oficial Kaeser Chile para la III y IV Región, con acceso directo al catálogo completo, repuestos originales y soporte técnico de la marca.',
   },
   {
     question: '¿Atienden compresores de otras marcas además de Kaeser?',
-    answer: 'Sí. Vital Airpower acumula 25 años de experiencia técnica en Atlas Copco e Ingersoll Rand antes de ser distribuidor Kaeser. Damos servicio técnico a compresores de esas marcas y otras que ya operan en su planta, sin importar la marca.',
+    answer: 'Sí. Con 25 años de experiencia técnica en Atlas Copco e Ingersoll Rand, damos servicio técnico a cualquier compresor industrial que ya opere en su planta, sin importar la marca.',
   },
   {
     question: '¿Qué cobertura geográfica tienen?',
-    answer: 'La Serena, Coquimbo y faenas mineras del norte chico, con base técnica propia en Quilacán, Región de Coquimbo.',
+    answer: 'Cubrimos desde Diego de Almagro (III Región) hasta Los Vilos (IV Región), incluyendo La Serena, Coquimbo, Ovalle, Illapel y faenas mineras del norte chico. Base técnica propia en Quilacán, Región de Coquimbo.',
   },
   {
     question: '¿Qué tipo de compresores venden?',
-    answer: 'Toda la gama Kaeser: tornillo con inyección de aceite, tornillo seco, pistón, portátiles MOBILAIR y sopladores. Desde 2,2 hasta 515 kW en compresores de tornillo.',
+    answer: 'Toda la gama Kaeser: tornillo con inyección de aceite, tornillo seco, pistón, portátiles MOBILAIR y sopladores. Desde 2,2 hasta 515 kW en compresores de tornillo. Los equipos están certificados para operar hasta 5.000 m.s.n.m.',
   },
   {
     question: '¿Trabajan secadores y filtros de línea?',
-    answer: 'Sí. Consideramos tratamiento de aire completo: secadores por refrigeración y adsorción, filtros de línea, drenajes de condensado y separadores agua-aceite AQUAMAT.',
+    answer: 'Sí. Tratamiento de aire completo: secadores por refrigeración y adsorción, filtros de línea, drenajes de condensado y separadores agua-aceite AQUAMAT.',
   },
   {
     question: '¿Realizan auditorías de fuga por ultrasonido?',
-    answer: 'Sí. El levantamiento por ultrasonido detecta pérdidas en la red para apoyar decisiones de eficiencia energética y reducción de costos operativos.',
+    answer: 'Sí. El levantamiento por ultrasonido detecta pérdidas en la red para apoyar decisiones de eficiencia energética y reducción de costos operativos en la III y IV Región.',
   },
   {
     question: '¿Pueden proyectar líneas de aire comprimido?',
-    answer: 'Sí. Instalamos y proyectamos redes SmartPipe+ de aluminio modular, desde pequeños locales hasta instalaciones industriales de gran escala.',
+    answer: 'Sí. Instalamos y proyectamos redes SmartPipe+ de aluminio modular, desde pequeños talleres hasta instalaciones industriales y mineras de gran escala.',
   },
   {
     question: '¿Tienen contingencia fuera de horario hábil?',
-    answer: 'Sí. La contingencia 24/7 está disponible para emergencias de parada en planta. El canal directo es WhatsApp para respuesta inmediata.',
+    answer: 'Sí. La contingencia 24/7 está disponible para emergencias de parada en planta. Canal directo por WhatsApp para respuesta inmediata en la III y IV Región.',
   },
 ];
 ---
@@ -174,11 +186,11 @@ const faqs = [
             Aire comprimido donde otros no llegan.
           </h2>
           <p class="text-white/70 text-lg max-w-lg mb-8 leading-relaxed">
-            Equipos Kaeser certificados para alta exigencia: altitud hasta 3.000 m.s.n.m., temperatura ambiente hasta 45°C y entornos de polvo mineral. Soporte técnico con respuesta 24/7 para faenas del norte chico.
+            Equipos Kaeser certificados para alta exigencia: altitud hasta 5.000 m.s.n.m., temperatura ambiente hasta 45°C y entornos de polvo mineral. Soporte técnico con respuesta 24/7 para faenas del norte chico.
           </p>
           <div class="grid grid-cols-2 gap-3 mb-8 max-w-sm">
             {[
-              { icon: 'altitude',  text: 'Hasta 3.000 m.s.n.m.' },
+              { icon: 'altitude',  text: 'Hasta 5.000 m.s.n.m.' },
               { icon: 'thermostat', text: 'Op. hasta 45°C ambiente' },
               { icon: 'schedule',  text: 'Contingencia 24/7' },
               { icon: 'build',     text: 'Servicio en faena' },
@@ -719,6 +731,48 @@ const faqs = [
               loading="lazy"
             />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ EMPRESAS QUE CONFIARON ═══════════════════ -->
+    <section class="bg-[#f4f1eb] border-b border-[#0f3d2f]/10">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div class="mb-10" data-animate="fade-up">
+          <p class="label-reveal font-[Space_Grotesk] text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#003F87] mb-3">25 años · III y IV Región · Minería, industria y servicios</p>
+          <h2 class="font-[Space_Grotesk] text-3xl md:text-4xl font-bold tracking-tight text-[#17211c] leading-[1.05]">
+            Empresas que confiaron en nosotros.
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-animate-stagger>
+
+          <div class="bg-white border border-[#0f3d2f]/10 p-6">
+            <p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#003F87] mb-4">Minería</p>
+            <div class="flex flex-wrap gap-2">
+              {['TECK CDA', 'SOMINORT', 'MAESTRAN', 'FAREMIN', 'MDF', 'ENAMI'].map(c => (
+                <span class="text-xs font-bold text-[#17211c] bg-[#f4f1eb] border border-[#0f3d2f]/10 px-3 py-1.5">{c}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-white border border-[#0f3d2f]/10 p-6">
+            <p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#003F87] mb-4">Frigoríficos y alimentación</p>
+            <div class="flex flex-wrap gap-2">
+              {['SANTA ADRIANA', 'BRON FRÍO', 'RÍO BLANCO'].map(c => (
+                <span class="text-xs font-bold text-[#17211c] bg-[#f4f1eb] border border-[#0f3d2f]/10 px-3 py-1.5">{c}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-white border border-[#0f3d2f]/10 p-6">
+            <p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#003F87] mb-4">Servicios, retail y salud</p>
+            <div class="flex flex-wrap gap-2">
+              {['SALFA CAMIONES', 'SALFA HUANHUALI', 'CINES CINÉPOLIS', 'CFN', 'VIÑA CONCHA Y TORO', 'HOSPITAL LA SERENA', 'HOSPITAL COQUIMBO'].map(c => (
+                <span class="text-xs font-bold text-[#17211c] bg-[#f4f1eb] border border-[#0f3d2f]/10 px-3 py-1.5">{c}</span>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

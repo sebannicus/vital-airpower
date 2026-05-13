@@ -9,7 +9,8 @@ const timeline = [
     company: 'Atlas Copco',
     role: 'Técnico de Servicio',
     badge: '7 años',
-    detail: 'Formación técnica de base en la marca líder mundial de aire comprimido. Servicio en terreno desde la Provincia de Antofagasta.',
+    detail: 'Formación técnica de base en la marca líder mundial de aire comprimido. Servicio en terreno en las principales faenas mineras del norte de Chile.',
+    faenas: ['Escondida', 'Chuquicamata', 'El Tesoro', 'Spence', 'Radomiro Tomic'],
     current: false,
   },
   {
@@ -17,7 +18,8 @@ const timeline = [
     company: 'Ingersoll Rand',
     role: 'Supervisor de Servicio Técnico',
     badge: '12 años',
-    detail: 'Supervisión de equipos técnicos con cobertura nacional. Mantenimiento y reparación de compresores industriales de alto rendimiento.',
+    detail: 'Supervisión de equipos técnicos con cobertura nacional. Mantención y reparación de compresores industriales de alto rendimiento en grandes faenas y yacimientos.',
+    faenas: ['Los Bronces', 'Las Tórtolas', 'Anglo American', 'El Teniente', 'Codelco', 'Andina', 'Los Pelambres'],
     current: false,
   },
   {
@@ -25,7 +27,8 @@ const timeline = [
     company: 'Kaeser Kompressoren',
     role: 'Representante y Distribuidor Oficial · Gerente Técnico Vital Airpower',
     badge: 'Actual',
-    detail: 'Representante oficial Kaeser Kompressoren para la Región de Coquimbo. Soporte técnico y ventas. Fundador de Vital Airpower Compresores Spa.',
+    detail: 'Distribuidor oficial Kaeser Kompressoren para la III y IV Región. Cobertura desde Diego de Almagro hasta Los Vilos. Fundador de Vital Airpower Compresores Spa.',
+    faenas: ['TECK CDA', 'SOMINORT', 'MAESTRAN', 'FAREMIN', 'MDF', 'ENAMI', 'y más faenas mineras'],
     current: true,
   },
 ];
@@ -124,7 +127,17 @@ const carouselImages = [
                 </div>
                 <div>
                   <p class="font-bold text-[#17211c] mb-2">{item.role}</p>
-                  <p class="text-[#4f5a53] leading-relaxed">{item.detail}</p>
+                  <p class="text-[#4f5a53] leading-relaxed mb-3">{item.detail}</p>
+                  {item.faenas && (
+                    <div>
+                      <p class="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#7a6b57] mb-2">Faenas y clientes:</p>
+                      <div class="flex flex-wrap gap-1.5">
+                        {item.faenas.map((f: string) => (
+                          <span class={`text-[0.68rem] font-bold px-2.5 py-1 ${item.current ? 'bg-[#003F87]/10 text-[#003F87]' : 'bg-[#f4f1eb] text-[#4f5a53]'}`}>{f}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
