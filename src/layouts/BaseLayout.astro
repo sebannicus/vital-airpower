@@ -15,7 +15,7 @@ const {
   ogImage = '/images/og-image.webp',
 } = Astro.props;
 
-const SITE_URL = 'https://vitalairpower.cl';
+const SITE_URL = 'https://vitalairpower.com';
 const canonicalURL = new URL(Astro.url.pathname, SITE_URL);
 
 const schemaLocalBusiness = {
@@ -26,7 +26,7 @@ const schemaLocalBusiness = {
   description: 'Distribuidor oficial Kaeser Chile y soporte corporativo para compresores industriales, tratamiento de aire y líneas de aire comprimido.',
   url: SITE_URL,
   telephone: '+56976400195',
-  image: `${SITE_URL}/images/logo.webp`,
+  image: `${SITE_URL}/images/logo-vital.webp`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Chile',
